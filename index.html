@@ -5,29 +5,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
   </head>
+
   <body>
     <!-- The freedom raw html provides -->
-      <div class="main-content">
+      <div class="moving-gradient"></div>
+      </div>
+      <div class="backdrop-content">
         MEANING PSYCHOLOGY PHILOSOPHY INNATE CURIOSITY 
       </div>
     <center>
         <h1>Ashish Thapa</h1>
     </center>
-    <input type="text" class="search-bar" placeholder="ctrl+k to focus 
-">
+
+    <div class="search-bar">
+      <kbd>
+        <img src="./svg/prompt.png" class="icon-png icon-big" />
+      </kbd>
+      <input type="text" placeholder="ctrl+k to focus" class="input-search"> 
+    </div>
     <div class="spotlight">
-      <kbd> haina bhane </kbd>
+      <div class="spotlight-elements">
+        <img src="./svg/user.svg" class="icon-png icon-small" />
+        About Me 
+      </div>
+      <div class="spotlight-elements">
+        <img src="./svg/blueprint.png" class="icon-png icon-small" />
+        Projects 
+      </div>
+      <div class="spotlight-elements">
+        <img src="./svg/writing.png" class="icon-png icon-small" />
+        Blogs 
+      </div>
+      <div class="spotlight-elements"> 
+        <img src="./svg/cv.png" class="icon-png icon-small" />
+        Download CV 
+      </div>
+    <hr/>
+      <div class="spotlight-element-description">Socials</div>
+      <div class="spotlight-elements"> 
+        <img src="./svg/github.png" class="icon-png icon-small" />
+        Github 
+      </div>
+      <div class="spotlight-elements"> 
+        <img src="./svg/twitter.png" class="icon-png icon-small" />
+        Twitter 
+      </div>
+      <div class="spotlight-elements"> 
+        <img src="./svg/instagram.png" class="icon-png icon-small" />
+        Instagram 
+      </div>
+    <hr/>
+      <div class="spotlight-element-description">Miscellaneous</div>
+      <div class="spotlight-elements"> 
+        <img src="./svg/ama.png" class="icon-png icon-small" />
+        Ask Me Anything 
+      </div>
+      <div class="spotlight-elements"> 
+        <img src="./svg/music-note.png" class="icon-png icon-small" />
+        Music I listen to
+      </div>
+
+      <div class="spotlight-elements"> 
+        <img src="./svg/heart.svg" class="icon-png icon-small" />
+        Want to fall in love with me?
+      </div>
+
     </div>
 <script>
-  const gradient = document.querySelector(".main-content");
+  const gradient = document.querySelector(".moving-gradient");
   function onMouseMove(event) {
-    console.log("mouse move");
-      
-    gradient.style.background = `radial-gradient(38.86% 3763.24% at ${event.clientX}px ${event.clientY}px, rgba(224, 172, 213, 0.2) 0%, rgba(255, 255, 255, 0) 100%)`;
-      // gradient.style.background = 'radial-gradient(at ' + event.clientX + 'px ' + event.clientY + 'px, rgba(224,172,213,.2) 0, rgba(255,255,255,0) 100%)';
+      console.log(`kashmir tu ${event.clientX} ${event.clientY}`);
+      gradient.style.left = `${event.clientX}px`;
+      gradient.style.top = `${event.clientY}px`;  
     }
-    document.addEventListener("mousemove", onMouseMove);
+    document.body.addEventListener("mousemove", onMouseMove);
 </script>
   </body>
 </html>
