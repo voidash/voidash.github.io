@@ -1,1 +1,33 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- The freedom raw html provides -->
+      <div class="main-content">
+        MEANING PSYCHOLOGY PHILOSOPHY INNATE CURIOSITY 
+      </div>
+    <center>
+        <h1>Ashish Thapa</h1>
+    </center>
+    <input type="text" class="search-bar" placeholder="ctrl+k to focus 
+">
+    <div class="spotlight">
+      <kbd> haina bhane </kbd>
+    </div>
+<script>
+  const gradient = document.querySelector(".main-content");
+  function onMouseMove(event) {
+    console.log("mouse move");
+      
+    gradient.style.background = `radial-gradient(38.86% 3763.24% at ${event.clientX}px ${event.clientY}px, rgba(224, 172, 213, 0.2) 0%, rgba(255, 255, 255, 0) 100%)`;
+      // gradient.style.background = 'radial-gradient(at ' + event.clientX + 'px ' + event.clientY + 'px, rgba(224,172,213,.2) 0, rgba(255,255,255,0) 100%)';
+    }
+    document.addEventListener("mousemove", onMouseMove);
+</script>
+  </body>
+</html>
