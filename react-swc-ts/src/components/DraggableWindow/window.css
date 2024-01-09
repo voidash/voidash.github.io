@@ -1,0 +1,63 @@
+.window {
+  width: 80%;
+  position: absolute;
+  color: white;
+  border-radius: 20px;
+  left: 5%;
+  top:30%;
+  font-size: 30px;
+  background: none; 
+  transform: translate(-50%,0);
+  backdrop-filter: blur(7.5px);
+  border: 1px solid #426CCE;
+  transform: rotate(-3deg);
+}
+
+.menu-bar {
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  background:  linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.4));
+  color: white;
+}
+
+.menu-bar > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-bar > span {
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.green {
+	background-color: limegreen;
+}
+
+.yellow {
+	background-color: yellow;
+}
+
+.red {
+	background-color: red;
+}
+
+
+.round {
+	cursor: pointer;
+	height: 16px;
+	width: 16px;
+	border-radius: 50%;
+	border: none;
+	margin-right: 6px;
+	box-shadow: 1px 1px 2px #000;
+}
+
+.window-content {
+  padding: 20px;
+  max-height: 500px;
+  overflow: scroll;
+}
