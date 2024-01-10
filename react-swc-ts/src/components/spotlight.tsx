@@ -131,7 +131,7 @@ function SpotLight() {
 
   return (
   <>
-<div className="spotlight" style = {{
+<div className="spotlight unselectable" style = {{
   background: `linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2)) ,url(${noise})`
 
       }}>

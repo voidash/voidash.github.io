@@ -1,5 +1,6 @@
 import { ReactElement, useEffect, useRef } from 'react';
 import './window.css';
+import useWindowStore from '../model/WindowStore';
 
 export type WindowProps = {
     title: String, 
@@ -8,6 +9,7 @@ export type WindowProps = {
 
 function DraggableWindow(props: WindowProps) {
   let divElement = useRef(null);
+  let disableWindow = useWindowStore((state) => state.disableWindow);
 
   function makeDraggable (element: any) {
       let currentPosX = 0, currentPosY = 0, previousPosX = 0, previousPosY = 0;
@@ -41,7 +43,56 @@ function DraggableWindow(props: WindowProps) {
           document.onmouseup = null;
           document.onmousemove = null;
       }
-  }
+      
+      function initResizeElement() {
+          let startX, startY, startWidth, startHeight;
+          let right = document.createElement("div");
+          right.className = "resizer-right";
+          element.appendChild(right);
+          right.addEventListener("mousedown", initDrag, false);
+
+          var bottom = document.createElement("div");
+          bottom.className = "resizer-bottom";
+          element.appendChild(bottom);
+          bottom.addEventListener("mousedown", initDrag, false);
+
+          var both = document.createElement("div");
+          both.className = "resizer-both";
+          element.appendChild(both);
+          both.addEventListener("mousedown", initDrag, false);
+
+          function initDrag(e) {
+            startX = e.clientX;
+            startY = e.clientY;
+             startWidth = parseInt(
+              element.offsetWidth,
+              10
+            );
+            startHeight = parseInt(
+              element.offsetHeight,
+              10
+            );
+
+            document.documentElement.addEventListener("mousemove", doDrag, false);
+            document.documentElement.addEventListener("mouseup", stopDrag, false);
+            }
+            
+
+            function doDrag(e){
+              element.style.width = startWidth + e.clientX - startX + "px";
+              element.style.height = startHeight + e.clientY - startY + "px";
+            }
+            
+          function stopDrag(e) {
+            document.documentElement.removeEventListener("mousemove", doDrag, false);
+            document.documentElement.removeEventListener("mouseup", stopDrag, false); 
+            }
+
+          }
+          initResizeElement();
+          
+      }
+  
 
   function MenuBar() {
       return (
@@ -59,26 +110,26 @@ function DraggableWindow(props: WindowProps) {
 
   useEffect(() => {
     makeDraggable(divElement.current);
-
     document.addEventListener('click', (e: any) => {
       if (e.target.closest('.round.red')) {
-        e.target.closest('.window').remove();
+          disableWindow();
       }
     });
 
     document.addEventListener('click', (e: any) => {
       if (e.target.closest('.round.yellow')) {
-        e.target.closest('.window').remove();
+          disableWindow();
       }
     });
 
 
     document.addEventListener('click', (e: any)  => {
       if (e.target.closest('.round.green')) {
-        e.target.closest('.window').style.transform = "rotate(0deg)";
-        e.target.closest('.window').style.width = "98%";
-        e.target.closest('.window').style.top = "0%";
-        e.target.closest('.window').style.left = "0%";
+        divElement.current.style.transform = "rotate(0deg)";
+        divElement.current.style.width = "98%";
+        divElement.current.style.height = "100%";
+        divElement.current.style.top = "0%";
+        divElement.current.style.left = "0%";
       }
     });
   },[]);

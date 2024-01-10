@@ -3,15 +3,13 @@ import './App.css'
 import NavBoard from './components/navBoard.tsx'
 
 import DraggableWindow from './components/DraggableWindow/main.tsx';
+import useWindowStore from './components/model/WindowStore.tsx';
 
 function App() {
 
-
-/**
- * Mouse move event gradient 
- *
- * @param {MouseEvent} event  
- */
+let shouldActivateWindow = useWindowStore((state) => state.shouldActivateWindow); 
+let windowTitle = useWindowStore((state) => state.windowTitle);
+let windowContent = useWindowStore((state) => state.windowContent);
 
  useEffect(() => {
     const gradient = document.querySelector(".moving-gradient") as HTMLDivElement;
@@ -27,7 +25,7 @@ function App() {
   return (
     <>
       <div className="moving-gradient"></div>
-      <div className="backdrop-content">
+      <div className="backdrop-content unselectable">
         MEANING PSYCHOLOGY PHILOSOPHY INNATE CURIOSITY 
       </div>
     <center>
@@ -35,7 +33,7 @@ function App() {
     </center>
       <NavBoard/>
 
-      <DraggableWindow/>
+      {shouldActivateWindow === true ? <DraggableWindow title={windowTitle} content={windowContent} /> : <></>}
     </>
   )
 }
