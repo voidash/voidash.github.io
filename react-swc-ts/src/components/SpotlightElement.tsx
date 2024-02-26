@@ -1,6 +1,5 @@
 import { ReactElement, useState } from "react";
-import DraggableWindow from "./DraggableWindow/main";
-import useWindowStore from "./model/WindowStore";
+import useWindowStore from "../model/WindowStore";
 
 export enum spotlightElementType {
   link,
@@ -27,7 +26,6 @@ function SpotLightElement(props: spotlightElementProps) {
    * @param {window} element  
    */
   function windowClick(element: window) {
-    console.log("clicked");
     activator(element.title,element.content);
     // console.log(title);
   }

@@ -1,10 +1,10 @@
-import SearchBar from "./searchBar"; 
+import TerminalBar from "./terminalBar"; 
 import SpotLight from "./spotlight";
 function navBoard(){
 
  return (
     <>
-      <SearchBar/>
+      <TerminalBar/>
 
       <SpotLight/>
     </>

@@ -1,6 +1,6 @@
 import { ReactElement, useEffect, useRef } from 'react';
 import './window.css';
-import useWindowStore from '../model/WindowStore';
+import useWindowStore from '../../model/WindowStore';
 
 export type WindowProps = {
     title: String, 
@@ -137,7 +137,7 @@ function DraggableWindow(props: WindowProps) {
     <div ref={divElement} className="window">
       <MenuBar/>
       <div className="window-content">
-          {props.title}
+          {props.content}
       </div>
   </div>
   );

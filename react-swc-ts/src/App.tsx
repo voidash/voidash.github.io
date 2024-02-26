@@ -3,7 +3,7 @@ import './App.css'
 import NavBoard from './components/navBoard.tsx'
 
 import DraggableWindow from './components/DraggableWindow/main.tsx';
-import useWindowStore from './components/model/WindowStore.tsx';
+import useWindowStore from './model/WindowStore.tsx';
 
 function App() {
 
@@ -33,7 +33,7 @@ let windowContent = useWindowStore((state) => state.windowContent);
     </center>
       <NavBoard/>
 
-      {shouldActivateWindow === true ? <DraggableWindow title={windowTitle} content={windowContent} /> : <></>}
+     {shouldActivateWindow === true ? <DraggableWindow title={windowTitle} content={windowContent} /> : <></>}
     </>
   )
 }

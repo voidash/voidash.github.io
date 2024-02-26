@@ -11,6 +11,7 @@
   backdrop-filter: blur(7.5px);
   border: 1px solid #426CCE;
   transform: rotate(-3deg);
+  overflow: none;
 }
 
 .menu-bar {
@@ -91,5 +92,5 @@
 .window-content {
   padding: 20px;
   max-height: 500px;
-  overflow: scroll;
+  overflow: auto;
 }

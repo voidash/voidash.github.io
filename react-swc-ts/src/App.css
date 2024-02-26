@@ -80,10 +80,11 @@ background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(15,23,42,1) 7
 }
  
 
-.search-bar {
+.terminal-bar {
   position: relative;
   left: 50%;
   transform: translate(-50%,0);
+  cursor: default;
   box-sizing: border-box;
   text-align: center;
   padding: 10px;
@@ -92,6 +93,8 @@ background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(15,23,42,1) 7
   background: rgba(25, 35, 61, 0.3);
   border: 1px solid #426CCE;
   display: flex;
+  justify-content:center; 
+  align-items: center;
   backdrop-filter: blur(7.5px);
   border-radius: 10px;
 }
@@ -105,13 +108,10 @@ kbd {
 }
 
 /* input type search inside a search bar*/
-.input-search {
-  background: none;
-  border: none;
-  outline: none;
-  width: 100%;
+.quote {
   padding: 10px;
-  font-size: 32px;
+  font-size: 0.5em;
+  color: grey;
 }
 
 .spotlight {
