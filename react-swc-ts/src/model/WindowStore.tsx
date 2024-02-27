@@ -1,29 +1,25 @@
 import { ReactElement } from 'react';
 import create from 'zustand';
 
+import { WindowProps } from '../components/DraggableWindow/main';
 
 type WindowStore = {
-  shouldActivateWindow : boolean,
-  windowTitle: string,
-  windowContent: ReactElement,
-  activateWindow: (title: string,content: ReactElement ) => void,
-  disableWindow: () => void
+  windows: Array<WindowProps & {ref: React.RefObject<HTMLDivElement>}>,
+  addWindow: (title: string,content: ReactElement,ref: React.RefObject<HTMLDivElement> ) => void,
+  disableWindow: (id: React.RefObject<HTMLDivElement>) => void
 }
 
 const useWindowStore = create<WindowStore>((set) => ({
-  shouldActivateWindow: false, 
-  windowTitle: "",
-  windowContent: <></>,
-  activateWindow: (title: string, content: ReactElement) => set(
+  windows: [],
+  addWindow: (title: string, content: ReactElement, ref: React.RefObject<HTMLDivElement>) => set(
     (state) => ({
-      shouldActivateWindow: true,
-      windowTitle: title,
-      windowContent: content
+      windows: [...state.windows, {title: title, content: content, ref: ref}]
     })
     ),
-  disableWindow: () => set((state) => ({
-      shouldActivateWindow: false
-    })
+
+  disableWindow: (ref: React.RefObject<HTMLDivElement>) => set((state) => ({
+      windows: [...state.windows.filter((val) => {val.ref !== ref})]
+  })
 
   ),
 }));

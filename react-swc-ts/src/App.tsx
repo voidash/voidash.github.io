@@ -2,14 +2,11 @@ import { useEffect } from 'react';
 import './App.css'
 import NavBoard from './components/navBoard.tsx'
 
-import DraggableWindow from './components/DraggableWindow/main.tsx';
 import useWindowStore from './model/WindowStore.tsx';
 
 function App() {
 
-let shouldActivateWindow = useWindowStore((state) => state.shouldActivateWindow); 
-let windowTitle = useWindowStore((state) => state.windowTitle);
-let windowContent = useWindowStore((state) => state.windowContent);
+let windows = useWindowStore((state) => state.windows); 
 
  useEffect(() => {
     const gradient = document.querySelector(".moving-gradient") as HTMLDivElement;
@@ -34,7 +31,10 @@ let windowContent = useWindowStore((state) => state.windowContent);
 
       <NavBoard/>
 
-     {shouldActivateWindow === true ? <DraggableWindow title={windowTitle} content={windowContent} /> : <></>}
+     {/*shouldActivateWindow === true ? <DraggableWindow title={windowTitle} content={windowContent} /> : <></>*/}
+     {windows.map((w) => {
+
+      })}
 
     </>
   )

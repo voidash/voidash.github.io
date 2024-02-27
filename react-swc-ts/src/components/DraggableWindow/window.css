@@ -1,6 +1,6 @@
 .window {
-  width: 80%;
   position: absolute;
+  width: 80%;
   color: white;
   border-radius: 20px;
   left: 5%;
@@ -8,9 +8,9 @@
   background: none; 
   transform: translate(-50%,0);
   backdrop-filter: blur(7.5px);
-  border: 1px solid #426CCE;
   transform: rotate(-3deg);
   overflow: none;
+  z-index: 2;
 }
 
 .menu-bar {
@@ -19,7 +19,7 @@
   height: 40px;
   display: flex;
   justify-content: space-between;
-  background:  linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.4));
+  background:  #333333;
   color: white;
   cursor: move;
 }
@@ -91,5 +91,10 @@
 .window-content {
   padding: 20px;
   max-height: 500px;
+  box-sizing: border;
   overflow: auto;
+  border-left: 1px solid #426CCE;
+  border-right: 1px solid #426CCE;
+  border-bottom: 1px solid #426CCE;
+  border-radius: 0 0 20px 20px;
 }

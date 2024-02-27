@@ -1,15 +1,22 @@
-import { ReactElement, useEffect, useRef } from 'react';
+import { ReactElement, forwardRef, useEffect} from 'react';
 import './window.css';
-import useWindowStore from '../../model/WindowStore';
 
 export type WindowProps = {
     title: String, 
     content: ReactElement,
+    disableWindow?: (ref: any) => void | null
 }
 
-function DraggableWindow(props: WindowProps) {
-  let divElement = useRef(null);
-  let disableWindow = useWindowStore((state) => state.disableWindow);
+const DraggableWindow = forwardRef<HTMLDivElement, WindowProps>((props: WindowProps, ref) => {
+  let divElement = ref as React.RefObject<HTMLDivElement>;
+  let disableWindow = props.disableWindow ?? (() => {
+      console.log("this is being used");
+      console.log(divElement.current);
+      if(divElement.current!.style.display != "None") {
+        divElement.current!.style.display = "None";
+      }
+  });
+
 
   function makeDraggable (element: any) {
       let currentPosX = 0, currentPosY = 0, previousPosX = 0, previousPosY = 0;
@@ -45,7 +52,7 @@ function DraggableWindow(props: WindowProps) {
       }
       
       function initResizeElement() {
-          let startX, startY, startWidth, startHeight;
+          let startX = 0, startY = 0, startWidth = 0, startHeight = 0;
           let right = document.createElement("div");
           right.className = "resizer-right";
           element.appendChild(right);
@@ -61,7 +68,7 @@ function DraggableWindow(props: WindowProps) {
           element.appendChild(both);
           both.addEventListener("mousedown", initDrag, false);
 
-          function initDrag(e) {
+          function initDrag(e: MouseEvent) {
             startX = e.clientX;
             startY = e.clientY;
              startWidth = parseInt(
@@ -78,12 +85,12 @@ function DraggableWindow(props: WindowProps) {
             }
             
 
-            function doDrag(e){
+            function doDrag(e: MouseEvent){
               element.style.width = startWidth + e.clientX - startX + "px";
               element.style.height = startHeight + e.clientY - startY + "px";
             }
             
-          function stopDrag(e) {
+          function stopDrag() {
             document.documentElement.removeEventListener("mousemove", doDrag, false);
             document.documentElement.removeEventListener("mouseup", stopDrag, false); 
             }
@@ -94,27 +101,16 @@ function DraggableWindow(props: WindowProps) {
       }
   
 
-  function MenuBar() {
-      return (
-      <div className="menu-bar">
-        <span>{props.title}</span>
-        <div>
-          <button className="round green"></button>
-          <button className="round yellow"></button>
-          <button className="round red"></button>
-        </div>
-      </div> 
-      );
-  }
 
 
   useEffect(() => {
+    if (divElement.current !== undefined) {
+      console.log(divElement.current.getElementsByClassName('.red'));
+      // ref.current.getElementsByClassName('.round.red')[0].addEventListener('click', (e: any) => {
+            // disableWindow();
+      // });
+    }
     makeDraggable(divElement.current);
-    document.addEventListener('click', (e: any) => {
-      if (e.target.closest('.round.red')) {
-          disableWindow();
-      }
-    });
 
     document.addEventListener('click', (e: any) => {
       if (e.target.closest('.round.yellow')) {
@@ -124,24 +120,32 @@ function DraggableWindow(props: WindowProps) {
 
 
     document.addEventListener('click', (e: any)  => {
-      if (e.target.closest('.round.green')) {
-        divElement.current.style.transform = "rotate(0deg)";
-        divElement.current.style.width = "98%";
-        divElement.current.style.height = "100%";
-        divElement.current.style.top = "0%";
-        divElement.current.style.left = "0%";
-      }
     });
   },[]);
   return (
-    <div ref={divElement} className="window">
-      <MenuBar/>
+    <div ref={ref} className="window">
+
+      <div className="menu-bar">
+        <div><div style={{display:"block", width: "10px"}}></div><h3>{props.title}</h3></div>
+        <div>
+          <button className="round green" onClick = {() => {
+              divElement.current!.style.transform = "rotate(0deg)";
+              divElement.current!.style.width = "100vw";
+              divElement.current!.style.height = "100vh";
+              divElement.current!.style.top = "0";
+              divElement.current!.style.left = "0";
+              (divElement.current!.getElementsByClassName('window-content')[0] as HTMLDivElement)!.style.maxHeight = "100%";
+            }}></button>
+          <button className="round yellow" onClick = {() => disableWindow()}></button>
+          <button className="round red" onClick = {() => disableWindow()}></button>
+        </div>
+      </div> 
       <div className="window-content">
           {props.content}
       </div>
   </div>
   );
-}
+})
 
 export default DraggableWindow;
 
