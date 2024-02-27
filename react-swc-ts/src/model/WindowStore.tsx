@@ -28,4 +28,4 @@ const useWindowStore = create<WindowStore>((set) => ({
   ),
 }));
 
-export  default useWindowStore;
+export default useWindowStore;

@@ -1,6 +1,8 @@
 import { spotlightElementProps, spotlightElementType } from './SpotlightElement';
 import images from '../svg/images';
 import Bookmark from '../pages/bookmarks';
+import { Music } from '../pages/music';
+import Aboutme from '../pages/aboutme';
 
 let mainSpotlightElements: Array<spotlightElementProps> = [
   {
@@ -9,10 +11,20 @@ let mainSpotlightElements: Array<spotlightElementProps> = [
     value: {
       type: spotlightElementType.window, 
       title: "About Me", 
-      content: (<h1>Hello</h1>) 
+      content: (<Aboutme/>) 
     }  
   },
-
+  {
+    icon: images.heart,
+    description: "Bookmarks, You will find something useful here",
+    value: {
+      type: spotlightElementType.window,
+      title: "Bookmarks",
+      content: (
+        <Bookmark/>
+      )
+    }
+  },
   {
     icon: images.blueprint,
     description: "Projects",
@@ -32,14 +44,6 @@ let mainSpotlightElements: Array<spotlightElementProps> = [
     }
   },
 
-  {
-    icon: images.cv,
-    description: "Download CV",
-    value: {
-      type: spotlightElementType.link,
-      href: "https://thapa-ashish.com.np/blog"
-    }
-  },
 ];
 
 let socials = [
@@ -95,18 +99,7 @@ let miscellaneous = [
     value: {
       type: spotlightElementType.window,
       title: "Music carrying my soul",
-      content: (<h1>Music</h1>)
-    }
-  },
-  {
-    icon: images.heart,
-    description: "My Bookmarks, You are going to love it",
-    value: {
-      type: spotlightElementType.window,
-      title: "Bookmarks",
-      content: (
-        <Bookmark/>
-      )
+      content: (<Music/>)
     }
   },
   {
@@ -116,6 +109,15 @@ let miscellaneous = [
       type: spotlightElementType.window,
       title: "Setup",
       content: (<h1>Todo</h1>)
+    }
+  },
+
+  {
+    icon: images.cv,
+    description: "Download CV",
+    value: {
+      type: spotlightElementType.link,
+      href: "https://thapa-ashish.com.np/blog"
     }
   },
 ];

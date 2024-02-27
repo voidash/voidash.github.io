@@ -1,0 +1,53 @@
+.card {
+  padding: 12px;
+  /* border: 1px solid white;   */
+
+  border: 1px solid #426CCE;
+  background: rgba(25, 35, 61, 0.3);
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 20px;
+  display: flex;
+  font-size: 0.6em;
+  flex-direction: column;
+  gap: 5px;
+}
+.card:hover {
+  filter: drop-shadow(16px 16px 20px red);
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  text-transform: capitalize;
+  border-radius: 20px;
+  padding: 1px 10px 1px 0;
+  margin-right: 10px;
+}
+
+.urlBar {
+  display: flex;
+  font-size: 0.8em;
+  align-items: center;
+}
+
+.url {
+  font-size: 0.7em;
+  color: lightblue;
+}
+
+.favicon {
+  width: 15px;
+  padding: 10px;
+  filter: invert(100);
+}
+
+.description {
+  color: lightgrey;
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+
