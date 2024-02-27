@@ -2,6 +2,9 @@ import { NotionRenderer } from "react-notion";
 import { NotionURL } from "../model/MiscStore";
 import { useEffect, useState } from "react";
 import { Spinner } from "../components/spinner";
+import "react-notion/src/styles.css";
+import "prismjs/themes/prism-tomorrow.css";
+
 
 
 export default function Aboutme() {

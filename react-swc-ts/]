@@ -1,0 +1,21 @@
+.input-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-bar {
+  cursor: default;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 0.8em;
+  background: rgba(25, 35, 61, 0.3);
+  border: 1px solid #426CCE;
+  backdrop-filter: blur(7.5px);
+  border-radius: 10px;
+}
+.submit {
+  background: none;
+
+  border: 1px solid #426cce;
+  font-size: 0.7em;
+}

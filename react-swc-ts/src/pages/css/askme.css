@@ -1,0 +1,51 @@
+.input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-bar {
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 0.8em;
+  background: rgba(25, 35, 61, 0.3);
+  border: 1px solid #426CCE;
+  backdrop-filter: blur(7.5px);
+  border-radius: 10px;
+}
+.button {
+  background: none;
+  font-size: 0.7em;
+  padding:10px;
+  border-radius: 10px;
+}
+
+.qna {
+  margin-top:10px;
+  display:flex;
+  border: 1px solid #426cce;
+  padding: 10px;
+  border-radius: 5px;
+  flex-direction: column;
+  gap:5px;
+}
+.question {
+  font-size: 0.9em;
+}
+.asker {
+  font-size: 0.7em;
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+.avatar {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 100% ;
+}
+.name {
+    color: lightgreen;
+}
+.answer {
+    font-size: 0.5em;
+  }

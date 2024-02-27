@@ -9,7 +9,7 @@
   cursor: pointer;
   margin: 20px;
   display: flex;
-  font-size: 0.6em;
+  font-size: 1.2em;
   flex-direction: column;
   gap: 5px;
 }

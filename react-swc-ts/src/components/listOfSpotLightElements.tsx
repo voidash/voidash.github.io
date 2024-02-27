@@ -3,6 +3,8 @@ import images from '../svg/images';
 import Bookmark from '../pages/bookmarks';
 import { Music } from '../pages/music';
 import Aboutme from '../pages/aboutme';
+import Askme from '../pages/askme';
+import Timeline from '../pages/timeline';
 
 let mainSpotlightElements: Array<spotlightElementProps> = [
   {
@@ -27,11 +29,11 @@ let mainSpotlightElements: Array<spotlightElementProps> = [
   },
   {
     icon: images.blueprint,
-    description: "Projects",
+    description: "My Timeline",
     value: {
       type: spotlightElementType.window,
-      title: "Projects",
-      content: (<h1>TODO</h1>)
+      title: "My Timeline",
+      content: (<Timeline/>)
     }
   },
 
@@ -89,13 +91,13 @@ let miscellaneous = [
     value: {
       type: spotlightElementType.window,
       title: "AMA",
-      content: (<h1>TODO</h1>)
+      content: (<Askme/>)
     }
   },
 
   {
     icon: images.musicnote ,
-    description: "Music i listen to",
+    description: "Music and Notes",
     value: {
       type: spotlightElementType.window,
       title: "Music carrying my soul",
@@ -104,7 +106,7 @@ let miscellaneous = [
   },
   {
     icon: images.briefcase,
-    description: "My Setup",
+    description: "TODO My Setup",
     value: {
       type: spotlightElementType.window,
       title: "Setup",
@@ -114,7 +116,7 @@ let miscellaneous = [
 
   {
     icon: images.cv,
-    description: "Download CV",
+    description: "TODO CV",
     value: {
       type: spotlightElementType.link,
       href: "https://thapa-ashish.com.np/blog"

@@ -6,7 +6,6 @@ import images from "../svg/images";
 import { Spinner } from "../components/spinner";
 
 
-
 type BookmarkEntry = {
   Title: string,
   id: string,

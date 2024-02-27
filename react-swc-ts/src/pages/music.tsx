@@ -1,9 +1,25 @@
-export function Music () {
+import "react-notion/src/styles.css";
+import "prismjs/themes/prism-tomorrow.css";
+import { NotionRenderer } from "react-notion"; 
+import { NotionURL } from "../model/MiscStore";
+import { useEffect, useState } from "react";
+import { Spinner } from "../components/spinner";
+
+
+export function Music() {
+  let [aboutme, setAboutme] = useState({});
+
+  useEffect(()=> {
+    fetch(`${NotionURL}/v1/page/Music-I-listen-to-f114f9d0040842adb8649125f13407dc`)
+        .then(res => res.json())
+        .then(json => setAboutme(json))
+  },[]);
+
   return (
-  <div>
-  <iframe width="860" height="315" src="https://www.youtube.com/embed/videoseries?list=PLOvadJOMY2iMrARtTTfcnXxr8YDH15jFC" allow="autoplay; encrypted-media"></iframe>
-  <div></div>
-  <a href="https://www.youtube.com/watch?v=Pewyb4kjQTY&list=PLOvadJOMY2iMrARtTTfcnXxr8YDH15jFC">Link to Youtube Music Playlist</a> 
-  </div>
+        <div>
+          <p>Some of the finest hours of my life</p>
+          <hr/>
+          {Object.keys(aboutme).length === 0 ? <Spinner/> :<NotionRenderer blockMap={aboutme}/>}
+        </div>
   );
-} 
+}

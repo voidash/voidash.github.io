@@ -31,9 +31,11 @@ let windowContent = useWindowStore((state) => state.windowContent);
     <center>
         <h1>Ashish Thapa</h1>
     </center>
+
       <NavBoard/>
 
      {shouldActivateWindow === true ? <DraggableWindow title={windowTitle} content={windowContent} /> : <></>}
+
     </>
   )
 }
