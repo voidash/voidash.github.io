@@ -1,8 +1,6 @@
 import './css/timeline.css';
 import { NotionURL } from '../model/MiscStore';
-import { useEffect, useRef, useState } from "react";
-import DraggableWindow from '../components/DraggableWindow/main';
-import { window } from '../components/SpotlightElement';
+import { useEffect, useState } from "react";
 import useWindowStore from '../model/WindowStore';
 import { NotionRenderer } from 'react-notion';
 import { Spinner } from '../components/spinner';
@@ -18,12 +16,10 @@ type TimelineType = {
 }
 
 export default function Timeline() {
-  let [timeline,setTimeline] = useState<Array<TimelineType>>(null);
+  let [timeline,setTimeline] = useState<Array<TimelineType> | null>(null);
   let [fetching, setFetching] = useState<boolean>(false);
   let addWindow = useWindowStore((state) => state.addWindow);
-  let currentId = useWindowStore((state) => state.winCount);
 
-  let anotherRef = useRef<HTMLDivElement>(null);
 
   useEffect(()=> {
     fetch(`${NotionURL}/v1/table/70bfec27eb6a4e11882b95e32bfdcdca`)

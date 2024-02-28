@@ -45,14 +45,6 @@ let mainSpotlightElements: Array<spotlightElementProps> = [
       href: "https://thapa-ashish.com.np/blog" 
     }
   },
-  {
-    icon: images.writing,
-    description: "Blog (External Site)",
-    value: {
-      type: spotlightElementType.link,
-      href: "https://thapa-ashish.com.np/blog" 
-    }
-  },
 ];
 
 let socials = [
@@ -62,6 +54,14 @@ let socials = [
     value: {
       type: spotlightElementType.link,
       href: "https://github.com/voidash"
+    }
+  },
+  {
+    icon: images.writing,
+    description: "My Blog",
+    value: {
+      type: spotlightElementType.link,
+      href: "https://thapa-ashish.com.np/blog" 
     }
   },
   {

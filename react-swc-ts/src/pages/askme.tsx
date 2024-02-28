@@ -54,7 +54,7 @@ export default function Askme() {
       </div> : <></>}
       
       {questions.length === 0 ? <Spinner/> : questions.map((qna) => {
-        return (<div className="qna" key={qna.id}>
+        return (<div className="qna" key={qna.id as any}>
           <div className="question">{qna.Question} ? </div>
           <div className="asker">
               <div className="avatar">{qna.Name[0].toUpperCase()}</div> 

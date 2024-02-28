@@ -1,4 +1,4 @@
-import { ReactElement, useRef,forwardRef, useEffect} from 'react';
+import { ReactElement, useRef, useEffect} from 'react';
 import './window.css';
 import useWindowStore from '../../model/WindowStore';
 
@@ -61,7 +61,6 @@ const DraggableWindow = (props: WindowProps) => {
       function initResizeElement() {
           let content = element.querySelector('.window-content');
           let startX = 0, startY = 0, startWidth = 0, startHeight = 0;
-          let contentWidth = 0, contentHeight = 0;
 
           let right = document.createElement("div");
           right.className = "resizer-right";

@@ -6,5 +6,8 @@ export default defineConfig({
   server: {
     cors: false,
   },
+  build: {
+    outDir: '../'
+  },
   plugins: [react()],
 })

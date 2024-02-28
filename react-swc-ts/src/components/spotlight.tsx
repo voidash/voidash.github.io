@@ -1,7 +1,7 @@
 import noise from '../svg/noise.svg';
 import {mainSpotlightElements, socials, miscellaneous} from "./listOfSpotLightElements";
 
-import SpotLightElement, {spotlightElementProps,spotlightElementType} from "./SpotlightElement"; 
+import SpotLightElement, {spotlightElementProps} from "./SpotlightElement"; 
 
 function SpotLight() {
 
@@ -33,7 +33,7 @@ function SpotLight() {
       {
           socials.map((props)=> {
             return (
-            <a key={props.description} style={{ display: "flex", flexDirection: "column", alignItems: "center", textDecoration: "none", flex: "1 0 21%"}} className="spotlight-elements" target="blank" href={(props.value).href}>
+            <a key={props.description} style={{ display: "flex", flexDirection: "column", alignItems: "center", textDecoration: "none", flex: "1 0 15%"}} className="spotlight-elements" target="blank" href={(props.value).href}>
             <div>
               <img src={props.icon} className="icon-png icon-small" style={{
                 marginRight: "10px"

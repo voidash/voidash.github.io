@@ -1,4 +1,4 @@
-import { ReactElement, useState , useRef} from "react";
+import { ReactElement,  useRef} from "react";
 import useWindowStore from "../model/WindowStore";
 
 
@@ -20,7 +20,6 @@ export type spotlightElementProps = {
 function SpotLightElement(props: spotlightElementProps) {
 
   let addWindow = useWindowStore((state) => state.addWindow);
-  let currentId = useWindowStore((state) => state.winCount);
   let windowRef = useRef<HTMLDivElement>(null);
 
   function windowClick() {

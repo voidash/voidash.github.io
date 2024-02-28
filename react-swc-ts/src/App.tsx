@@ -4,7 +4,6 @@ import NavBoard from './components/navBoard.tsx'
 
 import useWindowStore from './model/WindowStore.tsx';
 import DraggableWindow from './components/DraggableWindow/main.tsx';
-import { NotionURL } from './model/MiscStore.tsx';
 
 function App() {
 let windows = useWindowStore((state) => state.windows); 
@@ -32,7 +31,7 @@ useEffect(() => {
 
       <NavBoard/>
      {windows.map((w) => {
-            return (<DraggableWindow id={w.id} key={w.id} title={w.title} content={w.content} ref={w.ref} disableWindow={w.disableWindow} />);
+            return (<DraggableWindow id={w.id} key={w.id} title={w.title} content={w.content} disableWindow={w.disableWindow} />);
       })}
 
     </>

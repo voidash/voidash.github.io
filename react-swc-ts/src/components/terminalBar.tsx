@@ -1,4 +1,3 @@
-import chat from '../svg/chat.svg';
 
 function TerminalBar() {
   return (
