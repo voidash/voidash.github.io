@@ -3,6 +3,8 @@ import { NotionURL } from '../model/MiscStore';
 import { useEffect, useRef, useState } from "react";
 import DraggableWindow from '../components/DraggableWindow/main';
 import { window } from '../components/SpotlightElement';
+import useWindowStore from '../model/WindowStore';
+import { NotionRenderer } from 'react-notion';
 
 
 type TimelineType = {
@@ -16,8 +18,7 @@ type TimelineType = {
 
 export default function Timeline() {
   let [timeline,setTimeline] = useState<Array<TimelineType>>([]);
-  let [timelineDetails, setTimelineDetails] = useState<window | null>(null);
-  let [showAdditionalTimeline, activateAdditionalTimeline] = useState([false,1]);
+  let addWindow = useWindowStore((state) => state.addWindow);
 
   let anotherRef = useRef<HTMLDivElement>(null);
 
@@ -39,6 +40,23 @@ export default function Timeline() {
         })
   },[]);
 
+  // TODO:
+  // add multiple Refs so that closing one of the child of timeline doesn't close all the windows
+  
+  let pageClick = async (id: string,title: string)=> {
+  let datawork = await fetch(`${NotionURL}/v1/page/${id}`)
+    .then(res => res.json());
+
+   addWindow(title, <NotionRenderer blockMap={datawork} customBlockComponents={{
+     page : ({blockValue, renderComponent}) => {
+        return (<div style={{cursor: "pointer",textDecoration: "underline",}} 
+        onClick={(e) => {
+          e.preventDefault();
+          pageClick(blockValue.id, blockValue.properties.Title);
+        }}>{renderComponent()}</div>)}
+    }} />, anotherRef);
+};
+
   return (
     <div>
 <ul className="timeline">
@@ -54,11 +72,9 @@ export default function Timeline() {
 
             {ev.isPage ? 
                   <>
-                  <div onClick={()=> {
-                    activateAdditionalTimeline([true,i]);
-                  }}>Learn More</div>
-
-                  {showAdditionalTimeline[0] === true && showAdditionalTimeline[1] === i? <DraggableWindow key={ev.Title} ref={anotherRef} title={"katex"} content={<h1>post</h1>} /> : <></> }
+                  <br/>
+                  <a style={{cursor: "pointer", textDecoration: "underline", margin: "10px", border: "1px solid white", padding: "10px"}} 
+                    onClick={() => pageClick(ev.id,ev.Title)}>Learn More</a>
                   </>
                   : <></>}
 

@@ -19,7 +19,7 @@ export function Music() {
         <div>
           <p>Some of the finest hours of my life</p>
           <hr/>
-          {Object.keys(aboutme).length === 0 ? <Spinner/> :<NotionRenderer blockMap={aboutme}/>}
+          {Object.keys(aboutme).length === 0 ? <Spinner/> :<NotionRenderer fullPage hideHeader blockMap={aboutme}/>}
         </div>
   );
 }

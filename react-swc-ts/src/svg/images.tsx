@@ -18,7 +18,8 @@ import search from "./search.png"
 import twitter from "./twitter.png"
 import user from "./user.svg"
 import writing from "./writing.png"
+import timeline from "./timeline.png"
 
 export default {
-  add, ama, blueprint, briefcase, calendar, chat, cv, download, envelope, github, heart, instagram, megaphone, musicnote, noise, prompt, search, twitter, user, writing};
+  add, ama, blueprint, briefcase, calendar, chat, cv, download, envelope, github, heart, instagram, megaphone, musicnote, noise, prompt, search, twitter, user, writing,timeline};
 

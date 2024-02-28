@@ -1,24 +1,25 @@
 import { ReactElement, forwardRef, useEffect} from 'react';
 import './window.css';
+import useWindowStore from '../../model/WindowStore';
 
 export type WindowProps = {
     title: String, 
     content: ReactElement,
-    disableWindow?: (ref: any) => void | null
+    disableWindow?: () => void | null
 }
 
+
 const DraggableWindow = forwardRef<HTMLDivElement, WindowProps>((props: WindowProps, ref) => {
+  let removeFromWindowStore = useWindowStore((state) => state.disableWindow);
   let divElement = ref as React.RefObject<HTMLDivElement>;
   let disableWindow = props.disableWindow ?? (() => {
-      console.log("this is being used");
-      console.log(divElement.current);
       if(divElement.current!.style.display != "None") {
         divElement.current!.style.display = "None";
       }
-  });
+      removeFromWindowStore(divElement); });
 
 
-  function makeDraggable (element: any) {
+  function makeDraggable(element: any) {
       let currentPosX = 0, currentPosY = 0, previousPosX = 0, previousPosY = 0;
 
       if (element.querySelector('.menu-bar')) {
@@ -52,7 +53,10 @@ const DraggableWindow = forwardRef<HTMLDivElement, WindowProps>((props: WindowPr
       }
       
       function initResizeElement() {
+          let content = element.querySelector('.window-content');
           let startX = 0, startY = 0, startWidth = 0, startHeight = 0;
+          let contentWidth = 0, contentHeight = 0;
+
           let right = document.createElement("div");
           right.className = "resizer-right";
           element.appendChild(right);
@@ -71,23 +75,23 @@ const DraggableWindow = forwardRef<HTMLDivElement, WindowProps>((props: WindowPr
           function initDrag(e: MouseEvent) {
             startX = e.clientX;
             startY = e.clientY;
-             startWidth = parseInt(
-              element.offsetWidth,
-              10
-            );
-            startHeight = parseInt(
-              element.offsetHeight,
-              10
-            );
-
+            startWidth = parseInt( element.offsetWidth, 10);
+            startHeight = parseInt( element.offsetHeight, 10);
             document.documentElement.addEventListener("mousemove", doDrag, false);
             document.documentElement.addEventListener("mouseup", stopDrag, false);
             }
             
 
             function doDrag(e: MouseEvent){
+              
+
               element.style.width = startWidth + e.clientX - startX + "px";
               element.style.height = startHeight + e.clientY - startY + "px";
+              
+              content.style.height = element.clientHeight - element.querySelector('.menu-bar').clientHeight  + "px";
+              content.style.width = element.clientWidth + "px";
+              
+
             }
             
           function stopDrag() {
@@ -104,27 +108,11 @@ const DraggableWindow = forwardRef<HTMLDivElement, WindowProps>((props: WindowPr
 
 
   useEffect(() => {
-    if (divElement.current !== undefined) {
-      console.log(divElement.current.getElementsByClassName('.red'));
-      // ref.current.getElementsByClassName('.round.red')[0].addEventListener('click', (e: any) => {
-            // disableWindow();
-      // });
-    }
     makeDraggable(divElement.current);
-
-    document.addEventListener('click', (e: any) => {
-      if (e.target.closest('.round.yellow')) {
-          disableWindow();
-      }
-    });
-
-
-    document.addEventListener('click', (e: any)  => {
-    });
   },[]);
+
   return (
     <div ref={ref} className="window">
-
       <div className="menu-bar">
         <div><div style={{display:"block", width: "10px"}}></div><h3>{props.title}</h3></div>
         <div>

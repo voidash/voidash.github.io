@@ -23,16 +23,28 @@ function SpotLight() {
    <div className="blur">
     </div>
       {mapSpotlight(mainSpotlightElements)}
+    <hr/>
+      <div className="spotlight-element-description">Miscellaneous</div>
+      {mapSpotlight(miscellaneous)}
 
     <hr/>
       <div className="spotlight-element-description">Socials</div>
-
-      {mapSpotlight(socials)}
-    <hr/>
-      <div className="spotlight-element-description">Miscellaneous</div>
-
-      {mapSpotlight(miscellaneous)}
-
+        <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap"}}>
+      {
+          socials.map((props)=> {
+            return (
+            <a style={{ display: "flex", flexDirection: "column", alignItems: "center", textDecoration: "none", flex: "1 0 21%"}} className="spotlight-elements" target="blank" href={(props.value).href}>
+            <div>
+              <img src={props.icon} className="icon-png icon-small" style={{
+                marginRight: "10px"
+            }} />
+            </div>
+            <div>{props.description}</div>
+            </a>
+              );
+          })
+      } 
+      </div>
     </div>
   </div>
   </>

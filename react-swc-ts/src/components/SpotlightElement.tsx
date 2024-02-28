@@ -1,6 +1,6 @@
 import { ReactElement, useState , useRef} from "react";
 import useWindowStore from "../model/WindowStore";
-import DraggableWindow from "./DraggableWindow/main";
+
 
 export enum spotlightElementType {
   link,
@@ -19,19 +19,16 @@ export type spotlightElementProps = {
 
 function SpotLightElement(props: spotlightElementProps) {
 
-  let [windowVisible,toggleWindowVisibility] = useState(false);
+  let addWindow = useWindowStore((state) => state.addWindow);
   let windowRef = useRef<HTMLDivElement>(null);
 
-  /**
-   * Activate on Spotlight element click 
-   *
-   * @param {window} element  
-   */
   function windowClick() {
+    let windowDescription = props.value as window;
     if (windowRef.current)  {
       windowRef.current!.style.display = "block";
     }
-    toggleWindowVisibility(true);
+
+    addWindow(windowDescription.title, windowDescription.content,windowRef);
   }
 
 
@@ -52,7 +49,6 @@ function SpotLightElement(props: spotlightElementProps) {
       </a>
       }
 
-      {windowVisible? <DraggableWindow ref={windowRef} title={(props.value as window).title} content={(props.value as window).content} /> : <></> }
   </>);
 }
 

@@ -3,19 +3,20 @@ import './App.css'
 import NavBoard from './components/navBoard.tsx'
 
 import useWindowStore from './model/WindowStore.tsx';
+import DraggableWindow from './components/DraggableWindow/main.tsx';
+import { NotionURL } from './model/MiscStore.tsx';
 
 function App() {
-
 let windows = useWindowStore((state) => state.windows); 
 
- useEffect(() => {
+useEffect(() => {
     const gradient = document.querySelector(".moving-gradient") as HTMLDivElement;
 
   document.body.addEventListener("mousemove",(event) => {
       gradient.style.left = `${event.clientX}px`;
       gradient.style.top = `${event.clientY}px`;  
     });
-  },[]);
+},[]);
 
 
 
@@ -30,10 +31,9 @@ let windows = useWindowStore((state) => state.windows);
     </center>
 
       <NavBoard/>
-
-     {/*shouldActivateWindow === true ? <DraggableWindow title={windowTitle} content={windowContent} /> : <></>*/}
      {windows.map((w) => {
-
+            console.log(windows);
+            return (<DraggableWindow title={w.title} content={w.content} ref={w.ref} disableWindow={w.disableWindow} />);
       })}
 
     </>

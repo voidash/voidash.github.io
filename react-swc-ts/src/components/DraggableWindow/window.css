@@ -9,14 +9,16 @@
   transform: translate(-50%,0);
   backdrop-filter: blur(7.5px);
   transform: rotate(-3deg);
-  overflow: none;
   z-index: 2;
+  border: 1px solid yellow;
 }
 
 .menu-bar {
+  position: relative;
   width: 100%;
   border-radius: 20px 20px 0px 0px;
   height: 40px;
+  overflow:hidden;
   display: flex;
   justify-content: space-between;
   background:  #333333;
@@ -90,11 +92,6 @@
 
 .window-content {
   padding: 20px;
-  max-height: 500px;
-  box-sizing: border;
+  box-sizing: border-box;
   overflow: auto;
-  border-left: 1px solid #426CCE;
-  border-right: 1px solid #426CCE;
-  border-bottom: 1px solid #426CCE;
-  border-radius: 0 0 20px 20px;
 }

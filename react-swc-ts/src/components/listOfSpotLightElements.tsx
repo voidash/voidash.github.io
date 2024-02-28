@@ -28,8 +28,8 @@ let mainSpotlightElements: Array<spotlightElementProps> = [
     }
   },
   {
-    icon: images.blueprint,
-    description: "My Timeline",
+    icon: images.timeline,
+    description: "Timeline of My Life",
     value: {
       type: spotlightElementType.window,
       title: "My Timeline",
@@ -38,14 +38,21 @@ let mainSpotlightElements: Array<spotlightElementProps> = [
   },
 
   {
-    icon: images.writing,
-    description: "Blogs",
+    icon: images.blueprint,
+    description: "My Projects",
     value: {
       type: spotlightElementType.link,
       href: "https://thapa-ashish.com.np/blog" 
     }
   },
-
+  {
+    icon: images.writing,
+    description: "Blog (External Site)",
+    value: {
+      type: spotlightElementType.link,
+      href: "https://thapa-ashish.com.np/blog" 
+    }
+  },
 ];
 
 let socials = [
@@ -57,10 +64,9 @@ let socials = [
       href: "https://github.com/voidash"
     }
   },
-
   {
     icon: images.twitter,
-    description: "X (formerly Twitter)",
+    description: "Twitter",
     value: {
       type: spotlightElementType.link,
       href: "https://twitter.com/rifeash"
@@ -75,7 +81,7 @@ let socials = [
     }
   },
   {
-    icon: images.search,
+    icon: images.megaphone,
     description: "LinkedIn",
     value: {
       type: spotlightElementType.link,
