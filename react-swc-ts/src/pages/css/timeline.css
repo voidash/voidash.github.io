@@ -262,10 +262,19 @@
 }
 
 @media screen and (min-width: 400px ?? max-width: 660px) {
-
-.direction-l .desc,
-.direction-r .desc {
-	margin: 1em 4em 0 4em;
+  .direction-l .desc,
+  .direction-r .desc {
+    margin: 1em 4em 0 4em;
+  }
 }
 
+.notify-bar {
+  position: absolute;
+  text-align: center;
+  transition: display 0.5s linear;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background:#416D19 ;
+  color: white;
 }

@@ -8,7 +8,7 @@ function SpotLight() {
   function mapSpotlight(elements: Array<spotlightElementProps>) {
       return elements.map(
       (el) => {
-          return <SpotLightElement {...el}  />
+          return <SpotLightElement key={el.description} {...el}  />
       }
     ) 
   }
@@ -33,7 +33,7 @@ function SpotLight() {
       {
           socials.map((props)=> {
             return (
-            <a style={{ display: "flex", flexDirection: "column", alignItems: "center", textDecoration: "none", flex: "1 0 21%"}} className="spotlight-elements" target="blank" href={(props.value).href}>
+            <a key={props.description} style={{ display: "flex", flexDirection: "column", alignItems: "center", textDecoration: "none", flex: "1 0 21%"}} className="spotlight-elements" target="blank" href={(props.value).href}>
             <div>
               <img src={props.icon} className="icon-png icon-small" style={{
                 marginRight: "10px"
@@ -48,7 +48,7 @@ function SpotLight() {
     </div>
   </div>
   </>
-  );
+ );
 }
 
 export default SpotLight;

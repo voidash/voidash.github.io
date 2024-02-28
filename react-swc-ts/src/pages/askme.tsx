@@ -33,8 +33,7 @@ export default function Askme() {
   }
 
   useEffect(() => {
-    fetch(`${DatabaseURL}`).then((resp) => resp.json()).then(data => {setQuestions(data);
-    console.log(data)});
+    fetch(`${DatabaseURL}`).then((resp) => resp.json()).then(data => {setQuestions(data);});
   }, [questionSubmitted]);
   return (<>
 

@@ -1,22 +1,28 @@
-import { ReactElement, forwardRef, useEffect} from 'react';
+import { ReactElement, useRef,forwardRef, useEffect} from 'react';
 import './window.css';
 import useWindowStore from '../../model/WindowStore';
 
 export type WindowProps = {
-    title: String, 
+    id: number,
+    title: string, 
     content: ReactElement,
+    width?: number,
+    height?: number,
     disableWindow?: () => void | null
 }
 
 
-const DraggableWindow = forwardRef<HTMLDivElement, WindowProps>((props: WindowProps, ref) => {
+const DraggableWindow = (props: WindowProps) => {
   let removeFromWindowStore = useWindowStore((state) => state.disableWindow);
-  let divElement = ref as React.RefObject<HTMLDivElement>;
-  let disableWindow = props.disableWindow ?? (() => {
+  // let divElement = ref as React.RefObject<HTMLDivElement>;
+  let divElement = useRef<HTMLDivElement>(null);
+
+  let removeWindow = () => {
       if(divElement.current!.style.display != "None") {
         divElement.current!.style.display = "None";
       }
-      removeFromWindowStore(divElement); });
+      removeFromWindowStore(props.id);
+  };
 
 
   function makeDraggable(element: any) {
@@ -109,10 +115,18 @@ const DraggableWindow = forwardRef<HTMLDivElement, WindowProps>((props: WindowPr
 
   useEffect(() => {
     makeDraggable(divElement.current);
+
+    if (props.width) {
+      divElement.current!.style.width = props.width + "px";
+    }
+    if (props.height) {
+      divElement.current!.style.height = props.height + "px";
+    }
+
   },[]);
 
   return (
-    <div ref={ref} className="window">
+    <div ref={divElement} className="window">
       <div className="menu-bar">
         <div><div style={{display:"block", width: "10px"}}></div><h3>{props.title}</h3></div>
         <div>
@@ -124,8 +138,8 @@ const DraggableWindow = forwardRef<HTMLDivElement, WindowProps>((props: WindowPr
               divElement.current!.style.left = "0";
               (divElement.current!.getElementsByClassName('window-content')[0] as HTMLDivElement)!.style.maxHeight = "100%";
             }}></button>
-          <button className="round yellow" onClick = {() => disableWindow()}></button>
-          <button className="round red" onClick = {() => disableWindow()}></button>
+          <button className="round yellow" onClick = {() => removeWindow()}></button>
+          <button className="round red" onClick = {() => removeWindow()}></button>
         </div>
       </div> 
       <div className="window-content">
@@ -133,7 +147,7 @@ const DraggableWindow = forwardRef<HTMLDivElement, WindowProps>((props: WindowPr
       </div>
   </div>
   );
-})
+}
 
 export default DraggableWindow;
 

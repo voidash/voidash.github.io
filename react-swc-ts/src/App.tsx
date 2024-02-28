@@ -10,7 +10,7 @@ function App() {
 let windows = useWindowStore((state) => state.windows); 
 
 useEffect(() => {
-    const gradient = document.querySelector(".moving-gradient") as HTMLDivElement;
+  const gradient = document.querySelector(".moving-gradient") as HTMLDivElement;
 
   document.body.addEventListener("mousemove",(event) => {
       gradient.style.left = `${event.clientX}px`;
@@ -32,8 +32,7 @@ useEffect(() => {
 
       <NavBoard/>
      {windows.map((w) => {
-            console.log(windows);
-            return (<DraggableWindow title={w.title} content={w.content} ref={w.ref} disableWindow={w.disableWindow} />);
+            return (<DraggableWindow id={w.id} key={w.id} title={w.title} content={w.content} ref={w.ref} disableWindow={w.disableWindow} />);
       })}
 
     </>

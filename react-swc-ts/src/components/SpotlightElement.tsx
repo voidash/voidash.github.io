@@ -20,6 +20,7 @@ export type spotlightElementProps = {
 function SpotLightElement(props: spotlightElementProps) {
 
   let addWindow = useWindowStore((state) => state.addWindow);
+  let currentId = useWindowStore((state) => state.winCount);
   let windowRef = useRef<HTMLDivElement>(null);
 
   function windowClick() {
@@ -28,7 +29,7 @@ function SpotLightElement(props: spotlightElementProps) {
       windowRef.current!.style.display = "block";
     }
 
-    addWindow(windowDescription.title, windowDescription.content,windowRef);
+    addWindow(windowDescription.title, windowDescription.content);
   }
 
 

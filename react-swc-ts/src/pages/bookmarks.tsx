@@ -27,7 +27,6 @@ function Bookmark() {
     let data = await fetch(endpoint);
     if (data.ok) {
       let content = await data.json();
-      console.log(content);
       setBookmarks(content);
     }else{
       console.log("can't retreive from Notion");
@@ -38,11 +37,13 @@ function Bookmark() {
       <p>Links that i found really interesting</p>
       <div className="bookmarks">
         {bookmarks.length === 0 ? <Spinner/> :bookmarks.map((content) => {
-        return (<a className="card" key={content.Title} href={content.URL} target="_blank">
+        return (
+          <div key={content.id}>
+          <a className="card" key={content.Title} href={content.URL} target="_blank">
           <div className="title">{content.Title}</div>
           <div className="urlBar">
-            {content.Tags.map((type) => {
-                return ( <div className="tags">
+            {content.Tags.map((type,i) => {
+                return ( <div className="tags" key={i}>
                     { type === "blog" ? 
                     <img className="favicon" src={images.writing}/> :
                       type === "advice" ? 
@@ -57,9 +58,10 @@ function Bookmark() {
             })}
 
           </div>
-          <a className="url" target="_blank" href={content.URL}>{new URL(content.URL).hostname}</a> 
+          <span className="url">{new URL(content.URL).hostname}</span> 
           <div className="description">"{content.Description}"</div>
-        </a>)
+        </a>
+        </div>)
         })}
       </div>
     </>
