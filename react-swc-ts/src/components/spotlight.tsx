@@ -17,8 +17,7 @@ function SpotLight() {
   <>
 <div className="parent">
 <div className="spotlight unselectable" style = {{
-  background: `linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2)) ,url(${noise})`
-
+  background: `linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2)) ,url(${noise})`,
       }}>
    <div className="blur">
     </div>

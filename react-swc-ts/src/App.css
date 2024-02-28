@@ -121,6 +121,7 @@ kbd {
 .spotlight {
   /* position: fixed; */
   /* left: 50%; */
+  background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2)) ,url('./svg/noise.svg');
   box-sizing: border-box;
   width: 50%;
   min-height: 50vh;
