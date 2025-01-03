@@ -12,6 +12,7 @@ let mainSpotlightElements: Array<spotlightElementProps> = [
     description: "About Me",
     value: {
       type: spotlightElementType.window, 
+      url: "about-me",
       title: "About Me", 
       content: (<Aboutme/>) 
     }  
@@ -21,6 +22,7 @@ let mainSpotlightElements: Array<spotlightElementProps> = [
     description: "Bookmarks, You will find something useful here",
     value: {
       type: spotlightElementType.window,
+      url: "bookmarks",
       title: "Bookmarks",
       content: (
         <Bookmark/>
@@ -32,6 +34,7 @@ let mainSpotlightElements: Array<spotlightElementProps> = [
     description: "Timeline of My Life",
     value: {
       type: spotlightElementType.window,
+      url: "timeline",
       title: "My Timeline",
       content: (<Timeline/>)
     }
@@ -42,6 +45,7 @@ let mainSpotlightElements: Array<spotlightElementProps> = [
     description: "My Projects",
     value: {
       type: spotlightElementType.link,
+      url: "projects",
       href: "https://thapa-ashish.com.np/blog" 
     }
   },
@@ -90,12 +94,13 @@ let socials = [
   },
 ];
 
-let miscellaneous = [
+let miscellaneous : Array<spotlightElementProps> = [
   {
     icon: images.ama,
     description: "Ask Me Anything",
     value: {
       type: spotlightElementType.window,
+      url: "ama",
       title: "AMA",
       content: (<Askme/>)
     }
@@ -106,6 +111,7 @@ let miscellaneous = [
     description: "Music and Notes",
     value: {
       type: spotlightElementType.window,
+      url: "music",
       title: "Music carrying my soul",
       content: (<Music/>)
     }
@@ -115,6 +121,7 @@ let miscellaneous = [
     description: "TODO My Setup",
     value: {
       type: spotlightElementType.window,
+      url: "setup",
       title: "Setup",
       content: (<h1>Todo</h1>)
     }
@@ -124,8 +131,10 @@ let miscellaneous = [
     icon: images.cv,
     description: "TODO CV",
     value: {
-      type: spotlightElementType.link,
-      href: "https://thapa-ashish.com.np/blog"
+      type: spotlightElementType.window,
+      url: "todo",
+      title: "CV",
+      content: (<h1>Todo</h1>)
     }
   },
 ];

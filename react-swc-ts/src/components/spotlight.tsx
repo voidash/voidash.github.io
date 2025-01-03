@@ -22,8 +22,9 @@ function SpotLight() {
    <div className="blur">
     </div>
       {mapSpotlight(mainSpotlightElements)}
+
+    <div className="spotlight-element-description">Miscellaneous</div>
     <hr/>
-      <div className="spotlight-element-description">Miscellaneous</div>
       {mapSpotlight(miscellaneous)}
 
     <hr/>

@@ -3,25 +3,33 @@ import './window.css';
 import useWindowStore from '../../model/WindowStore';
 
 export type WindowProps = {
-    id: number,
+    url: string, 
     title: string, 
     content: ReactElement,
     width?: number,
     height?: number,
+    sref: React.RefObject<HTMLDivElement>,
     disableWindow?: () => void | null
 }
 
 
 const DraggableWindow = (props: WindowProps) => {
   let removeFromWindowStore = useWindowStore((state) => state.disableWindow);
-  // let divElement = ref as React.RefObject<HTMLDivElement>;
-  let divElement = useRef<HTMLDivElement>(null);
+  let divElement = props.sref;
+
+  useEffect(()=> {
+      // console.log(divElement.current!.style.display);
+      // if(divElement.current!.style.display == "None") {
+       // console.log("what is it?");
+       // divElement.current!.style.display = "Block";
+      // }
+  }, []);
 
   let removeWindow = () => {
       if(divElement.current!.style.display != "None") {
         divElement.current!.style.display = "None";
       }
-      removeFromWindowStore(props.id);
+      removeFromWindowStore(props.url);
   };
 
 
@@ -125,7 +133,7 @@ const DraggableWindow = (props: WindowProps) => {
   },[]);
 
   return (
-    <div ref={divElement} className="window">
+    <div ref={divElement} className="window" style={{display: "block"}}>
       <div className="menu-bar">
         <div><div style={{display:"block", width: "10px"}}></div><h3>{props.title}</h3></div>
         <div>

@@ -8,7 +8,7 @@ export enum spotlightElementType {
 };
 
 export type link = { type: spotlightElementType,href: string};
-export type window = {type: spotlightElementType,title: string, content: ReactElement};
+export type window = {type: spotlightElementType, url: string, title: string, content: ReactElement};
 
 export type spotlightElementProps = {
   icon: string, 
@@ -18,7 +18,7 @@ export type spotlightElementProps = {
 
 
 function SpotLightElement(props: spotlightElementProps) {
-
+  
   let addWindow = useWindowStore((state) => state.addWindow);
   let windowRef = useRef<HTMLDivElement>(null);
 
@@ -28,7 +28,7 @@ function SpotLightElement(props: spotlightElementProps) {
       windowRef.current!.style.display = "block";
     }
 
-    addWindow(windowDescription.title, windowDescription.content);
+    addWindow(windowDescription.url, windowDescription.title, windowDescription.content);
   }
 
 
