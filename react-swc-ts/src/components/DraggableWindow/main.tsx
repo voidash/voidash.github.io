@@ -1,4 +1,4 @@
-import { ReactElement, useRef, useEffect} from 'react';
+import { ReactElement, useEffect} from 'react';
 import './window.css';
 import useWindowStore from '../../model/WindowStore';
 

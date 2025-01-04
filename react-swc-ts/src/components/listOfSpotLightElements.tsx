@@ -1,10 +1,11 @@
 import { spotlightElementProps, spotlightElementType } from './SpotlightElement';
 import images from '../svg/images';
 import Bookmark from '../pages/bookmarks';
-import { Music } from '../pages/music';
 import Aboutme from '../pages/aboutme';
 import Askme from '../pages/askme';
 import Timeline from '../pages/timeline';
+import { NotionPage } from '../pages/genericNotion';
+
 
 let mainSpotlightElements: Array<spotlightElementProps> = [
   {
@@ -39,14 +40,14 @@ let mainSpotlightElements: Array<spotlightElementProps> = [
       content: (<Timeline/>)
     }
   },
-
   {
-    icon: images.blueprint,
-    description: "My Projects",
+    icon: images.ama,
+    description: "Ask Me Anything",
     value: {
-      type: spotlightElementType.link,
-      url: "projects",
-      href: "https://thapa-ashish.com.np/blog" 
+      type: spotlightElementType.window,
+      url: "ama",
+      title: "AMA",
+      content: (<Askme/>)
     }
   },
 ];
@@ -96,16 +97,15 @@ let socials = [
 
 let miscellaneous : Array<spotlightElementProps> = [
   {
-    icon: images.ama,
-    description: "Ask Me Anything",
+    icon: images.blueprint,
+    description: "Blueprint for 2025",
     value: {
       type: spotlightElementType.window,
-      url: "ama",
-      title: "AMA",
-      content: (<Askme/>)
+      url: "2025",
+      title: "Where 2025 will take me",
+      content: (<NotionPage url='Blueprint-for-2025-171c12466a36808fbbb4cdbfcbbe8366?pvs=4'/>)
     }
   },
-
   {
     icon: images.musicnote ,
     description: "Music and Notes",
@@ -113,28 +113,28 @@ let miscellaneous : Array<spotlightElementProps> = [
       type: spotlightElementType.window,
       url: "music",
       title: "Music carrying my soul",
-      content: (<Music/>)
+      content: (<NotionPage url='music-i-listen-to-f114f9d0040842adb8649125f13407dc'/>)
     }
   },
   {
     icon: images.briefcase,
-    description: "TODO My Setup",
+    description: "My Setup",
     value: {
       type: spotlightElementType.window,
       url: "setup",
       title: "Setup",
-      content: (<h1>Todo</h1>)
+      content: (<NotionPage url='My-Setup-171c12466a36802a9ebdf6ec516f7f3f'/>)
     }
   },
 
   {
     icon: images.cv,
-    description: "TODO CV",
+    description: "Books",
     value: {
       type: spotlightElementType.window,
-      url: "todo",
-      title: "CV",
-      content: (<h1>Todo</h1>)
+      url: "books",
+      title: "My Books",
+      content: (<NotionPage url='Books-171c12466a3680869dd4dd1007de7b10'/>)
     }
   },
 ];

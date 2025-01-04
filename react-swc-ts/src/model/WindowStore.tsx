@@ -1,4 +1,4 @@
-import { ReactElement, useRef } from 'react';
+import { ReactElement } from 'react';
 import create from 'zustand';
 
 import { WindowProps } from '../components/DraggableWindow/main';
@@ -39,7 +39,6 @@ const useWindowStore = create<WindowStore>((set) => ({
   },
 
   disableWindow: (url: string) => {
-    history.back();
     set((state) => {
       return {
           windows: [...(state.windows.filter((val) =>  {return val.url !== url;}))],
@@ -49,13 +48,15 @@ const useWindowStore = create<WindowStore>((set) => ({
   },
   disableRecent: () => {
       set((state) => {
-        let current = state.windows.splice(-1);
-        if (current.length != 0) {
-            current[0].sref.current!.style.display = "None";
+        let current = state.windows.pop();
+        if (current != undefined)  {
+            if(current.sref.current!.style.display != "None") {
+              current.sref.current!.style.display = "None";
+            }
         }
 
         return {
-            windows: state.windows,
+            windows: [...state.windows],
         }
       }
     )
