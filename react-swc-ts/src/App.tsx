@@ -38,8 +38,10 @@ function App() {
 
   function resolvePath() {
       let url = window.location.href;
+      console.log(url);
       let splitPaths : any[] = [];
       if (url.includes("?/")) {
+        console.log("url includes this");
         splitPaths = window.location.href.split("?/")[1].split("/");
       } else {
         splitPaths = window.location.pathname.split("/").slice(1);
