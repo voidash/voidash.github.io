@@ -37,17 +37,24 @@ function App() {
   },[]);
 
   function resolvePath() {
-      let splitPaths = window.location.pathname.split("/");
+      let url = window.location.href;
+      let splitPaths : any[] = [];
+      if (url.includes("?/")) {
+        splitPaths = window.location.href.split("?/")[1].split("/");
+      } else {
+        splitPaths = window.location.pathname.split("/").slice(1);
+      }
+      console.log(splitPaths);
 
       // if pathname is empty
-      if (splitPaths.length < 2) {
+      if (splitPaths.length < 1) {
           return undefined;
       }
 
 
-      if (splitPaths[1] === "notion") {
+      if (splitPaths[0] === "notion") {
         //use notion url
-        let path = splitPaths[2];
+        let path = splitPaths[1];
         // build url and then fetch routine
         let url = `${NotionURL}/v1/page/${path}`;
 
@@ -78,14 +85,14 @@ function App() {
         let cnt = <HocWindow content={content} fetchRoutine={fetchRoutine}/>;
         addWindow(window.location.pathname, "Notion Window", cnt);
 
-      } else if(splitPaths[1] === 'admin') {
+      } else if(splitPaths[0] === 'admin') {
           addWindow("admin", "admin dashboard", <Admin/>)
         
       } else {
         // try to check our own elements
         let element = mainSpotlightElements
           .concat(miscellaneous).find((el) => {
-            return (el.value as any).url === splitPaths[1];
+            return (el.value as any).url === splitPaths[0];
           });
         
         // if element is found
