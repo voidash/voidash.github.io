@@ -22,8 +22,9 @@ function App() {
 
   useEffect(() => {
     const gradient = document.querySelector(".moving-gradient") as HTMLDivElement;
+    let url = window.location.href;
+    console.log(url);
 
-    console.log("stateChange");
     document.body.addEventListener("mousemove", (event) => {
         gradient.style.left = `${event.clientX}px`;
         gradient.style.top = `${event.clientY}px`;  
@@ -31,7 +32,6 @@ function App() {
 
     resolvePath();
     window.addEventListener("popstate", () => {
-        console.log("popper");
         removeWindow();
     })
   },[]);
