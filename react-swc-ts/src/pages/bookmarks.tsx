@@ -1,5 +1,5 @@
 import { useState,useEffect } from "react";
-import { NotionURL } from "../model/MiscStore";
+import { fetchNotionDatabase } from "../lib/notion-direct";
 import './css/bookmark.css';
 
 import images from "../svg/images";
@@ -22,14 +22,11 @@ function Bookmark() {
   }, []);
 
   async function getBookmarks() {
-    const tableURL = '6fab1aca487d4d8c875e6625c5d01a0a?v=6dc3a9d4faf04d19942183cb3e3e1359';
-    let endpoint = `${NotionURL}/v1/table/${tableURL}`;
-    let data = await fetch(endpoint);
-    if (data.ok) {
-      let content = await data.json();
+    try {
+      const content = await fetchNotionDatabase('6fab1aca487d4d8c875e6625c5d01a0a');
       setBookmarks(content);
-    }else{
-      console.log("can't retreive from Notion");
+    } catch (error) {
+      console.error("Can't retrieve from Notion:", error);
     }
   }
   return (

@@ -1,5 +1,5 @@
 import './css/timeline.css';
-import { NotionURL } from '../model/MiscStore';
+import { fetchNotionDatabase } from '../lib/notion-direct';
 import HocWindow from './hoc';
 
 
@@ -13,13 +13,12 @@ type TimelineType = {
 }
 
 let fetchRoutine = async () => {
-  let res = await fetch(`${NotionURL}/v1/table/70bfec27eb6a4e11882b95e32bfdcdca`);
-  let json = await res.json();
+  let json = await fetchNotionDatabase('70bfec27eb6a4e11882b95e32bfdcdca');
   let final_result = json.sort((a: TimelineType,b: TimelineType) => {
     let d1 = new Date(a.StartDate);
     let d2 = new Date(b.StartDate);
     if (d1 > d2) {
-      return 1; 
+      return 1;
     }
     return -1;
   });
