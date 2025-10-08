@@ -10,6 +10,19 @@ export default function SimpleHomePage() {
         </p>
       </header>
 
+      <section style={{ marginBottom: '40px', padding: '20px', background: '#f9f9f9', borderRadius: '8px' }}>
+        <h2 style={{ fontSize: '18px', marginBottom: '15px', color: '#333' }}>View Mode</h2>
+        <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
+          <a href="/spa" style={{ fontSize: '16px', color: '#0066cc', textDecoration: 'none' }}>
+            SPA
+          </a>
+          <span style={{ color: '#999' }}>|</span>
+          <span style={{ fontSize: '16px', color: '#666', fontWeight: '500' }}>
+            Simple (current)
+          </span>
+        </div>
+      </section>
+
       <nav style={{ marginBottom: '40px' }}>
         <h2 style={{ marginBottom: '20px' }}>Navigation</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
@@ -35,6 +48,21 @@ export default function SimpleHomePage() {
           </li>
         </ul>
       </nav>
+
+      <section style={{ marginBottom: '40px' }}>
+        <h2 style={{ marginBottom: '20px' }}>Socials</h2>
+        <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+          <a href="https://github.com/voidash" target="_blank" rel="noopener noreferrer" style={{ fontSize: '16px', color: '#0066cc', textDecoration: 'none' }}>
+            GitHub
+          </a>
+          <a href="https://twitter.com/voidash_" target="_blank" rel="noopener noreferrer" style={{ fontSize: '16px', color: '#0066cc', textDecoration: 'none' }}>
+            Twitter
+          </a>
+          <a href="https://www.instagram.com/voidash_" target="_blank" rel="noopener noreferrer" style={{ fontSize: '16px', color: '#0066cc', textDecoration: 'none' }}>
+            Instagram
+          </a>
+        </div>
+      </section>
 
       <section style={{ background: '#f5f5f5', padding: '20px', borderRadius: '8px' }}>
         <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
