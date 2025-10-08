@@ -18,6 +18,7 @@ const notion = new Client({
 
 const TIMELINE_DB_ID = process.env.TIMELINE_DB_ID || '70bfec27eb6a4e11882b95e32bfdcdca'
 const BOOKMARKS_DB_ID = process.env.BOOKMARKS_DB_ID || '6fab1aca487d4d8c875e6625c5d01a0a'
+const BOOKS_DB_ID = process.env.BOOKS_DB_ID || 'ce0fa1f0d55b4d1f9e993ca6520455b4'
 
 const discoveredPages = new Set()
 const imageCache = {}
@@ -135,6 +136,33 @@ async function getPagesFromDatabase(databaseId) {
   }
 }
 
+async function getBooksChildPages(pageId) {
+  console.log(`\nFetching books from page: ${pageId}`)
+
+  try {
+    const response = await notion.blocks.children.list({
+      block_id: pageId.replace(/-/g, ''),
+      page_size: 100,
+    })
+
+    const bookPageIds = []
+    for (const block of response.results) {
+      if (block.type === 'child_page') {
+        const title = block.child_page?.title || 'Untitled'
+        console.log(`  ✓ Found book: ${title} (${block.id})`)
+        bookPageIds.push(block.id)
+        const nestedPages = await crawlNotionPage(block.id)
+        bookPageIds.push(...nestedPages)
+      }
+    }
+
+    return bookPageIds
+  } catch (error) {
+    console.error(`Error fetching books page ${pageId}:`, error.message)
+    return []
+  }
+}
+
 async function crawlAllNotionPages() {
   console.log('='.repeat(60))
   console.log('Starting Notion page crawler...')
@@ -145,6 +173,8 @@ async function crawlAllNotionPages() {
   allPageIds.push(...timelinePages)
   const bookmarkPages = await getPagesFromDatabase(BOOKMARKS_DB_ID)
   allPageIds.push(...bookmarkPages)
+  const bookPages = await getBooksChildPages(BOOKS_DB_ID)
+  allPageIds.push(...bookPages)
 
   const uniquePageIds = [...new Set(allPageIds)]
 

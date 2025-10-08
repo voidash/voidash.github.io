@@ -42,8 +42,18 @@ export default function SimpleHomePage() {
             </Link>
           </li>
           <li style={{ marginBottom: '12px' }}>
+            <Link href="/books" style={{ fontSize: '18px', color: '#0066cc' }}>
+              → Books I Read
+            </Link>
+          </li>
+          <li style={{ marginBottom: '12px' }}>
             <Link href="/ask" style={{ fontSize: '18px', color: '#0066cc' }}>
               → Ask Me Anything
+            </Link>
+          </li>
+          <li style={{ marginBottom: '12px' }}>
+            <Link href="/blog" style={{ fontSize: '18px', color: '#0066cc' }}>
+              → Blog
             </Link>
           </li>
         </ul>
@@ -55,8 +65,8 @@ export default function SimpleHomePage() {
           <a href="https://github.com/voidash" target="_blank" rel="noopener noreferrer" style={{ fontSize: '16px', color: '#0066cc', textDecoration: 'none' }}>
             GitHub
           </a>
-          <a href="https://twitter.com/voidash_" target="_blank" rel="noopener noreferrer" style={{ fontSize: '16px', color: '#0066cc', textDecoration: 'none' }}>
-            Twitter
+          <a href="https://x.com/rifeash" target="_blank" rel="noopener noreferrer" style={{ fontSize: '16px', color: '#0066cc', textDecoration: 'none' }}>
+            X/Twitter
           </a>
           <a href="https://www.instagram.com/voidash_" target="_blank" rel="noopener noreferrer" style={{ fontSize: '16px', color: '#0066cc', textDecoration: 'none' }}>
             Instagram

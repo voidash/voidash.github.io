@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-import ModeToggle from '@/components/ModeToggle'
 import Link from 'next/link'
 import AMAClient from './AMAClient'
 
@@ -11,7 +10,6 @@ export const metadata: Metadata = {
 export default function AMAPage() {
   return (
     <>
-      <ModeToggle />
       <main style={{ padding: '40px 20px', maxWidth: '900px', margin: '0 auto' }}>
         <nav style={{ marginBottom: '20px' }}>
           <Link href="/" style={{ color: '#0066cc', fontSize: '16px' }}>
