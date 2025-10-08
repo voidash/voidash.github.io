@@ -133,6 +133,26 @@ export default function NotionPageClient({ blocks }: NotionPageClientProps) {
           </details>
         )
 
+      case 'link_to_page':
+        const pageId = value.page_id || value.database_id
+        return pageId ? (
+          <div
+            key={id}
+            style={{
+              cursor: 'pointer',
+              textDecoration: 'underline',
+              color: '#0066cc',
+              margin: '8px 0'
+            }}
+            onClick={(e) => {
+              e.preventDefault()
+              handlePageClick(pageId)
+            }}
+          >
+            🔗 Link to page
+          </div>
+        ) : null
+
       default:
         return (
           <div key={id} style={{ color: '#888', fontSize: '0.9em', margin: '8px 0' }}>
