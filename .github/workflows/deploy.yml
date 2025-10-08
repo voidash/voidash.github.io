@@ -43,6 +43,7 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           TIMELINE_DB_ID: ${{ secrets.TIMELINE_DB_ID }}
           BOOKMARKS_DB_ID: ${{ secrets.BOOKMARKS_DB_ID }}
+          BOOKS_DB_ID: ${{ secrets.BOOKS_DB_ID }}
         run: node scripts/crawl-notion.js
 
       - name: Build Next.js site
@@ -56,6 +57,12 @@ jobs:
       - name: Install React SPA dependencies
         working-directory: react-swc-ts
         run: npm ci
+
+      - name: Fetch Notion data for SPA
+        working-directory: react-swc-ts
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        run: node scripts/fetch-notion-data.cjs
 
       - name: Build React SPA
         working-directory: react-swc-ts

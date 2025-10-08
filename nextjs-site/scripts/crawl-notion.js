@@ -61,7 +61,7 @@ async function processBlockImages(blocks) {
   for (const block of blocks) {
     if (block.type === 'image') {
       const imageUrl = block.image?.file?.url || block.image?.external?.url
-      if (imageUrl && imageUrl.includes('secure.notion-static.com')) {
+      if (imageUrl && (imageUrl.includes('secure.notion-static.com') || imageUrl.includes('amazonaws.com'))) {
         try {
           await downloadImage(imageUrl)
         } catch (err) {
