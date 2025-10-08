@@ -1,9 +1,9 @@
 /**
- * Notion Page Crawler
- * Runs at build time to discover all Notion pages that need to be statically generated
+ * Notion Page Crawler with Image Caching
+ * Runs at build time to discover all Notion pages and download images locally
  *
  * Usage: node scripts/crawl-notion.js
- * Output: JSON file with all discovered page IDs
+ * Output: JSON file with all discovered page IDs and cached images
  */
 
 const { Client } = require('@notionhq/client')
@@ -12,7 +12,6 @@ const path = require('path')
 const https = require('https')
 const crypto = require('crypto')
 
-// Initialize Notion client
 const notion = new Client({
   auth: process.env.NOTION_TOKEN,
 })
@@ -20,12 +19,58 @@ const notion = new Client({
 const TIMELINE_DB_ID = process.env.TIMELINE_DB_ID || '70bfec27eb6a4e11882b95e32bfdcdca'
 const BOOKMARKS_DB_ID = process.env.BOOKMARKS_DB_ID || '6fab1aca487d4d8c875e6625c5d01a0a'
 
-// Store discovered pages to avoid infinite loops
 const discoveredPages = new Set()
+const imageCache = {}
 
-/**
- * Fetch blocks from a Notion page and look for child pages
- */
+async function downloadImage(url) {
+  return new Promise((resolve, reject) => {
+    const hash = crypto.createHash('md5').update(url).digest('hex')
+    const ext = url.split('?')[0].split('.').pop() || 'jpg'
+    const filename = `${hash}.${ext}`
+    const dir = path.join(process.cwd(), 'public', 'notion-images')
+    const filepath = path.join(dir, filename)
+
+    if (fs.existsSync(filepath)) {
+      imageCache[url] = `/notion-images/${filename}`
+      resolve(`/notion-images/${filename}`)
+      return
+    }
+
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true })
+    }
+
+    const file = fs.createWriteStream(filepath)
+    https.get(url, (response) => {
+      response.pipe(file)
+      file.on('finish', () => {
+        file.close()
+        imageCache[url] = `/notion-images/${filename}`
+        console.log(`    ↳ Downloaded image: ${filename}`)
+        resolve(`/notion-images/${filename}`)
+      })
+    }).on('error', (err) => {
+      fs.unlink(filepath, () => {})
+      reject(err)
+    })
+  })
+}
+
+async function processBlockImages(blocks) {
+  for (const block of blocks) {
+    if (block.type === 'image') {
+      const imageUrl = block.image?.file?.url || block.image?.external?.url
+      if (imageUrl && imageUrl.includes('secure.notion-static.com')) {
+        try {
+          await downloadImage(imageUrl)
+        } catch (err) {
+          console.error(`    ✗ Failed to download image: ${imageUrl}`, err.message)
+        }
+      }
+    }
+  }
+}
+
 async function crawlNotionPage(pageId) {
   if (discoveredPages.has(pageId)) {
     console.log(`  ↳ Already crawled: ${pageId}`)
@@ -41,15 +86,13 @@ async function crawlNotionPage(pageId) {
       page_size: 100,
     })
 
-    const childPageIds = []
+    await processBlockImages(response.results)
 
-    // Look for child_page blocks
+    const childPageIds = []
     for (const block of response.results) {
       if (block.type === 'child_page') {
         console.log(`  ↳ Found child page: ${block.id}`)
         childPageIds.push(block.id)
-
-        // Recursively crawl the child page
         const nestedPages = await crawlNotionPage(block.id)
         childPageIds.push(...nestedPages)
       }
@@ -62,9 +105,6 @@ async function crawlNotionPage(pageId) {
   }
 }
 
-/**
- * Get all pages from a database that have isPage: true
- */
 async function getPagesFromDatabase(databaseId) {
   console.log(`\nFetching pages from database: ${databaseId}`)
 
@@ -75,19 +115,14 @@ async function getPagesFromDatabase(databaseId) {
     })
 
     const pageIds = []
-
     for (const page of response.results) {
       const properties = page.properties
-
-      // Check if this entry has isPage: true
       const isPage = properties.isPage?.checkbox || false
 
       if (isPage) {
         const title = properties.Title?.title?.[0]?.plain_text || properties.Name?.title?.[0]?.plain_text || 'Untitled'
         console.log(`  ✓ Found page: ${title} (${page.id})`)
         pageIds.push(page.id)
-
-        // Crawl this page for nested pages
         const nestedPages = await crawlNotionPage(page.id)
         pageIds.push(...nestedPages)
       }
@@ -100,47 +135,41 @@ async function getPagesFromDatabase(databaseId) {
   }
 }
 
-/**
- * Main crawler function
- */
 async function crawlAllNotionPages() {
   console.log('='.repeat(60))
   console.log('Starting Notion page crawler...')
   console.log('='.repeat(60))
 
   const allPageIds = []
-
-  // Crawl Timeline database
   const timelinePages = await getPagesFromDatabase(TIMELINE_DB_ID)
   allPageIds.push(...timelinePages)
-
-  // Crawl Bookmarks database (if it has pages)
   const bookmarkPages = await getPagesFromDatabase(BOOKMARKS_DB_ID)
   allPageIds.push(...bookmarkPages)
 
-  // Remove duplicates
   const uniquePageIds = [...new Set(allPageIds)]
 
   console.log('\n' + '='.repeat(60))
   console.log(`✓ Crawl complete! Found ${uniquePageIds.length} unique pages`)
+  console.log(`✓ Downloaded ${Object.keys(imageCache).length} images`)
   console.log('='.repeat(60))
 
-  // Write to JSON file
   const outputPath = path.join(__dirname, '..', 'notion-pages.json')
   fs.writeFileSync(
     outputPath,
     JSON.stringify({ pages: uniquePageIds, timestamp: new Date().toISOString() }, null, 2)
   )
-
   console.log(`\n✓ Saved to: ${outputPath}`)
+
+  const imageCachePath = path.join(__dirname, '..', 'image-cache.json')
+  fs.writeFileSync(imageCachePath, JSON.stringify(imageCache, null, 2))
+  console.log('✓ Image cache saved to:', imageCachePath)
 
   return uniquePageIds
 }
 
-// Run the crawler
 if (require.main === module) {
   crawlAllNotionPages()
-    .then((pages) => {
+    .then(() => {
       console.log('\n✓ Crawler finished successfully')
       process.exit(0)
     })
