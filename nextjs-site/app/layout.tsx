@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { ModeProvider } from '@/components/ModeProvider'
 
 export const metadata: Metadata = {
   title: 'Ashish Thapa',
@@ -15,9 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ModeProvider>
-          {children}
-        </ModeProvider>
+        {children}
       </body>
     </html>
   )
