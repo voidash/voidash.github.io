@@ -21,7 +21,7 @@ export function ThemeToggle() {
       className="theme-toggle"
       aria-label="Toggle theme"
     >
-      {theme === 'dark' ? '☀️' : '🌙'}
+      {theme === 'dark' ? 'Light' : 'Dark'}
     </button>
   )
 }
