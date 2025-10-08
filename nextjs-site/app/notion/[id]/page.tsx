@@ -1,6 +1,7 @@
 import { fetchNotionPage } from '@/lib/notion-direct'
 import { Metadata } from 'next'
 import Link from 'next/link'
+import { ThemeToggle } from '@/components/ThemeToggle'
 import NotionPageClient from './NotionPageClient'
 import fs from 'fs'
 import path from 'path'
@@ -58,6 +59,7 @@ export default async function NotionPage({ params }: Props) {
 
   return (
     <>
+      <ThemeToggle />
       <main style={{ padding: '40px 20px', maxWidth: '900px', margin: '0 auto' }}>
         <nav style={{ marginBottom: '20px' }}>
           <Link href="/timeline" style={{ color: '#0066cc', fontSize: '16px' }}>
@@ -68,7 +70,7 @@ export default async function NotionPage({ params }: Props) {
         {error && (
           <div style={{ padding: '20px', background: 'rgba(255, 0, 0, 0.1)', border: '1px solid red', borderRadius: '5px', marginBottom: '20px' }}>
             <p>⚠️ Unable to load Notion page. The Notion API may be temporarily unavailable.</p>
-            <p style={{ fontSize: '0.9em', color: '#888' }}>{error}</p>
+            <p style={{ fontSize: '0.9em', color: 'var(--text-secondary)' }}>{error}</p>
           </div>
         )}
 

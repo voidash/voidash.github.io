@@ -7,7 +7,7 @@
 
 .timeline li {
   padding: 24px 0;
-  border-bottom: 1px solid rgba(100, 100, 100, 0.15);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .timeline li:last-child {
@@ -26,19 +26,19 @@
 .event-title {
   font-size: 1.25em;
   font-weight: 600;
-  color: var(--foreground, #000);
+  color: var(--text-primary);
   letter-spacing: 0.2px;
 }
 
 .event-date {
   font-size: 0.9em;
-  color: rgba(100, 100, 100, 0.6);
+  color: var(--text-secondary);
   font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
   white-space: nowrap;
 }
 
 .event-description {
-  color: rgba(80, 80, 80, 0.8);
+  color: var(--text-secondary);
   line-height: 1.6;
   font-size: 1em;
   margin-bottom: 12px;
@@ -49,17 +49,17 @@
   padding: 8px 16px;
   margin-top: 8px;
   background: transparent;
-  border: 1px solid rgba(100, 100, 100, 0.3);
+  border: 1px solid var(--border-color);
   border-radius: 4px;
-  color: var(--foreground, #000);
+  color: var(--text-primary);
   text-decoration: none;
   font-size: 0.9em;
   transition: all 0.2s ease;
 }
 
 .event-link:hover {
-  border-color: rgba(100, 100, 100, 0.6);
-  background: rgba(100, 100, 100, 0.05);
+  border-color: var(--text-secondary);
+  background: var(--bg-secondary);
 }
 
 @media screen and (max-width: 600px) {

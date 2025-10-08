@@ -1,6 +1,7 @@
 import { Client } from '@notionhq/client'
 import { Metadata } from 'next'
 import Link from 'next/link'
+import { ThemeToggle } from '@/components/ThemeToggle'
 import './books.css'
 
 const BOOKS_PAGE_ID = process.env.BOOKS_DB_ID || 'ce0fa1f0d55b4d1f9e993ca6520455b4'
@@ -52,6 +53,7 @@ export default async function BooksPage() {
 
   return (
     <>
+      <ThemeToggle />
       <main style={{ padding: '40px 20px', maxWidth: '900px', margin: '0 auto' }}>
         <nav style={{ marginBottom: '20px' }}>
           <Link href="/" style={{ color: '#0066cc', fontSize: '16px' }}>
@@ -60,12 +62,12 @@ export default async function BooksPage() {
         </nav>
 
         <h1 style={{ marginBottom: '10px' }}>Books I Read</h1>
-        <p style={{ color: '#666', marginBottom: '40px' }}>Books that shaped my thinking</p>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: '40px' }}>Books that shaped my thinking</p>
 
         {error && (
           <div style={{ padding: '20px', background: 'rgba(255, 0, 0, 0.1)', border: '1px solid red', borderRadius: '5px', marginBottom: '20px' }}>
             <p>⚠️ Unable to load books. The Notion API may be temporarily unavailable.</p>
-            <p style={{ fontSize: '0.9em', color: '#888' }}>{error}</p>
+            <p style={{ fontSize: '0.9em', color: 'var(--text-secondary)' }}>{error}</p>
           </div>
         )}
 

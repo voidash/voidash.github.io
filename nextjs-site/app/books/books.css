@@ -6,7 +6,7 @@
 
 .book-item {
   padding: 12px 0;
-  border-bottom: 1px solid rgba(100, 100, 100, 0.15);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .book-item:last-child {
@@ -27,6 +27,6 @@
 .book-title {
   font-weight: 500;
   font-size: 1.05em;
-  color: var(--foreground, #000);
+  color: var(--text-primary);
   line-height: 1.4;
 }

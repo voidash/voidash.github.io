@@ -7,7 +7,7 @@
 
 .card {
   padding: 16px 0;
-  border-bottom: 1px solid rgba(100, 100, 100, 0.15);
+  border-bottom: 1px solid var(--border-color);
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@
 .title {
   font-weight: 500;
   font-size: 1.05em;
-  color: var(--foreground, #000);
+  color: var(--text-primary);
   line-height: 1.4;
 }
 
@@ -40,7 +40,7 @@
   align-items: center;
   gap: 4px;
   font-size: 0.8em;
-  color: rgba(100, 100, 100, 0.7);
+  color: var(--text-secondary);
 }
 
 .favicon {
@@ -55,12 +55,12 @@
 
 .url {
   font-size: 0.8em;
-  color: rgba(100, 100, 100, 0.6);
+  color: var(--text-secondary);
   font-family: monospace;
 }
 
 .description {
-  color: rgba(80, 80, 80, 0.7);
+  color: var(--text-secondary);
   font-size: 0.9em;
   line-height: 1.5;
   margin-top: 4px;

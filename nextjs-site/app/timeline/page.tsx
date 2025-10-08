@@ -1,6 +1,7 @@
 import { fetchNotionDatabase } from '@/lib/notion-direct'
 import { Metadata } from 'next'
 import Link from 'next/link'
+import { ThemeToggle } from '@/components/ThemeToggle'
 import './timeline.css'
 
 const TIMELINE_DB_ID = process.env.TIMELINE_DB_ID || '70bfec27eb6a4e11882b95e32bfdcdca'
@@ -40,6 +41,7 @@ export default async function TimelinePage() {
 
   return (
     <>
+      <ThemeToggle />
       <main style={{ padding: '40px 20px', maxWidth: '1200px', margin: '0 auto' }}>
         <nav style={{ marginBottom: '20px' }}>
           <Link href="/" style={{ color: '#0066cc', fontSize: '16px' }}>
@@ -52,7 +54,7 @@ export default async function TimelinePage() {
         {error && (
           <div style={{ padding: '20px', background: 'rgba(255, 0, 0, 0.1)', border: '1px solid red', borderRadius: '5px', marginBottom: '20px' }}>
             <p>⚠️ Unable to load timeline data. The Notion API may be temporarily unavailable.</p>
-            <p style={{ fontSize: '0.9em', color: '#888' }}>{error}</p>
+            <p style={{ fontSize: '0.9em', color: 'var(--text-secondary)' }}>{error}</p>
           </div>
         )}
 
