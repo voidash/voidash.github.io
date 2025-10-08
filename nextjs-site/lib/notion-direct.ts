@@ -86,10 +86,30 @@ export async function fetchNotionPage(pageId: string) {
       page_size: 100,
     })
 
-    // For compatibility with react-notion, we need to transform this
-    // This is a simplified version - you may need to adjust based on your needs
+    // Fetch children for blocks that have them (like toggle blocks)
+    const blocksWithChildren = await Promise.all(
+      response.results.map(async (block: any) => {
+        if (block.has_children && block.type === 'toggle') {
+          try {
+            const childrenResponse = await notion.blocks.children.list({
+              block_id: block.id,
+              page_size: 100,
+            })
+            return {
+              ...block,
+              children: childrenResponse.results,
+            }
+          } catch (error) {
+            console.error(`Error fetching children for block ${block.id}:`, error)
+            return block
+          }
+        }
+        return block
+      })
+    )
+
     return {
-      blocks: response.results,
+      blocks: blocksWithChildren,
     }
   } catch (error) {
     console.error('Error fetching Notion page:', error)

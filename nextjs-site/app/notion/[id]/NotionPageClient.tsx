@@ -121,6 +121,18 @@ export default function NotionPageClient({ blocks }: NotionPageClientProps) {
           </div>
         )
 
+      case 'toggle':
+        return (
+          <details key={id} style={{ margin: '8px 0' }}>
+            <summary style={{ cursor: 'pointer', fontWeight: '500' }}>
+              {value.rich_text?.map((text: any) => text.plain_text).join('')}
+            </summary>
+            <div style={{ paddingLeft: '20px', marginTop: '8px' }}>
+              {block.children?.map((child: any) => renderBlock(child))}
+            </div>
+          </details>
+        )
+
       default:
         return (
           <div key={id} style={{ color: '#888', fontSize: '0.9em', margin: '8px 0' }}>
