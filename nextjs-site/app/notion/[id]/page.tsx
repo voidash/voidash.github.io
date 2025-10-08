@@ -24,7 +24,7 @@ export async function generateStaticParams() {
 
     if (!fs.existsSync(jsonPath)) {
       console.warn('notion-pages.json not found. Run: node scripts/crawl-notion.js')
-      return []
+      return [{ id: 'placeholder' }]
     }
 
     const data = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'))
@@ -32,12 +32,16 @@ export async function generateStaticParams() {
 
     console.log(`Generating static params for ${pages.length} Notion pages`)
 
+    if (pages.length === 0) {
+      return [{ id: 'placeholder' }]
+    }
+
     return pages.map((id: string) => ({
       id: id,
     }))
   } catch (error) {
     console.error('Error reading notion-pages.json:', error)
-    return []
+    return [{ id: 'placeholder' }]
   }
 }
 
