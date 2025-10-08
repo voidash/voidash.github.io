@@ -11,19 +11,19 @@
   padding: 12px 16px;
   font-size: 1em;
   background: transparent;
-  border: 1px solid rgba(100, 100, 100, 0.3);
+  border: 1px solid var(--border-color);
   border-radius: 4px;
-  color: var(--foreground, #000);
+  color: var(--text-primary);
   font-family: inherit;
 }
 
 .input-bar:focus {
   outline: none;
-  border-color: rgba(100, 100, 100, 0.6);
+  border-color: var(--text-secondary);
 }
 
 .input-bar::placeholder {
-  color: rgba(100, 100, 100, 0.5);
+  color: var(--text-secondary);
 }
 
 textarea.input-bar {
@@ -37,22 +37,22 @@ textarea.input-bar {
   padding: 10px 16px;
   border-radius: 4px;
   cursor: pointer;
-  border: 1px solid rgba(100, 100, 100, 0.3);
-  color: var(--foreground, #000);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
   font-family: inherit;
   transition: all 0.2s ease;
   width: fit-content;
 }
 
 .button:hover {
-  border-color: rgba(100, 100, 100, 0.6);
-  background: rgba(100, 100, 100, 0.05);
+  border-color: var(--text-secondary);
+  background: var(--bg-secondary);
 }
 
 .qna {
   margin-top: 24px;
   padding: 20px 0 20px 20px;
-  border-left: 3px solid rgba(100, 100, 100, 0.3);
+  border-left: 3px solid var(--border-color);
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -61,7 +61,7 @@ textarea.input-bar {
 .question {
   font-size: 1.15em;
   font-weight: 500;
-  color: var(--foreground, #000);
+  color: var(--text-primary);
   line-height: 1.4;
 }
 
@@ -70,25 +70,25 @@ textarea.input-bar {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: rgba(100, 100, 100, 0.7);
+  color: var(--text-secondary);
 }
 
 .avatar {
-  border: 1px solid rgba(100, 100, 100, 0.3);
+  border: 1px solid var(--border-color);
   padding: 8px 12px;
   border-radius: 50%;
   font-size: 0.9em;
-  background: rgba(100, 100, 100, 0.05);
+  background: var(--bg-secondary);
 }
 
 .name {
-  color: rgba(80, 80, 80, 0.8);
+  color: var(--text-secondary);
   font-weight: 500;
 }
 
 .answer {
   font-size: 0.95em;
-  color: rgba(80, 80, 80, 0.8);
+  color: var(--text-secondary);
   line-height: 1.5;
   margin-top: 8px;
 }
@@ -96,12 +96,12 @@ textarea.input-bar {
 .answer p {
   margin: 0 0 8px 0;
   font-weight: 500;
-  color: var(--foreground, #000);
+  color: var(--text-primary);
 }
 
 .spinner {
   text-align: center;
   padding: 40px 20px;
-  color: rgba(100, 100, 100, 0.6);
+  color: var(--text-secondary);
   font-size: 0.95em;
 }
