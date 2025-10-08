@@ -1,6 +1,5 @@
 import { fetchNotionPage } from '@/lib/notion-direct'
 import { Metadata } from 'next'
-import ModeToggle from '@/components/ModeToggle'
 import Link from 'next/link'
 import NotionPageClient from './NotionPageClient'
 import fs from 'fs'
@@ -59,7 +58,6 @@ export default async function NotionPage({ params }: Props) {
 
   return (
     <>
-      <ModeToggle />
       <main style={{ padding: '40px 20px', maxWidth: '900px', margin: '0 auto' }}>
         <nav style={{ marginBottom: '20px' }}>
           <Link href="/timeline" style={{ color: '#0066cc', fontSize: '16px' }}>
