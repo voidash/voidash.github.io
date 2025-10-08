@@ -9,6 +9,8 @@
 const { Client } = require('@notionhq/client')
 const fs = require('fs')
 const path = require('path')
+const https = require('https')
+const crypto = require('crypto')
 
 // Initialize Notion client
 const notion = new Client({
