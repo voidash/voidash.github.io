@@ -1,0 +1,158 @@
+[
+  {
+    "id": "1a5c1246-6a36-8198-86bf-f1daa74a35e4",
+    "Tags": [
+      "advice"
+    ],
+    "URL": "https://jsomers.net/blog/dictionary",
+    "Title": "You are using the wrong dictionary",
+    "Description": "26 years, 28 languages and Noah Webster came up with this masterpiece of a dictionary with 70k words. It's different from engineered modern dictionaries like Oxford and Google dictionary."
+  },
+  {
+    "id": "18fc1246-6a36-814d-87c2-ec2500482a72",
+    "Tags": [
+      "technique",
+      "approach"
+    ],
+    "URL": "http://langsec.org/",
+    "Title": "LangSec",
+    "Description": "pdfs on how improper handling of input leads to insecurity problems. Some example include: patch on postel’s principle, Shotgun parser etc"
+  },
+  {
+    "id": "18fc1246-6a36-81a5-8124-c72f31a3b357",
+    "Tags": [
+      "blog",
+      "programming"
+    ],
+    "URL": "https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/",
+    "Title": "Parse, don’t validate",
+    "Description": "Discusses how validation is harmful and how we can replace  validation logic with helpful state machine like behavior that is meant to consume for another state in static typed systems "
+  },
+  {
+    "id": "17ec1246-6a36-81cc-b569-d4bd53a9f43a",
+    "Tags": [
+      "github"
+    ],
+    "URL": "https://github.com/pingcap/talent-plan",
+    "Title": "For Distributed systems",
+    "Description": "pingcap/talent-plan: open source training courses about distributed database and distributed systems"
+  },
+  {
+    "id": "17dc1246-6a36-8169-90db-e18aa0702498",
+    "Tags": [
+      "blog",
+      "advice"
+    ],
+    "URL": "https://www.codusoperandi.com/posts/increasing-your-luck-surface-area",
+    "Title": "How to increase your luck surface area",
+    "Description": "Codus Operandi"
+  },
+  {
+    "id": "164c1246-6a36-804a-bfbf-da8191ed446d",
+    "Tags": [
+      "critique"
+    ],
+    "URL": "https://www.unqualified-reservations.org/2013/03/sam-altman-is-not-blithering-idiot/",
+    "Title": "Sam altman is not a blithering idiot",
+    "Description": "Discusses about Pig Philosophy and whether human advancement is equal to technological advancement"
+  },
+  {
+    "id": "fba970b7-be14-4608-890c-40f99a7cf51b",
+    "Tags": [
+      "programmingadvice",
+      "experiencedprogrammer"
+    ],
+    "URL": "http://www.ranum.com/security/computer_security/editorials/dumb/",
+    "Title": "“Good Engineering is cool” rather than “Hacking is cool”",
+    "Description": "The Six Dumbest Ideas in Computer Security"
+  },
+  {
+    "id": "0f9569fd-3431-4e7a-8ce6-ebe6ce02b174",
+    "Tags": [
+      "methodology",
+      "software development",
+      "testing",
+      "approach",
+      "technique"
+    ],
+    "URL": "https://mmapped.blog/posts/29-plan-execute",
+    "Title": "Design patterns ",
+    "Description": "The plan-execute pattern"
+  },
+  {
+    "id": "3f394366-0a47-4711-bab1-6d361db461f9",
+    "Tags": [
+      "vim",
+      "tips",
+      "gvim",
+      "vimtips",
+      "gvimfeatures",
+      "zzapper"
+    ],
+    "URL": "https://www.ele.uri.edu/faculty/vetter/Other-stuff/vi/vimtips.html",
+    "Title": "Best of Vim Tips",
+    "Description": "Best of VIM Tips, gVIM's Key Features zzapper"
+  },
+  {
+    "id": "ccbfc892-7fd2-4de3-a936-74068c5e78ba",
+    "Tags": [
+      "archi",
+      "dev",
+      "critique"
+    ],
+    "URL": "https://aosabook.org/en/index.html",
+    "Title": "The Architecture of Open Source Applications",
+    "Description": "Architects look at thousands of buildings during their training, and study critiques of those buildings written by masters. In contrast, most software developers only ever get to know a handful of large programs well—usually programs they wrote themselves—and never study the great programs of history. As a result, they repeat one another's mistakes rather than building on one another's successes"
+  },
+  {
+    "id": "14862723-fc8e-4b48-af45-35b4747887db",
+    "Tags": [
+      "video"
+    ],
+    "URL": "https://www.youtube.com/watch?v=1pQJkt7-R4Q&t=59s",
+    "Title": "Reed Solomon Codes",
+    "Description": "What are Reed-Solomon Codes? How computers recover lost data - YouTube"
+  },
+  {
+    "id": "449be8aa-294b-4c76-87a6-961ed216232e",
+    "Tags": [
+      "blog"
+    ],
+    "URL": "https://kristoff.it/blog/maintain-it-with-zig/",
+    "Title": "Maintain it With Zig | Loris Cro's Blog",
+    "Description": "Rewrite is not the answer, Maintenance is the way forward in the world where Kubernetes makes more sense for career than cmake "
+  },
+  {
+    "id": "97d265a0-ef69-4886-80b7-d00529f453db",
+    "Tags": [
+      "blog"
+    ],
+    "URL": "https://www.dreamsongs.com/RiseOfWorseIsBetter.html",
+    "Title": "Rise of Worse Is Better",
+    "Description": "Simplicity is the main concern, consistency, completeness, correctness all can be sacrificed in name of simplicity. Simplicity gets the work done. C and Unix are example of worse is better. "
+  },
+  {
+    "id": "472f6ff1-d092-41f7-bb8a-86143c5c922e",
+    "Tags": [
+      "blog",
+      "blogpost",
+      "programmingadvice",
+      "experiencedprogrammer"
+    ],
+    "URL": "https://medium.com/@alexey.inkin/advice-to-my-younger-self-and-you-after-20-years-in-programming-a3a2ccc7a942",
+    "Title": "Programmers Journey",
+    "Description": "Advice from a programmer with 20 years of experience"
+  },
+  {
+    "id": "82d3400e-2f24-4296-8be8-8bf1e0baba99",
+    "Tags": [
+      "video",
+      "talk",
+      "creator",
+      "godbolt"
+    ],
+    "URL": "https://www.youtube.com/watch?v=bSkpMdDe4g4",
+    "Title": "What has compiler done for me lately",
+    "Description": "Talk from the Matt Godbolt. Creator of godbolt.org"
+  }
+]

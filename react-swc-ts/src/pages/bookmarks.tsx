@@ -1,5 +1,4 @@
 import { useState,useEffect } from "react";
-import { fetchNotionDatabase } from "../lib/notion-direct";
 import './css/bookmark.css';
 
 import images from "../svg/images";
@@ -23,10 +22,14 @@ function Bookmark() {
 
   async function getBookmarks() {
     try {
-      const content = await fetchNotionDatabase('6fab1aca487d4d8c875e6625c5d01a0a');
+      const response = await fetch('/spa/data/bookmarks.json');
+      if (!response.ok) {
+        throw new Error('Failed to fetch bookmarks data');
+      }
+      const content = await response.json();
       setBookmarks(content);
     } catch (error) {
-      console.error("Can't retrieve from Notion:", error);
+      console.error("Can't retrieve bookmarks:", error);
     }
   }
   return (

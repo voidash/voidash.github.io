@@ -1,5 +1,4 @@
 import './css/timeline.css';
-import { fetchNotionDatabase } from '../lib/notion-direct';
 import HocWindow from './hoc';
 
 
@@ -13,7 +12,11 @@ type TimelineType = {
 }
 
 let fetchRoutine = async () => {
-  let json = await fetchNotionDatabase('70bfec27eb6a4e11882b95e32bfdcdca');
+  const response = await fetch('/spa/data/timeline.json');
+  if (!response.ok) {
+    throw new Error('Failed to fetch timeline data');
+  }
+  let json = await response.json();
   let final_result = json.sort((a: TimelineType,b: TimelineType) => {
     let d1 = new Date(a.StartDate);
     let d2 = new Date(b.StartDate);
