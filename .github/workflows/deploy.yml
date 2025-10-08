@@ -33,7 +33,7 @@ jobs:
           cache: 'npm'
           cache-dependency-path: nextjs-site/package-lock.json
 
-      - name: Install dependencies
+      - name: Install Next.js dependencies
         working-directory: nextjs-site
         run: npm ci
 
@@ -45,7 +45,7 @@ jobs:
           BOOKMARKS_DB_ID: ${{ secrets.BOOKMARKS_DB_ID }}
         run: node scripts/crawl-notion.js
 
-      - name: Build static site
+      - name: Build Next.js site
         working-directory: nextjs-site
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
@@ -53,14 +53,34 @@ jobs:
           BOOKMARKS_DB_ID: ${{ secrets.BOOKMARKS_DB_ID }}
         run: npm run build
 
-      - name: Add .nojekyll file
-        working-directory: nextjs-site
-        run: touch out/.nojekyll
+      - name: Install React SPA dependencies
+        working-directory: react-swc-ts
+        run: npm ci
+
+      - name: Build React SPA
+        working-directory: react-swc-ts
+        run: npm run build
+
+      - name: Prepare deployment directory
+        run: |
+          mkdir -p deploy
+
+          # Copy Next.js build (will be served from root)
+          cp -r nextjs-site/out/* deploy/
+
+          # Copy React SPA build to /spa subdirectory
+          mkdir -p deploy/spa
+          cp -r react-swc-ts/dist/* deploy/spa/
+
+          # Add .nojekyll file
+          touch deploy/.nojekyll
+
+          # Add CNAME for custom domain
+          echo "thapa-ashish.com.np" > deploy/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./nextjs-site/out
-          cname: thapa-ashish.com.np
+          publish_dir: ./deploy
           force_orphan: true
