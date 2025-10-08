@@ -5,6 +5,13 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
+  // Disable TypeScript and ESLint checks during build (optional)
+  // typescript: {
+  //   ignoreBuildErrors: false,
+  // },
+  // eslint: {
+  //   ignoreDuringBuilds: false,
+  // },
 }
 
 module.exports = nextConfig
