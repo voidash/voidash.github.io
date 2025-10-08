@@ -1,0 +1,63 @@
+name: Deploy to GitHub Pages
+
+on:
+  # Run daily at midnight UTC
+  schedule:
+    - cron: '0 0 * * *'
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+  # Run on push to main
+  push:
+    branches:
+      - main
+    paths:
+      - 'nextjs-site/**'
+      - '.github/workflows/deploy.yml'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: nextjs-site/package-lock.json
+
+      - name: Install dependencies
+        working-directory: nextjs-site
+        run: npm ci
+
+      - name: Run Notion crawler
+        working-directory: nextjs-site
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          TIMELINE_DB_ID: ${{ secrets.TIMELINE_DB_ID }}
+          BOOKMARKS_DB_ID: ${{ secrets.BOOKMARKS_DB_ID }}
+        run: node scripts/crawl-notion.js
+
+      - name: Build static site
+        working-directory: nextjs-site
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          TIMELINE_DB_ID: ${{ secrets.TIMELINE_DB_ID }}
+          BOOKMARKS_DB_ID: ${{ secrets.BOOKMARKS_DB_ID }}
+        run: npm run build
+
+      - name: Add .nojekyll file
+        working-directory: nextjs-site
+        run: touch out/.nojekyll
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./nextjs-site/out
+          cname: thapa-ashish.com.np

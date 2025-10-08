@@ -1,0 +1,58 @@
+@import url('https://fonts.cdnfonts.com/css/cabin-3');
+
+:root {
+  --bg-color: #0F172A;
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.complex-mode * {
+  font-family: 'Cabin', sans-serif;
+  color: white;
+  font-style: normal;
+}
+
+.complex-mode body {
+  background: var(--bg-color);
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.moving-gradient {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(15,23,42,1) 76%);
+  transform: translate(-200px,-200px);
+  transition: left 0.07s, top 0.07s;
+  z-index: -10;
+}
+
+.backdrop-content {
+  cursor: default;
+  position: absolute;
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20vh;
+  width: 100%;
+  overflow: hidden;
+  line-height: 20vh;
+  text-align: center;
+  letter-spacing: 0.1em;
+  background: radial-gradient(38.86% 3763.24% at 50% 50%, rgba(224, 172, 213, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
