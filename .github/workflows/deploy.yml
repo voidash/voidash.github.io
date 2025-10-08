@@ -61,6 +61,22 @@ jobs:
         working-directory: react-swc-ts
         run: npm run build
 
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Checkout Hugo blog
+        uses: actions/checkout@v4
+        with:
+          repository: voidash/blog
+          path: blog-repo
+
+      - name: Build Hugo blog
+        working-directory: blog-repo
+        run: hugo --minify
+
       - name: Prepare deployment directory
         run: |
           mkdir -p deploy
@@ -71,6 +87,10 @@ jobs:
           # Copy React SPA build to /spa subdirectory
           mkdir -p deploy/spa
           cp -r react-swc-ts/dist/* deploy/spa/
+
+          # Copy Hugo blog to /blog subdirectory
+          mkdir -p deploy/blog
+          cp -r blog-repo/public/* deploy/blog/
 
           # Add .nojekyll file
           touch deploy/.nojekyll
