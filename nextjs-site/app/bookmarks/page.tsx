@@ -2,6 +2,7 @@ import { fetchNotionDatabase } from '@/lib/notion-direct'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { ThemeToggle } from '@/components/ThemeToggle'
+import BookmarksClient from './BookmarksClient'
 import './bookmarks.css'
 
 const BOOKMARKS_DB_ID = process.env.BOOKMARKS_DB_ID || '6fab1aca487d4d8c875e6625c5d01a0a'
@@ -32,19 +33,6 @@ export default async function BookmarksPage() {
     console.error('Bookmarks fetch error:', e)
   }
 
-  const getIcon = (type: string) => {
-    switch (type) {
-      case 'blog':
-        return '📝'
-      case 'advice':
-        return '💬'
-      case 'video':
-        return '📹'
-      default:
-        return '📝'
-    }
-  }
-
   return (
     <>
       <ThemeToggle />
@@ -69,25 +57,7 @@ export default async function BookmarksPage() {
           <p>Loading bookmarks...</p>
         )}
 
-        <div className="bookmarks">
-          {bookmarks.map((content) => (
-            <div key={content.id}>
-              <a className="card" href={content.URL} target="_blank" rel="noopener noreferrer">
-                <div className="title">{content.Title}</div>
-                <div className="urlBar">
-                  {content.Tags.map((type, i) => (
-                    <div className="tags" key={i}>
-                      <span className="favicon">{getIcon(type)}</span>
-                      <div className="tag">{type}</div>
-                    </div>
-                  ))}
-                </div>
-                <span className="url">{new URL(content.URL).hostname}</span>
-                <div className="description">"{content.Description}"</div>
-              </a>
-            </div>
-          ))}
-        </div>
+        {bookmarks.length > 0 && <BookmarksClient bookmarks={bookmarks} />}
       </main>
     </>
   )

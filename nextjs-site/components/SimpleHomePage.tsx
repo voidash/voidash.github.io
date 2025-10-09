@@ -55,9 +55,9 @@ export default function SimpleHomePage() {
               </Link>
             </li>
             <li style={{ marginBottom: '12px' }}>
-              <Link href="/blog" style={{ fontSize: '18px', color: '#0066cc' }}>
+              <a href="https://voidash.github.io/blog" style={{ fontSize: '18px', color: '#0066cc', textDecoration: 'none' }}>
                 → Blog
-              </Link>
+              </a>
             </li>
           </ul>
         </nav>

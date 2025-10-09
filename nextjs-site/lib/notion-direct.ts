@@ -1,4 +1,5 @@
 import { Client } from '@notionhq/client'
+import { replaceImageUrlsInBlocks } from './image-url-mapper'
 
 // You need to create a Notion integration and get the token from:
 // https://www.notion.so/my-integrations
@@ -108,8 +109,11 @@ export async function fetchNotionPage(pageId: string) {
       })
     )
 
+    // Replace AWS image URLs with local cached versions
+    const blocksWithReplacedImages = replaceImageUrlsInBlocks(blocksWithChildren)
+
     return {
-      blocks: blocksWithChildren,
+      blocks: blocksWithReplacedImages,
     }
   } catch (error) {
     console.error('Error fetching Notion page:', error)
