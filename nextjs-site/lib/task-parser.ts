@@ -121,6 +121,7 @@ export function extractTodos(markdown: string, sourceDate: string): TodoItem[] {
           label,
           sourceDate,
           completed: task.completed,
+          createdAt: new Date().toISOString(),
         })
         break // Only add once per task even if multiple todo tags
       }

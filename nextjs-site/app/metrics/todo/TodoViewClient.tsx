@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { db } from '@/lib/firebase'
-import { collection, query, orderBy, getDocs, addDoc, updateDoc, doc, deleteDoc } from 'firebase/firestore'
+import { collection, query, orderBy, getDocs, addDoc, updateDoc, doc, deleteDoc, where } from 'firebase/firestore'
 import { DailyLog } from '@/lib/metrics-types'
 import { extractTodos, TodoItem } from '@/lib/task-parser'
 import Link from 'next/link'
