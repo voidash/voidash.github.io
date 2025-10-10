@@ -1,0 +1,68 @@
+{
+  "management": {
+    "weeklyLogSetup": true,
+    "dailyLoggedDays": 6,
+    "financeLogSetup": true
+  },
+  "learning": {
+    "loggedDays": 6,
+    "learningArtifactsCount": 4,
+    "revisionNotesCreated": 2,
+    "revisionRevisitPoints": 15,
+    "learningTodo": {
+      "s0": 8,
+      "add": 3,
+      "close": 5
+    }
+  },
+  "producer": {
+    "publicOutputsCount": 1,
+    "producerTodo": {
+      "s0": 5,
+      "add": 2,
+      "close": 3
+    }
+  },
+  "finance": {
+    "income": 50000,
+    "spend": 28000,
+    "spendCap": 12500,
+    "targetSavingsRate": 0.4,
+    "financeConceptApplied": "implemented",
+    "portfolioReview": "ips_checked",
+    "financeTodo": {
+      "s0": 3,
+      "add": 1,
+      "close": 2
+    }
+  },
+  "fitness": {
+    "loggedDays": 7,
+    "gymSessions": 4,
+    "avgWeightActual": 72.5,
+    "targetWeight": 72.0,
+    "caloriesTrackedDays": 6,
+    "fitnessTodo": {
+      "s0": 4,
+      "add": 1,
+      "close": 3
+    }
+  },
+  "relationship": {
+    "newInteractions": 4,
+    "familyCalls": 2,
+    "unresolvedConflicts": 0,
+    "primaryRelationshipActive": true,
+    "relationshipTodo": {
+      "s0": 2,
+      "add": 1,
+      "close": 2
+    }
+  },
+  "targets": {
+    "artifactsPerWeek": 3,
+    "gymSessionsPerWeek": 3,
+    "newInteractionsPerWeek": 3,
+    "familyCallsPerWeek": 2
+  }
+}

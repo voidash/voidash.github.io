@@ -11,6 +11,7 @@ type Qn = {
   Name: string
   Question: string
   Answer: string
+  Email?: string
 }
 
 export default function AMAClient() {
@@ -19,20 +20,29 @@ export default function AMAClient() {
   const [questionSubmitted, setQuestionSubmitted] = useState(false)
   const [name, setName] = useState('')
   const [qn, setQn] = useState('')
+  const [email, setEmail] = useState('')
   const [loading, setLoading] = useState(true)
 
   async function submitQN() {
     try {
-      await addDoc(collection(db, 'questions'), {
+      const questionData: any = {
         Name: name,
         Question: qn,
         Answer: '',
         created_at: new Date().toISOString(),
-      })
+      }
+
+      // Only include email if provided
+      if (email.trim()) {
+        questionData.Email = email.trim()
+      }
+
+      await addDoc(collection(db, 'questions'), questionData)
       setQuestionSubmitted(true)
       activateQuestionTab(false)
       setName('')
       setQn('')
+      setEmail('')
     } catch (e) {
       console.error('Error adding document: ', e)
     }
@@ -91,6 +101,14 @@ export default function AMAClient() {
             className="input-bar"
             placeholder="Question"
             required
+          />
+          <br />
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="input-bar"
+            placeholder="Email (optional - to receive answer notification)"
           />
           <br />
           <input

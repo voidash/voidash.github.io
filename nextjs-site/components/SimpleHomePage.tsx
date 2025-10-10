@@ -1,7 +1,12 @@
 import Link from 'next/link'
 import { ThemeToggle } from './ThemeToggle'
+import { BlogPost, formatDate } from '@/lib/rss-parser'
 
-export default function SimpleHomePage() {
+type SimpleHomePageProps = {
+  recentPosts: BlogPost[]
+}
+
+export default function SimpleHomePage({ recentPosts }: SimpleHomePageProps) {
   return (
     <>
       <ThemeToggle />
@@ -55,6 +60,11 @@ export default function SimpleHomePage() {
               </Link>
             </li>
             <li style={{ marginBottom: '12px' }}>
+              <Link href="/metrics" style={{ fontSize: '18px', color: '#0066cc' }}>
+                → Life Metrics
+              </Link>
+            </li>
+            <li style={{ marginBottom: '12px' }}>
               <a href="https://voidash.github.io/blog" style={{ fontSize: '18px', color: '#0066cc', textDecoration: 'none' }}>
                 → Blog
               </a>
@@ -75,6 +85,77 @@ export default function SimpleHomePage() {
               Instagram
             </a>
           </div>
+        </section>
+
+        <section style={{ marginBottom: '40px' }}>
+          <h2 style={{ marginBottom: '20px' }}>Recent Blog Posts</h2>
+          {recentPosts.length === 0 ? (
+            <p style={{ color: 'var(--text-secondary)' }}>No recent posts available.</p>
+          ) : (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              {recentPosts.map((post, index) => (
+                <article
+                  key={index}
+                  style={{
+                    borderBottom: '1px solid var(--border-color)',
+                    paddingBottom: '20px',
+                  }}
+                >
+                  <a
+                    href={post.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      fontSize: '18px',
+                      color: '#0066cc',
+                      textDecoration: 'none',
+                      fontWeight: '500',
+                      display: 'block',
+                      marginBottom: '8px',
+                    }}
+                  >
+                    {post.title}
+                  </a>
+                  <time
+                    style={{
+                      fontSize: '14px',
+                      color: 'var(--text-secondary)',
+                      display: 'block',
+                      marginBottom: '8px',
+                    }}
+                  >
+                    {formatDate(post.pubDate)}
+                  </time>
+                  {post.description && (
+                    <p
+                      style={{
+                        fontSize: '15px',
+                        color: 'var(--text-secondary)',
+                        lineHeight: '1.5',
+                        margin: 0,
+                      }}
+                    >
+                      {post.description.length > 150
+                        ? `${post.description.substring(0, 150)}...`
+                        : post.description}
+                    </p>
+                  )}
+                </article>
+              ))}
+            </div>
+          )}
+          <a
+            href="https://thapa-ashish.com.np/blog"
+            style={{
+              display: 'inline-block',
+              marginTop: '20px',
+              fontSize: '16px',
+              color: '#0066cc',
+              textDecoration: 'none',
+            }}
+          >
+            → View all posts
+          </a>
         </section>
 
         <section style={{ background: 'var(--bg-secondary)', padding: '20px', borderRadius: '8px' }}>
