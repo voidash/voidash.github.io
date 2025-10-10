@@ -6,6 +6,9 @@ on:
     - cron: '0 1 * * 1'
   workflow_dispatch: # Allow manual trigger
 
+permissions:
+  contents: write  # Allow the action to commit and push
+
 jobs:
   refresh-metrics:
     runs-on: ubuntu-latest
