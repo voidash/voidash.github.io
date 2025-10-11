@@ -1,0 +1,627 @@
+{
+  "f114f9d0-0408-42ad-b864-9125f13407dc": {
+    "value": {
+      "id": "f114f9d0-0408-42ad-b864-9125f13407dc",
+      "version": 265,
+      "type": "page",
+      "properties": {
+        "title": [
+          [
+            "Music I listen to"
+          ]
+        ]
+      },
+      "content": [
+        "e70ed5a7-6674-4594-a32b-d31aae5a315e",
+        "179c1246-6a36-8014-959f-eb4b1bee655f",
+        "179c1246-6a36-80b1-a057-f7f015205a6d",
+        "179c1246-6a36-80b3-b739-fe855e221577",
+        "4eaf4e74-2c42-4d4f-a51f-48ed56b4c131",
+        "ce864306-b358-468c-97d7-9b5f173e48f4",
+        "894eca55-b757-4d1d-808f-6662e8face39",
+        "179c1246-6a36-8028-a405-f1e31921cfa6",
+        "179c1246-6a36-809b-b4b7-e55ca5f63349",
+        "27992f0a-cc4c-4d55-81fc-ea0a08575403",
+        "179c1246-6a36-80d4-93b3-c83fa4e8dcfa",
+        "179c1246-6a36-801d-9e90-fa229edcf951",
+        "0152888c-8c8b-4a70-a702-190ddae93dc3",
+        "89d05d1e-c700-4b02-bc4a-2ab5a8db88bd",
+        "179c1246-6a36-80dd-901e-c79d1ae87adc",
+        "310e1497-ab1f-43d3-af43-cb72974c956e",
+        "211e3885-00fe-48e6-8738-b92517426dbb",
+        "16635957-3d4c-4f3b-b7b1-717f4fbc84ae",
+        "179c1246-6a36-80eb-a26b-f8fbc5a66aa5"
+      ],
+      "format": {
+        "use_crdt": false,
+        "page_icon": "🎵",
+        "page_cover": "/images/page-cover/met_william_morris_1878.jpg",
+        "page_cover_position": 1,
+        "social_media_image_preview_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5879eef3-18ea-4bbc-bd29-f5fd2e827242/577b3c8b-e64a-4a8d-9abf-12e4444d5261/SocialMediaPreviewImage.png"
+      },
+      "created_time": 1709029268696,
+      "last_edited_time": 1736690612765,
+      "parent_id": "487f0fd0-cab8-42ec-bcb7-73a992104e62",
+      "parent_table": "block",
+      "alive": true,
+      "file_ids": [
+        "577b3c8b-e64a-4a8d-9abf-12e4444d5261"
+      ],
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "tHP2OX7g_rwr5Qky-D3sHw,\"start\",\"end\"",
+          "n": {
+            "tHP2OX7g_rwr5Qky-D3sHw,\"start\",\"end\"": {
+              "s": {
+                "x": "tHP2OX7g_rwr5Qky-D3sHw",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "3L24-Zfj_Ydi",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 17,
+                    "c": "Music I listen to"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "487f0fd0-cab8-42ec-bcb7-73a992104e62": {
+    "value": {
+      "id": "487f0fd0-cab8-42ec-bcb7-73a992104e62",
+      "version": 145,
+      "type": "page",
+      "properties": {
+        "title": [
+          [
+            "Portfolio"
+          ]
+        ]
+      },
+      "content": [
+        "3aec3947-84ab-48dd-90fb-e44b948a7da9",
+        "f114f9d0-0408-42ad-b864-9125f13407dc",
+        "4b840ab3-1f97-48b3-961d-3ff88745f00c",
+        "c389a2ba-98f5-49ee-acf6-bd10d9e4bb07",
+        "535d7114-97b1-4223-ba4f-7dd378f40008",
+        "8defdd66-fd6f-4b24-af48-6b9a17e924d5"
+      ],
+      "format": {
+        "site_id": "1b59eef3-18ea-81c0-b62f-007935a29be3",
+        "page_icon": "🏅",
+        "social_media_image_preview_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5879eef3-18ea-4bbc-bd29-f5fd2e827242/830bfbb3-b9bd-4f3b-beb4-401a1f4f2c8a/SocialMediaPreviewImage.png"
+      },
+      "permissions": [
+        {
+          "role": "editor",
+          "type": "user_permission",
+          "user_id": "434f1b06-ea28-452f-8994-d8a57f7ee1f4"
+        },
+        {
+          "role": "reader",
+          "type": "public_permission",
+          "is_site": true,
+          "added_timestamp": 1709009004511
+        },
+        {
+          "role": {
+            "read_content": true,
+            "insert_content": true,
+            "update_content": true
+          },
+          "type": "bot_permission",
+          "bot_id": "386b5011-bf30-4d61-93d0-f4c3e84240f6",
+          "parent_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+          "parent_table": "space"
+        }
+      ],
+      "created_time": 1700028501124,
+      "last_edited_time": 1759918911977,
+      "parent_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "parent_table": "space",
+      "alive": true,
+      "file_ids": [
+        "830bfbb3-b9bd-4f3b-beb4-401a1f4f2c8a"
+      ],
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "x8PzfEsrTg4WHcrh0L-fbw,\"start\",\"end\"",
+          "n": {
+            "x8PzfEsrTg4WHcrh0L-fbw,\"start\",\"end\"": {
+              "s": {
+                "x": "x8PzfEsrTg4WHcrh0L-fbw",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "qT84P9CyIl5N",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 9,
+                    "c": "Portfolio"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "e70ed5a7-6674-4594-a32b-d31aae5a315e": {
+    "value": {
+      "id": "e70ed5a7-6674-4594-a32b-d31aae5a315e",
+      "version": 264,
+      "type": "sub_sub_header",
+      "properties": {
+        "title": [
+          [
+            "TODO:"
+          ]
+        ]
+      },
+      "created_time": 1709394541429,
+      "last_edited_time": 1736690117939,
+      "parent_id": "f114f9d0-0408-42ad-b864-9125f13407dc",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242"
+    },
+    "role": "reader"
+  },
+  "179c1246-6a36-8014-959f-eb4b1bee655f": {
+    "value": {
+      "id": "179c1246-6a36-8014-959f-eb4b1bee655f",
+      "version": 520,
+      "type": "text",
+      "properties": {
+        "title": [
+          [
+            "As times change, music taste does. There is interesting piece of literature surrounding this very idea. I want to write about this with interpretation of how it connects to me. "
+          ]
+        ]
+      },
+      "created_time": 1736690117933,
+      "last_edited_time": 1736690174015,
+      "parent_id": "f114f9d0-0408-42ad-b864-9125f13407dc",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242"
+    },
+    "role": "reader"
+  },
+  "179c1246-6a36-80b1-a057-f7f015205a6d": {
+    "value": {
+      "id": "179c1246-6a36-80b1-a057-f7f015205a6d",
+      "version": 306,
+      "type": "text",
+      "properties": {
+        "title": [
+          [
+            "\nIn the mean time you can go through my music exploration journey and best music for that year…."
+          ]
+        ]
+      },
+      "created_time": 1736690319758,
+      "last_edited_time": 1736690519370,
+      "parent_id": "f114f9d0-0408-42ad-b864-9125f13407dc",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242"
+    },
+    "role": "reader"
+  },
+  "179c1246-6a36-80b3-b739-fe855e221577": {
+    "value": {
+      "id": "179c1246-6a36-80b3-b739-fe855e221577",
+      "version": 72,
+      "type": "sub_header",
+      "properties": {
+        "title": [
+          [
+            "Best Songs through my Lifetime"
+          ]
+        ]
+      },
+      "created_time": 1736690488836,
+      "last_edited_time": 1736690495738,
+      "parent_id": "f114f9d0-0408-42ad-b864-9125f13407dc",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242"
+    },
+    "role": "reader"
+  },
+  "4eaf4e74-2c42-4d4f-a51f-48ed56b4c131": {
+    "value": {
+      "id": "4eaf4e74-2c42-4d4f-a51f-48ed56b4c131",
+      "version": 763,
+      "type": "text",
+      "properties": {
+        "title": [
+          [
+            "There are lots of songs, some with genuinely good feel good melody, some perspective shifters and on and on. I will curate this section once i have some time. "
+          ]
+        ]
+      },
+      "created_time": 1709394615979,
+      "last_edited_time": 1712171476020,
+      "parent_id": "f114f9d0-0408-42ad-b864-9125f13407dc",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242"
+    },
+    "role": "reader"
+  },
+  "ce864306-b358-468c-97d7-9b5f173e48f4": {
+    "value": {
+      "id": "ce864306-b358-468c-97d7-9b5f173e48f4",
+      "version": 34,
+      "type": "sub_sub_header",
+      "properties": {
+        "title": [
+          [
+            "2019"
+          ]
+        ]
+      },
+      "created_time": 1709394615979,
+      "last_edited_time": 1709394636350,
+      "parent_id": "f114f9d0-0408-42ad-b864-9125f13407dc",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242"
+    },
+    "role": "reader"
+  },
+  "894eca55-b757-4d1d-808f-6662e8face39": {
+    "value": {
+      "id": "894eca55-b757-4d1d-808f-6662e8face39",
+      "version": 13,
+      "type": "video",
+      "properties": {
+        "source": [
+          [
+            "https://music.youtube.com/watch?v=HpuDNBr2D6g"
+          ]
+        ]
+      },
+      "format": {
+        "block_width": 480,
+        "display_source": "https://www.youtube.com/embed/HpuDNBr2D6g?rel=0",
+        "block_full_width": false,
+        "block_page_width": false,
+        "block_aspect_ratio": 0.5625,
+        "block_preserve_scale": true
+      },
+      "created_time": 1709394596689,
+      "last_edited_time": 1709394610112,
+      "parent_id": "f114f9d0-0408-42ad-b864-9125f13407dc",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242"
+    },
+    "role": "reader"
+  },
+  "179c1246-6a36-8028-a405-f1e31921cfa6": {
+    "value": {
+      "id": "179c1246-6a36-8028-a405-f1e31921cfa6",
+      "version": 20,
+      "type": "sub_header",
+      "properties": {
+        "title": [
+          [
+            "2020"
+          ]
+        ]
+      },
+      "created_time": 1736690526417,
+      "last_edited_time": 1736690529570,
+      "parent_id": "f114f9d0-0408-42ad-b864-9125f13407dc",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242"
+    },
+    "role": "reader"
+  },
+  "179c1246-6a36-809b-b4b7-e55ca5f63349": {
+    "value": {
+      "id": "179c1246-6a36-809b-b4b7-e55ca5f63349",
+      "version": 11,
+      "type": "video",
+      "properties": {
+        "source": [
+          [
+            "https://www.youtube.com/watch?v=iXE_K2Kpoqc"
+          ]
+        ]
+      },
+      "format": {
+        "link_title": "Punch Brothers: NPR Music Tiny Desk Concert",
+        "block_width": 480,
+        "link_author": "NPR Music",
+        "link_provider": "YouTube",
+        "display_source": "https://www.youtube.com/embed/iXE_K2Kpoqc?rel=0",
+        "block_full_width": false,
+        "block_page_width": false,
+        "block_aspect_ratio": 0.5625,
+        "block_preserve_scale": true
+      },
+      "created_time": 1736690557492,
+      "last_edited_time": 1736690564275,
+      "parent_id": "f114f9d0-0408-42ad-b864-9125f13407dc",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242"
+    },
+    "role": "reader"
+  },
+  "27992f0a-cc4c-4d55-81fc-ea0a08575403": {
+    "value": {
+      "id": "27992f0a-cc4c-4d55-81fc-ea0a08575403",
+      "version": 20,
+      "type": "sub_header",
+      "properties": {
+        "title": [
+          [
+            "2021"
+          ]
+        ]
+      },
+      "created_time": 1712170954934,
+      "last_edited_time": 1736690190860,
+      "parent_id": "f114f9d0-0408-42ad-b864-9125f13407dc",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242"
+    },
+    "role": "reader"
+  },
+  "179c1246-6a36-80d4-93b3-c83fa4e8dcfa": {
+    "value": {
+      "id": "179c1246-6a36-80d4-93b3-c83fa4e8dcfa",
+      "version": 11,
+      "type": "video",
+      "properties": {
+        "source": [
+          [
+            "https://www.youtube.com/watch?v=bQ3f1wRv0sM"
+          ]
+        ]
+      },
+      "format": {
+        "link_title": "तिमी सत्तामा छौ - जेसन कुँवर (Timi Sattama Chhau - Jason Kunwar)",
+        "block_width": 480,
+        "link_author": "Jason Kunwar",
+        "link_provider": "YouTube",
+        "display_source": "https://www.youtube.com/embed/bQ3f1wRv0sM?rel=0",
+        "block_full_width": false,
+        "block_page_width": false,
+        "block_aspect_ratio": 0.5625,
+        "block_preserve_scale": true
+      },
+      "created_time": 1736690212145,
+      "last_edited_time": 1736690218299,
+      "parent_id": "f114f9d0-0408-42ad-b864-9125f13407dc",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242"
+    },
+    "role": "reader"
+  },
+  "179c1246-6a36-801d-9e90-fa229edcf951": {
+    "value": {
+      "id": "179c1246-6a36-801d-9e90-fa229edcf951",
+      "version": 3,
+      "type": "text",
+      "created_time": 1736690186298,
+      "last_edited_time": 1736690186300,
+      "parent_id": "f114f9d0-0408-42ad-b864-9125f13407dc",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242"
+    },
+    "role": "reader"
+  },
+  "0152888c-8c8b-4a70-a702-190ddae93dc3": {
+    "value": {
+      "id": "0152888c-8c8b-4a70-a702-190ddae93dc3",
+      "version": 76,
+      "type": "sub_header",
+      "properties": {
+        "title": [
+          [
+            "2022"
+          ]
+        ]
+      },
+      "format": {
+        "use_crdt": false
+      },
+      "created_time": 1709394604164,
+      "last_edited_time": 1712170974280,
+      "parent_id": "f114f9d0-0408-42ad-b864-9125f13407dc",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242"
+    },
+    "role": "reader"
+  },
+  "89d05d1e-c700-4b02-bc4a-2ab5a8db88bd": {
+    "value": {
+      "id": "89d05d1e-c700-4b02-bc4a-2ab5a8db88bd",
+      "version": 11,
+      "type": "video",
+      "properties": {
+        "source": [
+          [
+            "https://www.youtube.com/watch?v=ptcQP6Yb1Uo"
+          ]
+        ]
+      },
+      "format": {
+        "block_width": 480,
+        "display_source": "https://www.youtube.com/embed/ptcQP6Yb1Uo?rel=0",
+        "block_full_width": false,
+        "block_page_width": false,
+        "block_aspect_ratio": 0.5625,
+        "block_preserve_scale": true
+      },
+      "created_time": 1712171014368,
+      "last_edited_time": 1712171024461,
+      "parent_id": "f114f9d0-0408-42ad-b864-9125f13407dc",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242"
+    },
+    "role": "reader"
+  },
+  "179c1246-6a36-80dd-901e-c79d1ae87adc": {
+    "value": {
+      "id": "179c1246-6a36-80dd-901e-c79d1ae87adc",
+      "version": 3,
+      "type": "text",
+      "created_time": 1736690087877,
+      "last_edited_time": 1736690087879,
+      "parent_id": "f114f9d0-0408-42ad-b864-9125f13407dc",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242"
+    },
+    "role": "reader"
+  },
+  "310e1497-ab1f-43d3-af43-cb72974c956e": {
+    "value": {
+      "id": "310e1497-ab1f-43d3-af43-cb72974c956e",
+      "version": 24,
+      "type": "sub_header",
+      "properties": {
+        "title": [
+          [
+            "2023"
+          ]
+        ]
+      },
+      "created_time": 1712171032216,
+      "last_edited_time": 1712171035819,
+      "parent_id": "f114f9d0-0408-42ad-b864-9125f13407dc",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242"
+    },
+    "role": "reader"
+  },
+  "211e3885-00fe-48e6-8738-b92517426dbb": {
+    "value": {
+      "id": "211e3885-00fe-48e6-8738-b92517426dbb",
+      "version": 13,
+      "type": "video",
+      "properties": {
+        "source": [
+          [
+            "https://www.youtube.com/watch?v=Tjsshi8l-fM"
+          ]
+        ]
+      },
+      "format": {
+        "block_width": 480,
+        "block_height": 320,
+        "display_source": "https://www.youtube.com/embed/Tjsshi8l-fM?rel=0",
+        "block_full_width": false,
+        "block_page_width": false,
+        "block_aspect_ratio": 0.5625,
+        "block_preserve_scale": true
+      },
+      "created_time": 1712171135418,
+      "last_edited_time": 1712171148895,
+      "parent_id": "f114f9d0-0408-42ad-b864-9125f13407dc",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242"
+    },
+    "role": "reader"
+  },
+  "16635957-3d4c-4f3b-b7b1-717f4fbc84ae": {
+    "value": {
+      "id": "16635957-3d4c-4f3b-b7b1-717f4fbc84ae",
+      "version": 20,
+      "type": "sub_header",
+      "properties": {
+        "title": [
+          [
+            "2024"
+          ]
+        ]
+      },
+      "created_time": 1712171150629,
+      "last_edited_time": 1736690223947,
+      "parent_id": "f114f9d0-0408-42ad-b864-9125f13407dc",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242"
+    },
+    "role": "reader"
+  },
+  "179c1246-6a36-80eb-a26b-f8fbc5a66aa5": {
+    "value": {
+      "id": "179c1246-6a36-80eb-a26b-f8fbc5a66aa5",
+      "version": 11,
+      "type": "video",
+      "properties": {
+        "source": [
+          [
+            "https://www.youtube.com/watch?v=L5bGWV_7O7g"
+          ]
+        ]
+      },
+      "format": {
+        "link_title": "Chaubis Moury - Hajuraamako Darajko Basana",
+        "block_width": 480,
+        "link_author": "Ashish Thapa",
+        "link_provider": "YouTube",
+        "display_source": "https://www.youtube.com/embed/L5bGWV_7O7g?rel=0",
+        "block_full_width": false,
+        "block_page_width": false,
+        "block_aspect_ratio": 0.5625,
+        "block_preserve_scale": true
+      },
+      "created_time": 1736690266420,
+      "last_edited_time": 1736690279021,
+      "parent_id": "f114f9d0-0408-42ad-b864-9125f13407dc",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242"
+    },
+    "role": "reader"
+  }
+}
