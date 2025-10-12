@@ -2,15 +2,24 @@ import Link from 'next/link'
 import { ThemeToggle } from './ThemeToggle'
 import { BlogPost, formatDate } from '@/lib/rss-parser'
 
-type SimpleHomePageProps = {
-  recentPosts: BlogPost[]
+type BookmarkEntry = {
+  Title: string
+  id: string
+  URL: string
+  Description: string
+  Tags: Array<string>
 }
 
-export default function SimpleHomePage({ recentPosts }: SimpleHomePageProps) {
+type SimpleHomePageProps = {
+  recentPosts: BlogPost[]
+  recentBookmarks: BookmarkEntry[]
+}
+
+export default function SimpleHomePage({ recentPosts, recentBookmarks }: SimpleHomePageProps) {
   return (
     <>
       <ThemeToggle />
-      <main style={{ padding: '40px 20px', maxWidth: '800px', margin: '0 auto' }}>
+      <main style={{ padding: '40px 20px', maxWidth: '1200px', margin: '0 auto' }}>
         <header style={{ textAlign: 'center', marginBottom: '60px' }}>
           <h1 style={{ fontSize: '48px', marginBottom: '10px' }}>Ashish Thapa</h1>
           <p style={{ fontSize: '18px', color: 'var(--text-secondary)' }}>
@@ -88,80 +97,177 @@ export default function SimpleHomePage({ recentPosts }: SimpleHomePageProps) {
         </section>
 
         <section style={{ marginBottom: '40px' }}>
-          <h2 style={{ marginBottom: '20px' }}>Recent Blog Posts</h2>
-          {recentPosts.length === 0 ? (
-            <p style={{ color: 'var(--text-secondary)' }}>No recent posts available.</p>
-          ) : (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-              {recentPosts.map((post, index) => (
-                <article
-                  key={index}
-                  style={{
-                    borderBottom: '1px solid var(--border-color)',
-                    paddingBottom: '20px',
-                  }}
-                >
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '40px',
+            marginBottom: '20px'
+          }}>
+            {/* Recent Blog Posts Column */}
+            <div>
+              <h2 style={{ marginBottom: '20px' }}>Recent Blog Posts</h2>
+              {recentPosts.length === 0 ? (
+                <p style={{ color: 'var(--text-secondary)' }}>No recent posts available.</p>
+              ) : (
+                <>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                    {recentPosts.map((post, index) => (
+                      <article
+                        key={index}
+                        style={{
+                          borderBottom: '1px solid var(--border-color)',
+                          paddingBottom: '20px',
+                        }}
+                      >
+                        <a
+                          href={post.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            fontSize: '18px',
+                            color: '#0066cc',
+                            textDecoration: 'none',
+                            fontWeight: '500',
+                            display: 'block',
+                            marginBottom: '8px',
+                          }}
+                        >
+                          {post.title}
+                        </a>
+                        <time
+                          style={{
+                            fontSize: '14px',
+                            color: 'var(--text-secondary)',
+                            display: 'block',
+                            marginBottom: '8px',
+                          }}
+                        >
+                          {formatDate(post.pubDate)}
+                        </time>
+                        {post.description && (
+                          <p
+                            style={{
+                              fontSize: '15px',
+                              color: 'var(--text-secondary)',
+                              lineHeight: '1.5',
+                              margin: 0,
+                            }}
+                          >
+                            {post.description.length > 150
+                              ? `${post.description.substring(0, 150)}...`
+                              : post.description}
+                          </p>
+                        )}
+                      </article>
+                    ))}
+                  </div>
                   <a
-                    href={post.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="https://thapa-ashish.com.np/blog"
                     style={{
-                      fontSize: '18px',
+                      display: 'inline-block',
+                      marginTop: '20px',
+                      fontSize: '16px',
                       color: '#0066cc',
                       textDecoration: 'none',
-                      fontWeight: '500',
-                      display: 'block',
-                      marginBottom: '8px',
                     }}
                   >
-                    {post.title}
+                    → View all posts
                   </a>
-                  <time
+                </>
+              )}
+            </div>
+
+            {/* Recent Bookmarks Column */}
+            <div>
+              <h2 style={{ marginBottom: '20px' }}>Recent Bookmarks</h2>
+              {recentBookmarks.length === 0 ? (
+                <p style={{ color: 'var(--text-secondary)' }}>No recent bookmarks available.</p>
+              ) : (
+                <>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                    {recentBookmarks.map((bookmark) => (
+                      <article
+                        key={bookmark.id}
+                        style={{
+                          borderBottom: '1px solid var(--border-color)',
+                          paddingBottom: '20px',
+                        }}
+                      >
+                        <a
+                          href={bookmark.URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            fontSize: '18px',
+                            color: '#0066cc',
+                            textDecoration: 'none',
+                            fontWeight: '500',
+                            display: 'block',
+                            marginBottom: '8px',
+                          }}
+                        >
+                          {bookmark.Title}
+                        </a>
+                        {bookmark.Description && (
+                          <p
+                            style={{
+                              fontSize: '15px',
+                              color: 'var(--text-secondary)',
+                              lineHeight: '1.5',
+                              margin: 0,
+                              marginBottom: '8px',
+                            }}
+                          >
+                            {bookmark.Description.length > 150
+                              ? `${bookmark.Description.substring(0, 150)}...`
+                              : bookmark.Description}
+                          </p>
+                        )}
+                        {bookmark.Tags && bookmark.Tags.length > 0 && (
+                          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                            {bookmark.Tags.map((tag, idx) => (
+                              <span
+                                key={idx}
+                                style={{
+                                  fontSize: '12px',
+                                  padding: '2px 8px',
+                                  background: 'var(--bg-secondary)',
+                                  borderRadius: '4px',
+                                  color: 'var(--text-secondary)',
+                                }}
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                      </article>
+                    ))}
+                  </div>
+                  <Link
+                    href="/bookmarks"
                     style={{
-                      fontSize: '14px',
-                      color: 'var(--text-secondary)',
-                      display: 'block',
-                      marginBottom: '8px',
+                      display: 'inline-block',
+                      marginTop: '20px',
+                      fontSize: '16px',
+                      color: '#0066cc',
+                      textDecoration: 'none',
                     }}
                   >
-                    {formatDate(post.pubDate)}
-                  </time>
-                  {post.description && (
-                    <p
-                      style={{
-                        fontSize: '15px',
-                        color: 'var(--text-secondary)',
-                        lineHeight: '1.5',
-                        margin: 0,
-                      }}
-                    >
-                      {post.description.length > 150
-                        ? `${post.description.substring(0, 150)}...`
-                        : post.description}
-                    </p>
-                  )}
-                </article>
-              ))}
+                    → View all bookmarks
+                  </Link>
+                </>
+              )}
             </div>
-          )}
-          <a
-            href="https://thapa-ashish.com.np/blog"
-            style={{
-              display: 'inline-block',
-              marginTop: '20px',
-              fontSize: '16px',
-              color: '#0066cc',
-              textDecoration: 'none',
-            }}
-          >
-            → View all posts
-          </a>
+          </div>
         </section>
 
-        <section style={{ background: 'var(--bg-secondary)', padding: '20px', borderRadius: '8px' }}>
-          <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
-            Welcome to my portfolio. This site showcases my work, thoughts, and projects.
-            Navigate using the links above to explore different sections.
+        <section style={{ background: 'var(--bg-secondary)', padding: '20px', borderRadius: '8px', textAlign: 'center' }}>
+          <p style={{ fontSize: '18px', lineHeight: '1.6', fontStyle: 'italic', color: 'var(--text-primary)' }}>
+            "Without music, life would be a mistake."
+          </p>
+          <p style={{ fontSize: '14px', color: 'var(--text-secondary)', marginTop: '10px' }}>
+            — Friedrich Nietzsche
           </p>
         </section>
       </main>
