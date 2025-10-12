@@ -22,23 +22,23 @@ export default function SimpleHomePage({ recentPosts, recentBookmarks }: SimpleH
       <main style={{ padding: '40px 20px', maxWidth: '1200px', margin: '0 auto' }}>
         <header style={{ textAlign: 'center', marginBottom: '60px' }}>
           <h1 style={{ fontSize: '48px', marginBottom: '10px' }}>Ashish Thapa</h1>
-          <p style={{ fontSize: '18px', color: 'var(--text-secondary)' }}>
+          <p style={{ fontSize: '18px', color: 'var(--text-secondary)', marginBottom: '20px' }}>
             MEANING • PSYCHOLOGY • PHILOSOPHY • INNATE CURIOSITY
           </p>
+          <pre style={{
+            background: 'var(--card-bg)',
+            border: '1px solid var(--border-color)',
+            borderRadius: '6px',
+            padding: '12px',
+            fontSize: '14px',
+            color: 'var(--text-primary)',
+            overflow: 'auto',
+            display: 'inline-block',
+            margin: 0
+          }}>
+            <code>curl thapa-ashish.com.np/dir</code>
+          </pre>
         </header>
-
-        <section style={{ marginBottom: '40px', padding: '20px', background: 'var(--bg-secondary)', borderRadius: '8px' }}>
-          <h2 style={{ fontSize: '18px', marginBottom: '15px', color: 'var(--text-primary)' }}>View Mode</h2>
-          <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
-            <a href="/spa" style={{ fontSize: '16px', color: '#0066cc', textDecoration: 'none' }}>
-              SPA
-            </a>
-            <span style={{ color: 'var(--text-secondary)' }}>|</span>
-            <span style={{ fontSize: '16px', color: 'var(--text-secondary)', fontWeight: '500' }}>
-              Simple (current)
-            </span>
-          </div>
-        </section>
 
         <nav style={{ marginBottom: '40px' }}>
           <h2 style={{ marginBottom: '20px' }}>Navigation</h2>
@@ -50,8 +50,18 @@ export default function SimpleHomePage({ recentPosts, recentBookmarks }: SimpleH
             </li>
             <li style={{ marginBottom: '12px' }}>
               <Link href="/timeline" style={{ fontSize: '18px', color: '#0066cc' }}>
-                → Timeline
+                → Timeline / CV
               </Link>
+            </li>
+            <li style={{ marginBottom: '12px' }}>
+              <a href="https://thapa-ashish.com.np/digitalgarden/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '18px', color: '#0066cc', textDecoration: 'none' }}>
+                → Digital Garden
+              </a>
+            </li>
+            <li style={{ marginBottom: '12px' }}>
+              <a href="https://thapa-ashish.com.np/digitalgarden/Experiments" target="_blank" rel="noopener noreferrer" style={{ fontSize: '18px', color: '#0066cc', textDecoration: 'none' }}>
+                → Experiments/Projects
+              </a>
             </li>
             <li style={{ marginBottom: '12px' }}>
               <Link href="/bookmarks" style={{ fontSize: '18px', color: '#0066cc' }}>
@@ -74,7 +84,7 @@ export default function SimpleHomePage({ recentPosts, recentBookmarks }: SimpleH
               </Link>
             </li>
             <li style={{ marginBottom: '12px' }}>
-              <a href="https://voidash.github.io/blog" style={{ fontSize: '18px', color: '#0066cc', textDecoration: 'none' }}>
+              <a href="https://voidash.github.io/blog" target="_blank" rel="noopener noreferrer" style={{ fontSize: '18px', color: '#0066cc', textDecoration: 'none' }}>
                 → Blog
               </a>
             </li>
@@ -262,12 +272,28 @@ export default function SimpleHomePage({ recentPosts, recentBookmarks }: SimpleH
           </div>
         </section>
 
-        <section style={{ background: 'var(--bg-secondary)', padding: '20px', borderRadius: '8px', textAlign: 'center' }}>
+        <section style={{ background: 'var(--bg-secondary)', padding: '20px', borderRadius: '8px', textAlign: 'center', marginBottom: '40px' }}>
           <p style={{ fontSize: '18px', lineHeight: '1.6', fontStyle: 'italic', color: 'var(--text-primary)' }}>
             "Without music, life would be a mistake."
           </p>
           <p style={{ fontSize: '14px', color: 'var(--text-secondary)', marginTop: '10px' }}>
             — Friedrich Nietzsche
+          </p>
+        </section>
+
+        <section style={{ marginBottom: '40px', padding: '20px', background: 'var(--bg-secondary)', borderRadius: '8px' }}>
+          <h2 style={{ fontSize: '18px', marginBottom: '15px', color: 'var(--text-primary)' }}>View Mode</h2>
+          <div style={{ display: 'flex', gap: '15px', alignItems: 'center', marginBottom: '10px' }}>
+            <a href="/spa" style={{ fontSize: '16px', color: '#0066cc', textDecoration: 'none' }}>
+              SPA
+            </a>
+            <span style={{ color: 'var(--text-secondary)' }}>|</span>
+            <span style={{ fontSize: '16px', color: 'var(--text-secondary)', fontWeight: '500' }}>
+              Simple (current)
+            </span>
+          </div>
+          <p style={{ fontSize: '13px', color: 'var(--text-secondary)', margin: 0 }}>
+            <strong>Note:</strong> Single page mode has no feature parity with simple mode. SPA has OS like windows if you're into that.
           </p>
         </section>
       </main>
