@@ -42,8 +42,8 @@ async function generatePublicMetrics() {
 
     const metricsData = snapshot.docs[0].data();
 
-    // Write to JSON file
-    const outputPath = path.join(__dirname, '../data/public-metrics.json');
+    // Write to JSON file in public directory (so it's accessible as static asset)
+    const outputPath = path.join(__dirname, '../public/public-metrics.json');
     fs.writeFileSync(outputPath, JSON.stringify(metricsData, null, 2));
 
     console.log(`✅ Successfully generated public-metrics.json`);

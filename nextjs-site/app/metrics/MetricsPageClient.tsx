@@ -43,7 +43,7 @@ export default function MetricsPageClient() {
       // If not logged in, fetch from static JSON file
       if (!user && !authLoading) {
         try {
-          const response = await fetch('/data/public-metrics.json')
+          const response = await fetch('/public-metrics.json')
           if (!response.ok) {
             throw new Error('Failed to fetch public metrics')
           }

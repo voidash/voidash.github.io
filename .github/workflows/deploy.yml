@@ -46,6 +46,17 @@ jobs:
           BOOKS_DB_ID: ${{ secrets.BOOKS_DB_ID }}
         run: node scripts/crawl-notion.js
 
+      - name: Generate public metrics JSON
+        working-directory: nextjs-site
+        env:
+          NEXT_PUBLIC_FIREBASE_API_KEY: "AIzaSyCwVnyj4j9vVEu88BXKxd6-4sNa-mkduVI"
+          NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: "ask-me-anything-voidash.firebaseapp.com"
+          NEXT_PUBLIC_FIREBASE_PROJECT_ID: "ask-me-anything-voidash"
+          NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET: "ask-me-anything-voidash.firebasestorage.app"
+          NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: "695897255699"
+          NEXT_PUBLIC_FIREBASE_APP_ID: "1:695897255699:web:fef029a271b72ee38f74e6"
+        run: node scripts/generate-public-metrics.js
+
       - name: Build Next.js site
         working-directory: nextjs-site
         env:
