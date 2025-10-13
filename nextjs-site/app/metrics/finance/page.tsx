@@ -1,17 +1,10 @@
-import { Metadata } from 'next'
-import { ThemeToggle } from '@/components/ThemeToggle'
-import FinanceLogClient from './FinanceLogClient'
+import { redirect } from 'next/navigation'
 
-export const metadata: Metadata = {
-  title: 'Finance Log - Ashish Thapa',
-  description: 'Track daily spending',
+export const metadata = {
+  title: 'Finance - Ashish Thapa',
+  description: 'Finance tracking dashboard',
 }
 
-export default function FinanceLogPage() {
-  return (
-    <>
-      <ThemeToggle />
-      <FinanceLogClient />
-    </>
-  )
+export default function FinancePage() {
+  redirect('/metrics/finance/dashboard')
 }

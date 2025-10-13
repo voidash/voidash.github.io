@@ -66,6 +66,10 @@ export type Income = {
 export type BudgetTarget = {
   weeklyIncome: number
   weeklySpendCap: number
+  monthlyIncome: number
+  monthlySpendCap: number
+  yearlyIncome: number
+  yearlySpendCap: number
   targetSavingsRate: number
   updatedAt: string
 }

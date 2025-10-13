@@ -28,6 +28,10 @@ export default function FinanceLogClient() {
   // Budget
   const [weeklyIncome, setWeeklyIncome] = useState(0)
   const [weeklySpendCap, setWeeklySpendCap] = useState(0)
+  const [monthlyIncome, setMonthlyIncome] = useState(0)
+  const [monthlySpendCap, setMonthlySpendCap] = useState(0)
+  const [yearlyIncome, setYearlyIncome] = useState(0)
+  const [yearlySpendCap, setYearlySpendCap] = useState(0)
   const [targetSavingsRate, setTargetSavingsRate] = useState(0.4)
 
   const [status, setStatus] = useState('')
@@ -48,9 +52,13 @@ export default function FinanceLogClient() {
     const snapshot = await getDocs(collection(db, 'budget_targets'))
     if (!snapshot.empty) {
       const target = snapshot.docs[0].data() as BudgetTarget
-      setWeeklyIncome(target.weeklyIncome)
-      setWeeklySpendCap(target.weeklySpendCap)
-      setTargetSavingsRate(target.targetSavingsRate)
+      setWeeklyIncome(target.weeklyIncome || 0)
+      setWeeklySpendCap(target.weeklySpendCap || 0)
+      setMonthlyIncome(target.monthlyIncome || 0)
+      setMonthlySpendCap(target.monthlySpendCap || 0)
+      setYearlyIncome(target.yearlyIncome || 0)
+      setYearlySpendCap(target.yearlySpendCap || 0)
+      setTargetSavingsRate(target.targetSavingsRate || 0.4)
     }
   }
 
@@ -154,6 +162,10 @@ export default function FinanceLogClient() {
       const budgetData: BudgetTarget = {
         weeklyIncome,
         weeklySpendCap,
+        monthlyIncome,
+        monthlySpendCap,
+        yearlyIncome,
+        yearlySpendCap,
         targetSavingsRate,
         updatedAt: new Date().toISOString(),
       }
