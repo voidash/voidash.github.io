@@ -21,7 +21,7 @@ export default function SimpleHomePage({ recentPosts, recentBookmarks }: SimpleH
       <ThemeToggle />
       <main style={{ padding: '40px 20px', maxWidth: '1200px', margin: '0 auto' }}>
         <header style={{ textAlign: 'center', marginBottom: '60px' }}>
-          <h1 style={{ fontSize: '48px', marginBottom: '10px' }}>Ashish Thapa</h1>
+          <h1 style={{ fontSize: '48px', marginBottom: '10px' }}>Voidash</h1>
           <p style={{ fontSize: '18px', color: 'var(--text-secondary)', marginBottom: '20px' }}>
             MEANING • PSYCHOLOGY • PHILOSOPHY • INNATE CURIOSITY
           </p>
@@ -36,7 +36,7 @@ export default function SimpleHomePage({ recentPosts, recentBookmarks }: SimpleH
             display: 'inline-block',
             margin: 0
           }}>
-            <code>curl thapa-ashish.com.np/dir</code>
+            <code>curl voidash.github.io/dir</code>
           </pre>
         </header>
 

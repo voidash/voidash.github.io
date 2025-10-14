@@ -266,6 +266,29 @@ export default function DailyLogClient() {
     setActiveTab('add')
   }
 
+  async function handleDeleteLog(logId: string) {
+    if (!confirm('Are you sure you want to delete this daily log?')) return
+
+    try {
+      await deleteDoc(firestoreDoc(db, 'daily_logs', logId))
+      setStatus('✓ Log deleted')
+
+      // Refresh the logs list
+      const q = query(collection(db, 'daily_logs'), orderBy('date', 'desc'))
+      const snapshot = await getDocs(q)
+      const logs = snapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      } as DailyLog & { id: string }))
+      setAllLogs(logs)
+
+      setTimeout(() => setStatus(''), 2000)
+    } catch (error) {
+      console.error('Error deleting log:', error)
+      setStatus('Error deleting log')
+    }
+  }
+
   if (authLoading) {
     return (
       <div style={{ maxWidth: '900px', margin: '0 auto', padding: '40px 20px', textAlign: 'center' }}>
@@ -561,9 +584,24 @@ export default function DailyLogClient() {
                             borderRadius: '4px',
                             cursor: 'pointer',
                             fontSize: '12px',
+                            marginRight: '5px',
                           }}
                         >
                           Edit
+                        </button>
+                        <button
+                          onClick={() => handleDeleteLog(log.id)}
+                          style={{
+                            padding: '4px 12px',
+                            background: '#ef4444',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '4px',
+                            cursor: 'pointer',
+                            fontSize: '12px',
+                          }}
+                        >
+                          Del
                         </button>
                       </td>
                     </tr>
