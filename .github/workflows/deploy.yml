@@ -57,6 +57,13 @@ jobs:
           NEXT_PUBLIC_FIREBASE_APP_ID: "1:695897255699:web:fef029a271b72ee38f74e6"
         run: node scripts/generate-public-metrics.js
 
+      - name: Generate /dir endpoint
+        working-directory: nextjs-site
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          BOOKMARKS_DB_ID: ${{ secrets.BOOKMARKS_DB_ID }}
+        run: node scripts/generate-dir.js
+
       - name: Build Next.js site
         working-directory: nextjs-site
         env:
