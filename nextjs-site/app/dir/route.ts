@@ -36,7 +36,7 @@ export async function GET(request: NextRequest) {
       socials: {
         github: 'https://github.com/voidash',
         x: 'https://x.com/rifeash',
-        digitalGarden: 'https://thapa-ashish.com.np/digitalgarden/'
+        digitalGarden: 'https://voidash.github.io/digitalgarden/'
       },
       recentBlogPosts: recentPosts.map(post => ({
         title: post.title,
@@ -66,7 +66,7 @@ Email: ashish.thapa477@gmail.com
 Socials:
   GitHub: https://github.com/voidash
   X/Twitter: https://x.com/rifeash
-  Digital Garden: https://thapa-ashish.com.np/digitalgarden/
+  Digital Garden: https://voidash.github.io/digitalgarden/
 
 Recent Blog Posts:
 ${recentPosts.map((post, i) => `  ${i + 1}. ${post.title}

@@ -67,7 +67,7 @@ BOOKMARKS_DB_ID
 ```
 
 ### Domain
-Configured for: `thapa-ashish.com.np`
+Deployed at: `voidash.github.io`
 
 ## Documentation
 

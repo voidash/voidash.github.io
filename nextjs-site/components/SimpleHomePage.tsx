@@ -54,12 +54,12 @@ export default function SimpleHomePage({ recentPosts, recentBookmarks }: SimpleH
               </Link>
             </li>
             <li style={{ marginBottom: '12px' }}>
-              <a href="https://thapa-ashish.com.np/digitalgarden/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '18px', color: '#0066cc', textDecoration: 'none' }}>
+              <a href="https://voidash.github.io/digitalgarden/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '18px', color: '#0066cc', textDecoration: 'none' }}>
                 → Digital Garden
               </a>
             </li>
             <li style={{ marginBottom: '12px' }}>
-              <a href="https://thapa-ashish.com.np/digitalgarden/Experiments" target="_blank" rel="noopener noreferrer" style={{ fontSize: '18px', color: '#0066cc', textDecoration: 'none' }}>
+              <a href="https://voidash.github.io/digitalgarden/Experiments" target="_blank" rel="noopener noreferrer" style={{ fontSize: '18px', color: '#0066cc', textDecoration: 'none' }}>
                 → Experiments/Projects
               </a>
             </li>
@@ -172,7 +172,7 @@ export default function SimpleHomePage({ recentPosts, recentBookmarks }: SimpleH
                     ))}
                   </div>
                   <a
-                    href="https://thapa-ashish.com.np/blog"
+                    href="https://voidash.github.io/blog"
                     style={{
                       display: 'inline-block',
                       marginTop: '20px',

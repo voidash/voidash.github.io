@@ -93,9 +93,6 @@ jobs:
           # Add .nojekyll file
           touch deploy/.nojekyll
 
-          # Add CNAME for custom domain
-          echo "thapa-ashish.com.np" > deploy/CNAME
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
