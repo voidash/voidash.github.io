@@ -100,9 +100,6 @@ export default function SimpleHomePage({ recentPosts, recentBookmarks }: SimpleH
             <a href="https://x.com/rifeash" target="_blank" rel="noopener noreferrer" style={{ fontSize: '16px', color: '#0066cc', textDecoration: 'none' }}>
               X/Twitter
             </a>
-            <a href="https://www.instagram.com/voidash_" target="_blank" rel="noopener noreferrer" style={{ fontSize: '16px', color: '#0066cc', textDecoration: 'none' }}>
-              Instagram
-            </a>
           </div>
         </section>
 

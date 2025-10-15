@@ -78,14 +78,6 @@ let socials = [
     }
   },
   {
-    icon: images.instagram,
-    description: "Instagram",
-    value: {
-      type: spotlightElementType.link,
-      href: "https://instagram.com/voidash_"
-    }
-  },
-  {
     icon: images.megaphone,
     description: "LinkedIn",
     value: {
