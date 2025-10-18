@@ -4,10 +4,26 @@ import { useState, useMemo, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { db } from '@/lib/firebase'
 import { collection, addDoc, query, where, getDocs, updateDoc, doc as firestoreDoc, orderBy, getDoc, deleteDoc } from 'firebase/firestore'
-import { DailyLog } from '@/lib/metrics-types'
+import { DailyLog, WeeklyLog } from '@/lib/metrics-types'
 import { parseMarkdownTasks, countCompletedTasks, extractTodos, TodoItem } from '@/lib/task-parser'
 import { useAuth } from '@/lib/auth-context'
 import Link from 'next/link'
+
+// Helper to get week start (Monday) for a given date
+function getWeekStart(dateStr: string): string {
+  const date = new Date(dateStr)
+  const day = date.getDay()
+  const diff = date.getDate() - day + (day === 0 ? -6 : 1) // Adjust to Monday
+  const monday = new Date(date.setDate(diff))
+  return monday.toISOString().split('T')[0]
+}
+
+// Helper to get previous day
+function getPreviousDay(dateStr: string): string {
+  const date = new Date(dateStr)
+  date.setDate(date.getDate() - 1)
+  return date.toISOString().split('T')[0]
+}
 
 export default function DailyLogClient() {
   const { user, loading: authLoading } = useAuth()
@@ -23,6 +39,10 @@ export default function DailyLogClient() {
   const [existingLogId, setExistingLogId] = useState<string | null>(null)
   const [allLogs, setAllLogs] = useState<Array<DailyLog & { id: string }>>([])
   const [previousTodos, setPreviousTodos] = useState<string[]>([]) // Store previous todo IDs
+
+  // Context data
+  const [weeklyLog, setWeeklyLog] = useState<WeeklyLog | null>(null)
+  const [previousDayLog, setPreviousDayLog] = useState<DailyLog | null>(null)
 
   // Fetch existing log when date changes
   useEffect(() => {
@@ -65,6 +85,39 @@ export default function DailyLogClient() {
 
     loadLogForDate()
   }, [date, user])
+
+  // Fetch context data (weekly log and previous day)
+  useEffect(() => {
+    if (!user || activeTab !== 'add') return
+
+    async function fetchContext() {
+      try {
+        // Fetch weekly log
+        const weekStart = getWeekStart(date)
+        const weekQuery = query(collection(db, 'weekly_logs'), where('weekStart', '==', weekStart))
+        const weekSnapshot = await getDocs(weekQuery)
+        if (!weekSnapshot.empty) {
+          setWeeklyLog(weekSnapshot.docs[0].data() as WeeklyLog)
+        } else {
+          setWeeklyLog(null)
+        }
+
+        // Fetch previous day's log
+        const previousDate = getPreviousDay(date)
+        const prevQuery = query(collection(db, 'daily_logs'), where('date', '==', previousDate))
+        const prevSnapshot = await getDocs(prevQuery)
+        if (!prevSnapshot.empty) {
+          setPreviousDayLog(prevSnapshot.docs[0].data() as DailyLog)
+        } else {
+          setPreviousDayLog(null)
+        }
+      } catch (error) {
+        console.error('Error fetching context:', error)
+      }
+    }
+
+    fetchContext()
+  }, [date, user, activeTab])
 
   // Fetch all logs for view tab
   useEffect(() => {
@@ -432,6 +485,69 @@ export default function DailyLogClient() {
                 }}
               />
             </div>
+
+            {/* Weekly Log Context */}
+            {weeklyLog && (
+              <div
+                style={{
+                  background: 'var(--bg-secondary)',
+                  padding: '15px',
+                  borderRadius: '4px',
+                  marginBottom: '20px',
+                  border: '1px solid var(--border-color)',
+                }}
+              >
+                <h3 style={{ marginBottom: '10px', fontSize: '16px' }}>📅 This Week's Focus</h3>
+                <div style={{ fontSize: '14px', color: 'var(--text-secondary)', marginBottom: '8px' }}>
+                  Week of {weeklyLog.weekStart}
+                </div>
+                <pre
+                  style={{
+                    whiteSpace: 'pre-wrap',
+                    fontFamily: 'monospace',
+                    fontSize: '13px',
+                    margin: 0,
+                    lineHeight: '1.6',
+                  }}
+                >
+                  {weeklyLog.tasksMarkdown}
+                </pre>
+              </div>
+            )}
+
+            {/* Previous Day Context */}
+            {previousDayLog && (
+              <div
+                style={{
+                  background: 'var(--bg-secondary)',
+                  padding: '15px',
+                  borderRadius: '4px',
+                  marginBottom: '20px',
+                  border: '1px solid var(--border-color)',
+                }}
+              >
+                <h3 style={{ marginBottom: '10px', fontSize: '16px' }}>⏮️ Previous Day</h3>
+                <div style={{ fontSize: '14px', color: 'var(--text-secondary)', marginBottom: '8px' }}>
+                  {previousDayLog.date}
+                  {(() => {
+                    const tasks = parseMarkdownTasks(previousDayLog.tasksMarkdown)
+                    const completed = tasks.filter(t => t.completed).length
+                    return ` • ${completed}/${tasks.length} tasks completed`
+                  })()}
+                </div>
+                <pre
+                  style={{
+                    whiteSpace: 'pre-wrap',
+                    fontFamily: 'monospace',
+                    fontSize: '13px',
+                    margin: 0,
+                    lineHeight: '1.6',
+                  }}
+                >
+                  {previousDayLog.tasksMarkdown}
+                </pre>
+              </div>
+            )}
 
             {/* Stats Preview */}
             {taskStats && (

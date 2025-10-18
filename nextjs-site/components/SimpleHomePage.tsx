@@ -36,7 +36,7 @@ export default function SimpleHomePage({ recentPosts, recentBookmarks }: SimpleH
             display: 'inline-block',
             margin: 0
           }}>
-            <code>curl voidash.github.io/dir</code>
+            <code>curl ash9.dev/dir</code>
           </pre>
         </header>
 

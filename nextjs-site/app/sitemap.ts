@@ -2,6 +2,8 @@ import { MetadataRoute } from 'next'
 import fs from 'fs'
 import path from 'path'
 
+export const dynamic = 'force-static'
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://voidash.github.io'
 
@@ -27,7 +29,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   try {
     const notionPagesPath = path.join(process.cwd(), 'notion-pages.json')
     if (fs.existsSync(notionPagesPath)) {
-      const pages = JSON.parse(fs.readFileSync(notionPagesPath, 'utf-8'))
+      const data = JSON.parse(fs.readFileSync(notionPagesPath, 'utf-8'))
+      const pages = data.pages || data // Handle both { pages: [] } and [] formats
       notionPages = pages.map((pageId: string) => ({
         url: `${baseUrl}/notion/${pageId}`,
         lastModified: new Date(),

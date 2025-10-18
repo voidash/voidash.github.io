@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { db } from '@/lib/firebase'
 import { collection, query, orderBy, getDocs, addDoc, updateDoc, doc, deleteDoc, where } from 'firebase/firestore'
 import { DailyLog } from '@/lib/metrics-types'
-import { extractTodos, TodoItem } from '@/lib/task-parser'
+import { TodoItem } from '@/lib/task-parser'
 import Link from 'next/link'
 
 export default function TodoViewClient() {
@@ -24,7 +24,8 @@ export default function TodoViewClient() {
 
   async function fetchTodos() {
     try {
-      // Fetch todos from Firebase collection
+      // Fetch todos from Firebase collection only
+      // DailyLogClient already syncs todos from daily logs to this collection
       const todoQuery = query(collection(db, 'todos'), orderBy('createdAt', 'desc'))
       const todoSnapshot = await getDocs(todoQuery)
       const firestoreTodos: TodoItem[] = todoSnapshot.docs.map((doc) => ({
@@ -32,20 +33,7 @@ export default function TodoViewClient() {
         ...doc.data(),
       } as TodoItem))
 
-      // Also fetch todos from daily logs
-      const dailyQuery = query(collection(db, 'daily_logs'), orderBy('date', 'desc'))
-      const dailySnapshot = await getDocs(dailyQuery)
-
-      const dailyLogTodos: TodoItem[] = []
-      dailySnapshot.docs.forEach((doc) => {
-        const log = doc.data() as DailyLog
-        const logTodos = extractTodos(log.tasksMarkdown, log.date)
-        dailyLogTodos.push(...logTodos)
-      })
-
-      // Merge both sources
-      const allTodos = [...firestoreTodos, ...dailyLogTodos]
-      setTodos(allTodos)
+      setTodos(firestoreTodos)
       setLoading(false)
     } catch (error) {
       console.error('Error fetching todos:', error)
