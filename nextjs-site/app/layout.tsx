@@ -4,7 +4,7 @@ import { ThemeProvider } from '@/components/ThemeProvider'
 import { AuthProvider } from '@/lib/auth-context'
 import { StructuredData } from '@/components/StructuredData'
 
-const siteUrl = 'https://voidash.github.io'
+const siteUrl = 'https://ash9.dev'
 const siteName = 'Ashish Thapa'
 const siteDescription = 'Software engineer exploring meaning, psychology, philosophy, and innate curiosity. Builder, thinker, and lifelong learner.'
 

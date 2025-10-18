@@ -21,7 +21,7 @@ export default function SimpleHomePage({ recentPosts, recentBookmarks }: SimpleH
       <ThemeToggle />
       <main style={{ padding: '40px 20px', maxWidth: '1200px', margin: '0 auto' }}>
         <header style={{ textAlign: 'center', marginBottom: '60px' }}>
-          <h1 style={{ fontSize: '48px', marginBottom: '10px' }}>Voidash</h1>
+          <h1 style={{ fontSize: '48px', marginBottom: '10px' }}>voidash musings</h1>
           <p style={{ fontSize: '18px', color: 'var(--text-secondary)', marginBottom: '20px' }}>
             MEANING • PSYCHOLOGY • PHILOSOPHY • INNATE CURIOSITY
           </p>
@@ -54,12 +54,12 @@ export default function SimpleHomePage({ recentPosts, recentBookmarks }: SimpleH
               </Link>
             </li>
             <li style={{ marginBottom: '12px' }}>
-              <a href="https://voidash.github.io/digitalgarden/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '18px', color: '#0066cc', textDecoration: 'none' }}>
+              <a href="https://ash9.dev/digitalgarden/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '18px', color: '#0066cc', textDecoration: 'none' }}>
                 → Digital Garden
               </a>
             </li>
             <li style={{ marginBottom: '12px' }}>
-              <a href="https://voidash.github.io/digitalgarden/Experiments" target="_blank" rel="noopener noreferrer" style={{ fontSize: '18px', color: '#0066cc', textDecoration: 'none' }}>
+              <a href="https://ash9.dev/digitalgarden/Experiments" target="_blank" rel="noopener noreferrer" style={{ fontSize: '18px', color: '#0066cc', textDecoration: 'none' }}>
                 → Experiments/Projects
               </a>
             </li>
@@ -84,7 +84,7 @@ export default function SimpleHomePage({ recentPosts, recentBookmarks }: SimpleH
               </Link>
             </li>
             <li style={{ marginBottom: '12px' }}>
-              <a href="https://voidash.github.io/blog" target="_blank" rel="noopener noreferrer" style={{ fontSize: '18px', color: '#0066cc', textDecoration: 'none' }}>
+              <a href="https://ash9.dev/blog" target="_blank" rel="noopener noreferrer" style={{ fontSize: '18px', color: '#0066cc', textDecoration: 'none' }}>
                 → Blog
               </a>
             </li>
@@ -169,7 +169,7 @@ export default function SimpleHomePage({ recentPosts, recentBookmarks }: SimpleH
                     ))}
                   </div>
                   <a
-                    href="https://voidash.github.io/blog"
+                    href="https://ash9.dev/blog"
                     style={{
                       display: 'inline-block',
                       marginTop: '20px',

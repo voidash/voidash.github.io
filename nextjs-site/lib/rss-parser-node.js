@@ -4,7 +4,7 @@
 
 async function fetchRecentBlogPosts(limit = 5) {
   try {
-    const response = await fetch('https://voidash.github.io/blog/index.xml', {
+    const response = await fetch('https://ash9.dev/blog/index.xml', {
       cache: 'no-store'
     });
 

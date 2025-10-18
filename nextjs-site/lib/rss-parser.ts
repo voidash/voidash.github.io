@@ -15,7 +15,7 @@ export type BlogPost = {
  */
 export async function fetchRecentBlogPosts(limit: number = 5): Promise<BlogPost[]> {
   try {
-    const response = await fetch('https://voidash.github.io/blog/index.xml', {
+    const response = await fetch('https://ash9.dev/blog/index.xml', {
       next: { revalidate: 3600 }, // Cache for 1 hour
     })
 

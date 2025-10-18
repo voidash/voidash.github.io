@@ -44,7 +44,7 @@ Email: ashish.thapa477@gmail.com
 Socials:
   GitHub: https://github.com/voidash
   X/Twitter: https://x.com/rifeash
-  Digital Garden: https://voidash.github.io/digitalgarden/
+  Digital Garden: https://ash9.dev/digitalgarden/
 
 Recent Blog Posts:
 ${recentPosts.length > 0

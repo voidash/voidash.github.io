@@ -67,7 +67,7 @@ BOOKMARKS_DB_ID
 ```
 
 ### Domain
-Deployed at: `voidash.github.io`
+Deployed at: `ash9.dev` (with GitHub Pages at `voidash.github.io`)
 
 ## Documentation
 

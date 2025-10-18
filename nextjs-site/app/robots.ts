@@ -11,6 +11,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/admin/', '/api/'],
       },
     ],
-    sitemap: 'https://voidash.github.io/sitemap.xml',
+    sitemap: 'https://ash9.dev/sitemap.xml',
   }
 }

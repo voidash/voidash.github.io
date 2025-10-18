@@ -66,7 +66,7 @@ let socials = [
     description: "My Blog",
     value: {
       type: spotlightElementType.link,
-      href: "https://voidash.github.io/blog"
+      href: "https://ash9.dev/blog"
     }
   },
   {

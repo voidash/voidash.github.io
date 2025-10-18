@@ -5,7 +5,7 @@ import path from 'path'
 export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://voidash.github.io'
+  const baseUrl = 'https://ash9.dev'
 
   // Static routes
   const staticRoutes = [

@@ -9,7 +9,7 @@ export function StructuredData() {
     '@type': 'Person',
     name: 'Ashish Thapa',
     alternateName: 'voidash',
-    url: 'https://voidash.github.io',
+    url: 'https://ash9.dev',
     email: 'ashish.thapa477@gmail.com',
     jobTitle: 'Software Engineer',
     description: 'Software engineer exploring meaning, psychology, philosophy, and innate curiosity',
@@ -24,7 +24,7 @@ export function StructuredData() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'Ashish Thapa',
-    url: 'https://voidash.github.io',
+    url: 'https://ash9.dev',
     description: 'Personal portfolio and digital garden',
     author: {
       '@type': 'Person',
