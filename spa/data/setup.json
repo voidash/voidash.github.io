@@ -1,0 +1,2717 @@
+{
+  "171c1246-6a36-802a-9ebd-f6ec516f7f3f": {
+    "value": {
+      "id": "171c1246-6a36-802a-9ebd-f6ec516f7f3f",
+      "version": 176,
+      "type": "page",
+      "properties": {
+        "title": [
+          [
+            "My Setup"
+          ]
+        ]
+      },
+      "content": [
+        "177c1246-6a36-800a-9d75-e2b3879e1e49",
+        "177c1246-6a36-8032-adf2-fe388df76e5d",
+        "177c1246-6a36-800b-9a04-cbc6a025a7cd",
+        "177c1246-6a36-803b-a47f-d847340e8c47",
+        "177c1246-6a36-8055-8794-c0dd963477ab",
+        "177c1246-6a36-8098-a9c9-c7dcfd87bfc2",
+        "177c1246-6a36-8075-9d0e-e5d4dd443e32",
+        "177c1246-6a36-808d-a168-fed2c26431b6",
+        "177c1246-6a36-8009-9801-d31b3d047f0c",
+        "177c1246-6a36-805d-993b-ec7b16ef98d4",
+        "177c1246-6a36-8031-bea5-d6212cf88346",
+        "177c1246-6a36-80ff-953b-cb43c471175c",
+        "177c1246-6a36-8031-a046-ed392a7493b3",
+        "177c1246-6a36-8000-a56c-e605a20189a6",
+        "177c1246-6a36-80a1-b30c-e8d60ef95780",
+        "177c1246-6a36-8099-ba17-c62dc0172e89",
+        "177c1246-6a36-808a-aaa3-fe4dbd2c2f66",
+        "177c1246-6a36-8090-b2a4-de5bbf4b9d26",
+        "177c1246-6a36-80e4-a45f-d3728f793155"
+      ],
+      "format": {
+        "page_icon": "💻",
+        "page_cover_position": 1,
+        "social_media_image_preview_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5879eef3-18ea-4bbc-bd29-f5fd2e827242/749a4a5f-0dc9-4710-8e64-d5c1a9f99e03/SocialMediaPreviewImage.png"
+      },
+      "created_time": 1735963449732,
+      "last_edited_time": 1736526002398,
+      "parent_id": "4b840ab3-1f97-48b3-961d-3ff88745f00c",
+      "parent_table": "block",
+      "alive": true,
+      "file_ids": [
+        "ba4a0828-7b67-4b82-bdaa-c4d1c0f81f02",
+        "4b942ac6-1161-4aa1-9cdd-d3af25d0f638",
+        "6ef32d5e-8d26-4ce8-935c-4521c70ee1f2",
+        "e3a8e125-20c5-43a2-961f-09cd8b77c8fc",
+        "749a4a5f-0dc9-4710-8e64-d5c1a9f99e03"
+      ],
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "TadUksL_g-bJo2wZ-Wj84Q,\"start\",\"end\"",
+          "n": {
+            "TadUksL_g-bJo2wZ-Wj84Q,\"start\",\"end\"": {
+              "s": {
+                "x": "TadUksL_g-bJo2wZ-Wj84Q",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "bYovJrDFtJBn",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 8,
+                    "c": "My Setup"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "4b840ab3-1f97-48b3-961d-3ff88745f00c": {
+    "value": {
+      "id": "4b840ab3-1f97-48b3-961d-3ff88745f00c",
+      "version": 145,
+      "type": "page",
+      "properties": {
+        "title": [
+          [
+            "Personal Database"
+          ]
+        ]
+      },
+      "content": [
+        "6fab1aca-487d-4d8c-875e-6625c5d01a0a",
+        "76d6ac1f-5d52-4df5-a71f-d826ef2380fa",
+        "70bfec27-eb6a-4e11-882b-95e32bfdcdca",
+        "12e6efc8-4d68-4f5f-898d-afdd808d9fc2",
+        "171c1246-6a36-808f-bbb4-cdbfcbbe8366",
+        "171c1246-6a36-802a-9ebd-f6ec516f7f3f",
+        "171c1246-6a36-8086-9dd4-dd1007de7b10",
+        "28ac1246-6a36-804e-aae0-ee2be06154ad",
+        "28ac1246-6a36-8061-9ccb-d81d9cb50db3"
+      ],
+      "format": {
+        "page_icon": "💽"
+      },
+      "permissions": [
+        {
+          "role": {
+            "read_comment": true,
+            "read_content": true,
+            "insert_comment": true,
+            "insert_content": true,
+            "update_content": true
+          },
+          "type": "bot_permission",
+          "bot_id": "02715098-4986-45e7-b1eb-a5bb2ca2a420",
+          "parent_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+          "parent_table": "space"
+        }
+      ],
+      "created_time": 1704876662253,
+      "last_edited_time": 1760254094182,
+      "parent_id": "487f0fd0-cab8-42ec-bcb7-73a992104e62",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "XBsXXUIJZlXZsAns1niMug,\"start\",\"end\"",
+          "n": {
+            "XBsXXUIJZlXZsAns1niMug,\"start\",\"end\"": {
+              "s": {
+                "x": "XBsXXUIJZlXZsAns1niMug",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "G1z3c6BVcXTu",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 17,
+                    "c": "Personal Database"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "487f0fd0-cab8-42ec-bcb7-73a992104e62": {
+    "value": {
+      "id": "487f0fd0-cab8-42ec-bcb7-73a992104e62",
+      "version": 149,
+      "type": "page",
+      "properties": {
+        "title": [
+          [
+            "Portfolio"
+          ]
+        ]
+      },
+      "content": [
+        "3aec3947-84ab-48dd-90fb-e44b948a7da9",
+        "f114f9d0-0408-42ad-b864-9125f13407dc",
+        "4b840ab3-1f97-48b3-961d-3ff88745f00c",
+        "28ac1246-6a36-8082-a486-e4231600d0d4",
+        "535d7114-97b1-4223-ba4f-7dd378f40008",
+        "8defdd66-fd6f-4b24-af48-6b9a17e924d5"
+      ],
+      "format": {
+        "site_id": "1b59eef3-18ea-81c0-b62f-007935a29be3",
+        "page_icon": "🏅",
+        "social_media_image_preview_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5879eef3-18ea-4bbc-bd29-f5fd2e827242/830bfbb3-b9bd-4f3b-beb4-401a1f4f2c8a/SocialMediaPreviewImage.png"
+      },
+      "permissions": [
+        {
+          "role": "editor",
+          "type": "user_permission",
+          "user_id": "434f1b06-ea28-452f-8994-d8a57f7ee1f4"
+        },
+        {
+          "role": "reader",
+          "type": "public_permission",
+          "is_site": true,
+          "added_timestamp": 1709009004511
+        },
+        {
+          "role": {
+            "read_content": true,
+            "insert_content": true,
+            "update_content": true
+          },
+          "type": "bot_permission",
+          "bot_id": "386b5011-bf30-4d61-93d0-f4c3e84240f6",
+          "parent_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+          "parent_table": "space"
+        }
+      ],
+      "created_time": 1700028501124,
+      "last_edited_time": 1760254103622,
+      "parent_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "parent_table": "space",
+      "alive": true,
+      "file_ids": [
+        "830bfbb3-b9bd-4f3b-beb4-401a1f4f2c8a"
+      ],
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "x8PzfEsrTg4WHcrh0L-fbw,\"start\",\"end\"",
+          "n": {
+            "x8PzfEsrTg4WHcrh0L-fbw,\"start\",\"end\"": {
+              "s": {
+                "x": "x8PzfEsrTg4WHcrh0L-fbw",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "qT84P9CyIl5N",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 9,
+                    "c": "Portfolio"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-800a-9d75-e2b3879e1e49": {
+    "value": {
+      "id": "177c1246-6a36-800a-9d75-e2b3879e1e49",
+      "version": 99,
+      "type": "sub_header",
+      "properties": {
+        "title": [
+          [
+            "Computers"
+          ]
+        ]
+      },
+      "created_time": 1736509333932,
+      "last_edited_time": 1736512463531,
+      "parent_id": "171c1246-6a36-802a-9ebd-f6ec516f7f3f",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "VCVfkcETNKNIOuks0HskJQ,\"start\",\"end\"",
+          "n": {
+            "VCVfkcETNKNIOuks0HskJQ,\"start\",\"end\"": {
+              "s": {
+                "x": "VCVfkcETNKNIOuks0HskJQ",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "qY3PlxlKls1-",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 9,
+                    "c": "Computers"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-8032-adf2-fe388df76e5d": {
+    "value": {
+      "id": "177c1246-6a36-8032-adf2-fe388df76e5d",
+      "version": 8,
+      "type": "column_list",
+      "content": [
+        "c5264cfb-c84c-4e12-82b1-13227d61e19b",
+        "56a7ac40-7f95-4e3a-a104-f89b67d8e886",
+        "5432868b-0b46-4d53-be0a-fa6790257e33"
+      ],
+      "format": {
+        "block_width": 720,
+        "block_full_width": false,
+        "block_page_width": true
+      },
+      "created_time": 1736512473050,
+      "last_edited_time": 1736524842596,
+      "parent_id": "171c1246-6a36-802a-9ebd-f6ec516f7f3f",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "rv_yoAyVLZ1t9Xud0NtAlg,\"start\",\"end\"",
+          "n": {
+            "rv_yoAyVLZ1t9Xud0NtAlg,\"start\",\"end\"": {
+              "s": {
+                "x": "rv_yoAyVLZ1t9Xud0NtAlg",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-800b-9a04-cbc6a025a7cd": {
+    "value": {
+      "id": "177c1246-6a36-800b-9a04-cbc6a025a7cd",
+      "version": 339,
+      "type": "sub_header",
+      "properties": {
+        "title": [
+          [
+            "\nMy Workbench stuff"
+          ]
+        ]
+      },
+      "created_time": 1736509333574,
+      "last_edited_time": 1736524727353,
+      "parent_id": "171c1246-6a36-802a-9ebd-f6ec516f7f3f",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "Vdf8BXSrEk3b5VJVvN0j5A,\"start\",\"end\"",
+          "n": {
+            "Vdf8BXSrEk3b5VJVvN0j5A,\"start\",\"end\"": {
+              "s": {
+                "x": "Vdf8BXSrEk3b5VJVvN0j5A",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "YcinJ1K82gGX",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 19,
+                    "c": "\nMy Workbench stuff"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-803b-a47f-d847340e8c47": {
+    "value": {
+      "id": "177c1246-6a36-803b-a47f-d847340e8c47",
+      "version": 4,
+      "type": "text",
+      "created_time": 1736524643583,
+      "last_edited_time": 1736524643585,
+      "parent_id": "171c1246-6a36-802a-9ebd-f6ec516f7f3f",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "M9fKJGupztcJV-VE1yNRlw,\"start\",\"end\"",
+          "n": {
+            "M9fKJGupztcJV-VE1yNRlw,\"start\",\"end\"": {
+              "s": {
+                "x": "M9fKJGupztcJV-VE1yNRlw",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-8055-8794-c0dd963477ab": {
+    "value": {
+      "id": "177c1246-6a36-8055-8794-c0dd963477ab",
+      "version": 21,
+      "type": "image",
+      "properties": {
+        "size": [
+          [
+            "94.4KB"
+          ]
+        ],
+        "title": [
+          [
+            "20250110_185313 Medium.jpeg"
+          ]
+        ],
+        "source": [
+          [
+            "/spa/images/notion/996bd0ed2ba0d7e49958cffbaa40ee81.jpeg"
+          ]
+        ]
+      },
+      "format": {
+        "block_width": 288,
+        "display_source": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5879eef3-18ea-4bbc-bd29-f5fd2e827242/3ce2d6a2-f042-46a6-818c-a71387b16aff/20250110_185313_Medium.jpeg",
+        "block_full_width": false,
+        "block_page_width": false,
+        "block_aspect_ratio": 1.3333333333333333,
+        "block_preserve_scale": true
+      },
+      "created_time": 1736524634004,
+      "last_edited_time": 1736524735783,
+      "parent_id": "171c1246-6a36-802a-9ebd-f6ec516f7f3f",
+      "parent_table": "block",
+      "alive": true,
+      "file_ids": [
+        "3ce2d6a2-f042-46a6-818c-a71387b16aff"
+      ],
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "F4LcpcFV7HLCkxrm3DIkSw,\"start\",\"end\"",
+          "n": {
+            "F4LcpcFV7HLCkxrm3DIkSw,\"start\",\"end\"": {
+              "s": {
+                "x": "F4LcpcFV7HLCkxrm3DIkSw",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "zmimSE4s8gxs",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 27,
+                    "c": "20250110_185313 Medium.jpeg"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-8098-a9c9-c7dcfd87bfc2": {
+    "value": {
+      "id": "177c1246-6a36-8098-a9c9-c7dcfd87bfc2",
+      "version": 4,
+      "type": "column_list",
+      "content": [
+        "93b57e73-87fd-4b26-89ec-be35214cdda4",
+        "1bdee3bb-437d-43c4-bc15-90afb2277068",
+        "4fbe835c-dd74-453b-8d6a-c8f7e80951a2"
+      ],
+      "created_time": 1736513363599,
+      "last_edited_time": 1736513363604,
+      "parent_id": "171c1246-6a36-802a-9ebd-f6ec516f7f3f",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "He-sJ7r1lPjIgoAliiTGwg,\"start\",\"end\"",
+          "n": {
+            "He-sJ7r1lPjIgoAliiTGwg,\"start\",\"end\"": {
+              "s": {
+                "x": "He-sJ7r1lPjIgoAliiTGwg",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-8075-9d0e-e5d4dd443e32": {
+    "value": {
+      "id": "177c1246-6a36-8075-9d0e-e5d4dd443e32",
+      "version": 44,
+      "type": "text",
+      "properties": {
+        "title": [
+          [
+            "Other stuff includes"
+          ]
+        ]
+      },
+      "created_time": 1736524774766,
+      "last_edited_time": 1736524995067,
+      "parent_id": "171c1246-6a36-802a-9ebd-f6ec516f7f3f",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "qqewp1uFDyGACFnBPjpPWA,\"start\",\"end\"",
+          "n": {
+            "qqewp1uFDyGACFnBPjpPWA,\"start\",\"end\"": {
+              "s": {
+                "x": "qqewp1uFDyGACFnBPjpPWA",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "zjnsf9sasEcm",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 20,
+                    "c": "Other stuff includes"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-808d-a168-fed2c26431b6": {
+    "value": {
+      "id": "177c1246-6a36-808d-a168-fed2c26431b6",
+      "version": 31,
+      "type": "bulleted_list",
+      "properties": {
+        "title": [
+          [
+            "Drills"
+          ]
+        ]
+      },
+      "created_time": 1736524995266,
+      "last_edited_time": 1736525017988,
+      "parent_id": "171c1246-6a36-802a-9ebd-f6ec516f7f3f",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "jPat1ejAfAR_4LM6LP9NDg,\"start\",\"end\"",
+          "n": {
+            "jPat1ejAfAR_4LM6LP9NDg,\"start\",\"end\"": {
+              "s": {
+                "x": "jPat1ejAfAR_4LM6LP9NDg",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "XUIbhdQbtNJW",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 6,
+                    "c": "Drills"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-8009-9801-d31b3d047f0c": {
+    "value": {
+      "id": "177c1246-6a36-8009-9801-d31b3d047f0c",
+      "version": 154,
+      "type": "bulleted_list",
+      "properties": {
+        "title": [
+          [
+            "Welding machine (never used it even after buying)"
+          ]
+        ]
+      },
+      "created_time": 1736524997181,
+      "last_edited_time": 1736525015220,
+      "parent_id": "171c1246-6a36-802a-9ebd-f6ec516f7f3f",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "66t4bHCiOBVWYb2B11QIOg,\"start\",\"end\"",
+          "n": {
+            "66t4bHCiOBVWYb2B11QIOg,\"start\",\"end\"": {
+              "s": {
+                "x": "66t4bHCiOBVWYb2B11QIOg",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "uOEoY5GCpFlQ",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 49,
+                    "c": "Welding machine (never used it even after buying)"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-805d-993b-ec7b16ef98d4": {
+    "value": {
+      "id": "177c1246-6a36-805d-993b-ec7b16ef98d4",
+      "version": 44,
+      "type": "bulleted_list",
+      "properties": {
+        "title": [
+          [
+            "Jigsaw"
+          ]
+        ]
+      },
+      "created_time": 1736525067387,
+      "last_edited_time": 1736525115204,
+      "parent_id": "171c1246-6a36-802a-9ebd-f6ec516f7f3f",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "21TdCy47g6BrhabPKl6KVg,\"start\",\"end\"",
+          "n": {
+            "21TdCy47g6BrhabPKl6KVg,\"start\",\"end\"": {
+              "s": {
+                "x": "21TdCy47g6BrhabPKl6KVg",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "1WiBfS2s-k7d",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 6,
+                    "c": "Jigsaw"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-8031-bea5-d6212cf88346": {
+    "value": {
+      "id": "177c1246-6a36-8031-bea5-d6212cf88346",
+      "version": 32,
+      "type": "bulleted_list",
+      "properties": {
+        "title": [
+          [
+            "Circular Saw"
+          ]
+        ]
+      },
+      "created_time": 1736525231990,
+      "last_edited_time": 1736525235031,
+      "parent_id": "171c1246-6a36-802a-9ebd-f6ec516f7f3f",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "vxHb0LEYi1V8_x5uxYWkgA,\"start\",\"end\"",
+          "n": {
+            "vxHb0LEYi1V8_x5uxYWkgA,\"start\",\"end\"": {
+              "s": {
+                "x": "vxHb0LEYi1V8_x5uxYWkgA",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "F4ubrt3kys5k",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 12,
+                    "c": "Circular Saw"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-80ff-953b-cb43c471175c": {
+    "value": {
+      "id": "177c1246-6a36-80ff-953b-cb43c471175c",
+      "version": 4,
+      "type": "text",
+      "created_time": 1736524774932,
+      "last_edited_time": 1736524774934,
+      "parent_id": "171c1246-6a36-802a-9ebd-f6ec516f7f3f",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "7MDalHiEFJjCeINTnDLcaQ,\"start\",\"end\"",
+          "n": {
+            "7MDalHiEFJjCeINTnDLcaQ,\"start\",\"end\"": {
+              "s": {
+                "x": "7MDalHiEFJjCeINTnDLcaQ",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-8031-a046-ed392a7493b3": {
+    "value": {
+      "id": "177c1246-6a36-8031-a046-ed392a7493b3",
+      "version": 49,
+      "type": "sub_header",
+      "properties": {
+        "title": [
+          [
+            "Software Side "
+          ]
+        ]
+      },
+      "created_time": 1736524781449,
+      "last_edited_time": 1736524789404,
+      "parent_id": "171c1246-6a36-802a-9ebd-f6ec516f7f3f",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "dKOOU8HWlYf2s0dmIuNHuQ,\"start\",\"end\"",
+          "n": {
+            "dKOOU8HWlYf2s0dmIuNHuQ,\"start\",\"end\"": {
+              "s": {
+                "x": "dKOOU8HWlYf2s0dmIuNHuQ",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "sRSsVfcNR0_H",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 14,
+                    "c": "Software Side "
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-8000-a56c-e605a20189a6": {
+    "value": {
+      "id": "177c1246-6a36-8000-a56c-e605a20189a6",
+      "version": 1548,
+      "type": "text",
+      "properties": {
+        "title": [
+          [
+            "I will write on this on more detail when i get more time. Fair to say i use all three major operating systems. I think Linux and Mac Os is more comfortable in daily life. But for some windows only supporting softwares (especially CADs, and software on high seas, Windows is necessary. Plus it is also not that bad. Also i am transitioning to nix for most of the stuff so my nix config would be self explanatory."
+          ]
+        ]
+      },
+      "created_time": 1736525820785,
+      "last_edited_time": 1736526003180,
+      "parent_id": "171c1246-6a36-802a-9ebd-f6ec516f7f3f",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "pjjg9VQFT7iC0_r14aECbw,\"start\",\"end\"",
+          "n": {
+            "pjjg9VQFT7iC0_r14aECbw,\"start\",\"end\"": {
+              "s": {
+                "x": "pjjg9VQFT7iC0_r14aECbw",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "gH3AkfXvah8j",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 411,
+                    "c": "I will write on this on more detail when i get more time. Fair to say i use all three major operating systems. I think Linux and Mac Os is more comfortable in daily life. But for some windows only supporting softwares (especially CADs, and software on high seas, Windows is necessary. Plus it is also not that bad. Also i am transitioning to nix for most of the stuff so my nix config would be self explanatory."
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-80a1-b30c-e8d60ef95780": {
+    "value": {
+      "id": "177c1246-6a36-80a1-b30c-e8d60ef95780",
+      "version": 4,
+      "type": "text",
+      "created_time": 1736525852214,
+      "last_edited_time": 1736525852216,
+      "parent_id": "171c1246-6a36-802a-9ebd-f6ec516f7f3f",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "JLtKSY_zIuWJY7ZUOQcIFQ,\"start\",\"end\"",
+          "n": {
+            "JLtKSY_zIuWJY7ZUOQcIFQ,\"start\",\"end\"": {
+              "s": {
+                "x": "JLtKSY_zIuWJY7ZUOQcIFQ",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-8099-ba17-c62dc0172e89": {
+    "value": {
+      "id": "177c1246-6a36-8099-ba17-c62dc0172e89",
+      "version": 4,
+      "type": "text",
+      "created_time": 1736525852416,
+      "last_edited_time": 1736525852418,
+      "parent_id": "171c1246-6a36-802a-9ebd-f6ec516f7f3f",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "imW7oZ2WEdApUxKLj_40eQ,\"start\",\"end\"",
+          "n": {
+            "imW7oZ2WEdApUxKLj_40eQ,\"start\",\"end\"": {
+              "s": {
+                "x": "imW7oZ2WEdApUxKLj_40eQ",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-808a-aaa3-fe4dbd2c2f66": {
+    "value": {
+      "id": "177c1246-6a36-808a-aaa3-fe4dbd2c2f66",
+      "version": 27,
+      "type": "sub_sub_header",
+      "properties": {
+        "title": [
+          [
+            "Misc"
+          ]
+        ]
+      },
+      "created_time": 1736525852080,
+      "last_edited_time": 1736525857730,
+      "parent_id": "171c1246-6a36-802a-9ebd-f6ec516f7f3f",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "L45KKYV-2bdMLkJ2ayCEpA,\"start\",\"end\"",
+          "n": {
+            "L45KKYV-2bdMLkJ2ayCEpA,\"start\",\"end\"": {
+              "s": {
+                "x": "L45KKYV-2bdMLkJ2ayCEpA",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "SaSFAQcrG4t5",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 4,
+                    "c": "Misc"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-8090-b2a4-de5bbf4b9d26": {
+    "value": {
+      "id": "177c1246-6a36-8090-b2a4-de5bbf4b9d26",
+      "version": 4,
+      "type": "text",
+      "properties": {
+        "title": [
+          [
+            "This is what Chatgpt thinks my workspace looks like. It’s something similar i would say"
+          ]
+        ]
+      },
+      "format": {
+        "copied_from_pointer": {
+          "id": "177c1246-6a36-80ef-ab10-d9f8af73aeeb",
+          "table": "block",
+          "spaceId": "5879eef3-18ea-4bbc-bd29-f5fd2e827242"
+        }
+      },
+      "created_time": 1736509334183,
+      "last_edited_time": 1736509334188,
+      "parent_id": "171c1246-6a36-802a-9ebd-f6ec516f7f3f",
+      "parent_table": "block",
+      "alive": true,
+      "copied_from": "177c1246-6a36-80ef-ab10-d9f8af73aeeb",
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "1aN2JTtKnfNyAlMMKg0Chg,\"start\",\"end\"",
+          "n": {
+            "1aN2JTtKnfNyAlMMKg0Chg,\"start\",\"end\"": {
+              "s": {
+                "x": "1aN2JTtKnfNyAlMMKg0Chg",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "8pmbcJRAli3m",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 87,
+                    "c": "This is what Chatgpt thinks my workspace looks like. It’s something similar i would say"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-80e4-a45f-d3728f793155": {
+    "value": {
+      "id": "177c1246-6a36-80e4-a45f-d3728f793155",
+      "version": 16,
+      "type": "image",
+      "properties": {
+        "size": [
+          [
+            "2145.6KB"
+          ]
+        ],
+        "title": [
+          [
+            "image.png"
+          ]
+        ],
+        "source": [
+          [
+            "/spa/images/notion/26d2b4a817cb32644f24f1c312d7dace.png"
+          ]
+        ]
+      },
+      "format": {
+        "block_width": 432,
+        "display_source": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5879eef3-18ea-4bbc-bd29-f5fd2e827242/94a7d422-ce51-4124-8ac3-5bfc47c2835b/image.png",
+        "block_full_width": false,
+        "block_page_width": false,
+        "block_aspect_ratio": 1,
+        "block_preserve_scale": true
+      },
+      "created_time": 1736509349318,
+      "last_edited_time": 1736509373324,
+      "parent_id": "171c1246-6a36-802a-9ebd-f6ec516f7f3f",
+      "parent_table": "block",
+      "alive": true,
+      "file_ids": [
+        "94a7d422-ce51-4124-8ac3-5bfc47c2835b"
+      ],
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "hffTfIy2Ef6iKAngKHq9iA,\"start\",\"end\"",
+          "n": {
+            "hffTfIy2Ef6iKAngKHq9iA,\"start\",\"end\"": {
+              "s": {
+                "x": "hffTfIy2Ef6iKAngKHq9iA",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "VdbAGgvsCYrU",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 9,
+                    "c": "image.png"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "c5264cfb-c84c-4e12-82b1-13227d61e19b": {
+    "value": {
+      "id": "c5264cfb-c84c-4e12-82b1-13227d61e19b",
+      "version": 30,
+      "type": "column",
+      "content": [
+        "4e8056a0-fd1d-474d-88ad-bdb1acfc4703",
+        "177c1246-6a36-8001-a794-d27022a0cd1e",
+        "177c1246-6a36-808f-83eb-c943a1bb3dc8",
+        "177c1246-6a36-8024-8bf5-ec9e02d54714"
+      ],
+      "format": {
+        "column_ratio": 0.3333333333333333
+      },
+      "created_time": 1736512473050,
+      "last_edited_time": 1736524879005,
+      "parent_id": "177c1246-6a36-8032-adf2-fe388df76e5d",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "_51_qfXgIpJ2f63yJ7IHUg,\"start\",\"end\"",
+          "n": {
+            "_51_qfXgIpJ2f63yJ7IHUg,\"start\",\"end\"": {
+              "s": {
+                "x": "_51_qfXgIpJ2f63yJ7IHUg",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "56a7ac40-7f95-4e3a-a104-f89b67d8e886": {
+    "value": {
+      "id": "56a7ac40-7f95-4e3a-a104-f89b67d8e886",
+      "version": 36,
+      "type": "column",
+      "content": [
+        "7178c610-ef51-41cf-88aa-74552e660107",
+        "177c1246-6a36-80af-b4b6-dae5b06dff4e",
+        "177c1246-6a36-80c0-b7c3-ee6772bdaba1",
+        "177c1246-6a36-801d-bd49-f6641dd5dc2c",
+        "177c1246-6a36-8053-a418-dc9d61a33dad"
+      ],
+      "format": {
+        "column_ratio": 0.3333333333333333
+      },
+      "created_time": 1736512473051,
+      "last_edited_time": 1736524885789,
+      "parent_id": "177c1246-6a36-8032-adf2-fe388df76e5d",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "Spef4bflsPp4ktyqmMkM5Q,\"start\",\"end\"",
+          "n": {
+            "Spef4bflsPp4ktyqmMkM5Q,\"start\",\"end\"": {
+              "s": {
+                "x": "Spef4bflsPp4ktyqmMkM5Q",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "5432868b-0b46-4d53-be0a-fa6790257e33": {
+    "value": {
+      "id": "5432868b-0b46-4d53-be0a-fa6790257e33",
+      "version": 13,
+      "type": "column",
+      "content": [
+        "8f40c164-03ba-4023-9cf0-931b07feb68e",
+        "177c1246-6a36-80a2-85eb-d7b40cfe7917",
+        "177c1246-6a36-8055-9fdb-e04a7148a69c",
+        "177c1246-6a36-80be-95bc-d76f98d3c5b0"
+      ],
+      "format": {
+        "column_ratio": 0.3333333333333333
+      },
+      "created_time": 1736512473051,
+      "last_edited_time": 1736524985102,
+      "parent_id": "177c1246-6a36-8032-adf2-fe388df76e5d",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "zzI-6r6conNwhNi4kqEEng,\"start\",\"end\"",
+          "n": {
+            "zzI-6r6conNwhNi4kqEEng,\"start\",\"end\"": {
+              "s": {
+                "x": "zzI-6r6conNwhNi4kqEEng",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "4e8056a0-fd1d-474d-88ad-bdb1acfc4703": {
+    "value": {
+      "id": "4e8056a0-fd1d-474d-88ad-bdb1acfc4703",
+      "version": 64,
+      "type": "sub_sub_header",
+      "properties": {
+        "title": [
+          [
+            "Office Setup"
+          ]
+        ]
+      },
+      "created_time": 1736512473051,
+      "last_edited_time": 1736512484439,
+      "parent_id": "c5264cfb-c84c-4e12-82b1-13227d61e19b",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "7bZlaG45Parszt-RfZWbgw,\"start\",\"end\"",
+          "n": {
+            "7bZlaG45Parszt-RfZWbgw,\"start\",\"end\"": {
+              "s": {
+                "x": "7bZlaG45Parszt-RfZWbgw",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "lwCXyc6JOCsG",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 12,
+                    "c": "Office Setup"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-8001-a794-d27022a0cd1e": {
+    "value": {
+      "id": "177c1246-6a36-8001-a794-d27022a0cd1e",
+      "version": 22,
+      "type": "image",
+      "properties": {
+        "size": [
+          [
+            "1120.6KB"
+          ]
+        ],
+        "title": [
+          [
+            "image.png"
+          ]
+        ],
+        "source": [
+          [
+            "/spa/images/notion/a84e2b8862a0de205a6547c8b3792c8d.png"
+          ]
+        ]
+      },
+      "format": {
+        "block_width": 144,
+        "display_source": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5879eef3-18ea-4bbc-bd29-f5fd2e827242/27f4ef18-c434-4175-b720-a4235685169c/image.png",
+        "block_full_width": false,
+        "block_page_width": false,
+        "block_aspect_ratio": 1.3791574279379157,
+        "block_preserve_scale": true
+      },
+      "created_time": 1736512485198,
+      "last_edited_time": 1736525813500,
+      "parent_id": "c5264cfb-c84c-4e12-82b1-13227d61e19b",
+      "parent_table": "block",
+      "alive": true,
+      "file_ids": [
+        "27f4ef18-c434-4175-b720-a4235685169c"
+      ],
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "mXKfJJRnlT4Qb0N98t6rkQ,\"start\",\"end\"",
+          "n": {
+            "mXKfJJRnlT4Qb0N98t6rkQ,\"start\",\"end\"": {
+              "s": {
+                "x": "mXKfJJRnlT4Qb0N98t6rkQ",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "vs0CAVAuaXeg",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 9,
+                    "c": "image.png"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-808f-83eb-c943a1bb3dc8": {
+    "value": {
+      "id": "177c1246-6a36-808f-83eb-c943a1bb3dc8",
+      "version": 44,
+      "type": "text",
+      "properties": {
+        "title": [
+          [
+            "Macbook pro M3"
+          ]
+        ]
+      },
+      "created_time": 1736524863945,
+      "last_edited_time": 1736524878629,
+      "parent_id": "c5264cfb-c84c-4e12-82b1-13227d61e19b",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "PXmBv9UKMt_LH7H10vo2IQ,\"start\",\"end\"",
+          "n": {
+            "PXmBv9UKMt_LH7H10vo2IQ,\"start\",\"end\"": {
+              "s": {
+                "x": "PXmBv9UKMt_LH7H10vo2IQ",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "jsjdN_6J32Se",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 14,
+                    "c": "Macbook pro M3"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-8024-8bf5-ec9e02d54714": {
+    "value": {
+      "id": "177c1246-6a36-8024-8bf5-ec9e02d54714",
+      "version": 32,
+      "type": "text",
+      "properties": {
+        "title": [
+          [
+            "Benq Monitor"
+          ]
+        ]
+      },
+      "created_time": 1736524879001,
+      "last_edited_time": 1736524884971,
+      "parent_id": "c5264cfb-c84c-4e12-82b1-13227d61e19b",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "CLkbcIk_FDykoJ8lnkl8XA,\"start\",\"end\"",
+          "n": {
+            "CLkbcIk_FDykoJ8lnkl8XA,\"start\",\"end\"": {
+              "s": {
+                "x": "CLkbcIk_FDykoJ8lnkl8XA",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "-KBra-caEK93",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 12,
+                    "c": "Benq Monitor"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "7178c610-ef51-41cf-88aa-74552e660107": {
+    "value": {
+      "id": "7178c610-ef51-41cf-88aa-74552e660107",
+      "version": 132,
+      "type": "sub_sub_header",
+      "properties": {
+        "title": [
+          [
+            "Home Setup I"
+          ]
+        ]
+      },
+      "created_time": 1736512473051,
+      "last_edited_time": 1736524798183,
+      "parent_id": "56a7ac40-7f95-4e3a-a104-f89b67d8e886",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "jqBy9guTd3DfFGJLE3Qzaw,\"start\",\"end\"",
+          "n": {
+            "jqBy9guTd3DfFGJLE3Qzaw,\"start\",\"end\"": {
+              "s": {
+                "x": "jqBy9guTd3DfFGJLE3Qzaw",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "LaXMD426q4d4",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 12,
+                    "c": "Home Setup I"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-80af-b4b6-dae5b06dff4e": {
+    "value": {
+      "id": "177c1246-6a36-80af-b4b6-dae5b06dff4e",
+      "version": 30,
+      "type": "image",
+      "properties": {
+        "size": [
+          [
+            "73.2KB"
+          ]
+        ],
+        "title": [
+          [
+            "yes.jpeg"
+          ]
+        ],
+        "source": [
+          [
+            "/spa/images/notion/02e5e91f513901662942a3c373759800.jpeg"
+          ]
+        ]
+      },
+      "format": {
+        "block_width": 288,
+        "display_source": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5879eef3-18ea-4bbc-bd29-f5fd2e827242/954a8ffb-a33c-40ec-affc-3081c27f35fa/yes.jpeg",
+        "block_full_width": false,
+        "block_page_width": true,
+        "block_aspect_ratio": 0.75,
+        "block_preserve_scale": true
+      },
+      "created_time": 1736524518586,
+      "last_edited_time": 1736525810055,
+      "parent_id": "56a7ac40-7f95-4e3a-a104-f89b67d8e886",
+      "parent_table": "block",
+      "alive": true,
+      "file_ids": [
+        "954a8ffb-a33c-40ec-affc-3081c27f35fa"
+      ],
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "0TCQg-Wuob2PwUuMc39xdw,\"start\",\"end\"",
+          "n": {
+            "0TCQg-Wuob2PwUuMc39xdw,\"start\",\"end\"": {
+              "s": {
+                "x": "0TCQg-Wuob2PwUuMc39xdw",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "-Jue2tHP3lKN",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 8,
+                    "c": "yes.jpeg"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-80c0-b7c3-ee6772bdaba1": {
+    "value": {
+      "id": "177c1246-6a36-80c0-b7c3-ee6772bdaba1",
+      "version": 112,
+      "type": "text",
+      "properties": {
+        "title": [
+          [
+            "i5-10th Gen "
+          ]
+        ]
+      },
+      "created_time": 1736524803349,
+      "last_edited_time": 1736524867528,
+      "parent_id": "56a7ac40-7f95-4e3a-a104-f89b67d8e886",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "AdHAIgr1DPnQlgdcoUG6ZA,\"start\",\"end\"",
+          "n": {
+            "AdHAIgr1DPnQlgdcoUG6ZA,\"start\",\"end\"": {
+              "s": {
+                "x": "AdHAIgr1DPnQlgdcoUG6ZA",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "YEhP4JwIoRf-",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 12,
+                    "c": "i5-10th Gen "
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-801d-bd49-f6641dd5dc2c": {
+    "value": {
+      "id": "177c1246-6a36-801d-bd49-f6641dd5dc2c",
+      "version": 38,
+      "type": "text",
+      "properties": {
+        "title": [
+          [
+            "GTX 1660 TI"
+          ]
+        ]
+      },
+      "created_time": 1736524830556,
+      "last_edited_time": 1736524852162,
+      "parent_id": "56a7ac40-7f95-4e3a-a104-f89b67d8e886",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "-CsI6N4xI8tr9GreMB7sdA,\"start\",\"end\"",
+          "n": {
+            "-CsI6N4xI8tr9GreMB7sdA,\"start\",\"end\"": {
+              "s": {
+                "x": "-CsI6N4xI8tr9GreMB7sdA",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "LYtcMTd5wBS-",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 11,
+                    "c": "GTX 1660 TI"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-8053-a418-dc9d61a33dad": {
+    "value": {
+      "id": "177c1246-6a36-8053-a418-dc9d61a33dad",
+      "version": 142,
+      "type": "text",
+      "properties": {
+        "title": [
+          [
+            "Koorui and Dell Monitor"
+          ]
+        ]
+      },
+      "created_time": 1736524885788,
+      "last_edited_time": 1736524901332,
+      "parent_id": "56a7ac40-7f95-4e3a-a104-f89b67d8e886",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "XT6hFXhSaYO3hJFkYkAeHw,\"start\",\"end\"",
+          "n": {
+            "XT6hFXhSaYO3hJFkYkAeHw,\"start\",\"end\"": {
+              "s": {
+                "x": "XT6hFXhSaYO3hJFkYkAeHw",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "COjVQ6EKUHyg",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 23,
+                    "c": "Koorui and Dell Monitor"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "8f40c164-03ba-4023-9cf0-931b07feb68e": {
+    "value": {
+      "id": "8f40c164-03ba-4023-9cf0-931b07feb68e",
+      "version": 42,
+      "type": "sub_header",
+      "properties": {
+        "title": [
+          [
+            "Home Setup II"
+          ]
+        ]
+      },
+      "created_time": 1736512473051,
+      "last_edited_time": 1736513336986,
+      "parent_id": "5432868b-0b46-4d53-be0a-fa6790257e33",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "oWJ0jOlUw11LhVhY6awI_w,\"start\",\"end\"",
+          "n": {
+            "oWJ0jOlUw11LhVhY6awI_w,\"start\",\"end\"": {
+              "s": {
+                "x": "oWJ0jOlUw11LhVhY6awI_w",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "aJH8gw1D0dmW",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 13,
+                    "c": "Home Setup II"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-80a2-85eb-d7b40cfe7917": {
+    "value": {
+      "id": "177c1246-6a36-80a2-85eb-d7b40cfe7917",
+      "version": 24,
+      "type": "image",
+      "properties": {
+        "size": [
+          [
+            "72.7KB"
+          ]
+        ],
+        "title": [
+          [
+            "sds Medium.jpeg"
+          ]
+        ],
+        "source": [
+          [
+            "/spa/images/notion/75c50c905b9cbf851f87d994ac57da83.jpeg"
+          ]
+        ]
+      },
+      "format": {
+        "block_width": 144,
+        "display_source": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5879eef3-18ea-4bbc-bd29-f5fd2e827242/3d1f7539-d5c5-4c3b-8040-6cef3d784ccd/sds_Medium.jpeg",
+        "block_full_width": false,
+        "block_page_width": false,
+        "block_aspect_ratio": 1.3333333333333333,
+        "block_preserve_scale": true
+      },
+      "created_time": 1736513201241,
+      "last_edited_time": 1736525807239,
+      "parent_id": "5432868b-0b46-4d53-be0a-fa6790257e33",
+      "parent_table": "block",
+      "alive": true,
+      "file_ids": [
+        "3d1f7539-d5c5-4c3b-8040-6cef3d784ccd"
+      ],
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "0w9WoJ0rzVeHpTqF_0xqFA,\"start\",\"end\"",
+          "n": {
+            "0w9WoJ0rzVeHpTqF_0xqFA,\"start\",\"end\"": {
+              "s": {
+                "x": "0w9WoJ0rzVeHpTqF_0xqFA",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "JrX8c2fj46pC",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 15,
+                    "c": "sds Medium.jpeg"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-8055-9fdb-e04a7148a69c": {
+    "value": {
+      "id": "177c1246-6a36-8055-9fdb-e04a7148a69c",
+      "version": 38,
+      "type": "text",
+      "properties": {
+        "title": [
+          [
+            "Ryzen 5700x"
+          ]
+        ]
+      },
+      "created_time": 1736524902439,
+      "last_edited_time": 1736524929394,
+      "parent_id": "5432868b-0b46-4d53-be0a-fa6790257e33",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "zC5kHv0ALME99qQFFALsJw,\"start\",\"end\"",
+          "n": {
+            "zC5kHv0ALME99qQFFALsJw,\"start\",\"end\"": {
+              "s": {
+                "x": "zC5kHv0ALME99qQFFALsJw",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "7tjZNMDO0j3l",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 11,
+                    "c": "Ryzen 5700x"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-80be-95bc-d76f98d3c5b0": {
+    "value": {
+      "id": "177c1246-6a36-80be-95bc-d76f98d3c5b0",
+      "version": 32,
+      "type": "text",
+      "properties": {
+        "title": [
+          [
+            "Radeon Rx6600 "
+          ]
+        ]
+      },
+      "created_time": 1736524929777,
+      "last_edited_time": 1736524970152,
+      "parent_id": "5432868b-0b46-4d53-be0a-fa6790257e33",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "8eElyKjdmwE0K9NeH11NQw,\"start\",\"end\"",
+          "n": {
+            "8eElyKjdmwE0K9NeH11NQw,\"start\",\"end\"": {
+              "s": {
+                "x": "8eElyKjdmwE0K9NeH11NQw",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "oBAT6-2b1aZ0",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 14,
+                    "c": "Radeon Rx6600 "
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "93b57e73-87fd-4b26-89ec-be35214cdda4": {
+    "value": {
+      "id": "93b57e73-87fd-4b26-89ec-be35214cdda4",
+      "version": 8,
+      "type": "column",
+      "content": [
+        "30495a42-9484-4ba1-9ff4-5c957f78acb1",
+        "177c1246-6a36-80bd-b4be-e78082b0ceae"
+      ],
+      "format": {
+        "column_ratio": 0.3333333333333333
+      },
+      "created_time": 1736513363599,
+      "last_edited_time": 1736513418138,
+      "parent_id": "177c1246-6a36-8098-a9c9-c7dcfd87bfc2",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "oeNXBksieC-wnfFo000S2A,\"start\",\"end\"",
+          "n": {
+            "oeNXBksieC-wnfFo000S2A,\"start\",\"end\"": {
+              "s": {
+                "x": "oeNXBksieC-wnfFo000S2A",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "1bdee3bb-437d-43c4-bc15-90afb2277068": {
+    "value": {
+      "id": "1bdee3bb-437d-43c4-bc15-90afb2277068",
+      "version": 8,
+      "type": "column",
+      "content": [
+        "22629f47-1826-42c7-b6d2-6bfea5c0df16",
+        "177c1246-6a36-80eb-8ab8-f5daf44a1e7b"
+      ],
+      "format": {
+        "column_ratio": 0.3333333333333333
+      },
+      "created_time": 1736513363600,
+      "last_edited_time": 1736513471069,
+      "parent_id": "177c1246-6a36-8098-a9c9-c7dcfd87bfc2",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "RyswXwR_gble1sr_L-gQrg,\"start\",\"end\"",
+          "n": {
+            "RyswXwR_gble1sr_L-gQrg,\"start\",\"end\"": {
+              "s": {
+                "x": "RyswXwR_gble1sr_L-gQrg",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "4fbe835c-dd74-453b-8d6a-c8f7e80951a2": {
+    "value": {
+      "id": "4fbe835c-dd74-453b-8d6a-c8f7e80951a2",
+      "version": 7,
+      "type": "column",
+      "content": [
+        "3fc62f54-1c52-4587-9a77-cfc457e455eb",
+        "177c1246-6a36-8048-8a2c-cb8a462ff42f",
+        "177c1246-6a36-8086-805c-ef70a0403f51"
+      ],
+      "format": {
+        "column_ratio": 0.3333333333333333
+      },
+      "created_time": 1736513363600,
+      "last_edited_time": 1736513555127,
+      "parent_id": "177c1246-6a36-8098-a9c9-c7dcfd87bfc2",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "W9LtS4lGZb56O5gkCsNkJg,\"start\",\"end\"",
+          "n": {
+            "W9LtS4lGZb56O5gkCsNkJg,\"start\",\"end\"": {
+              "s": {
+                "x": "W9LtS4lGZb56O5gkCsNkJg",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "30495a42-9484-4ba1-9ff4-5c957f78acb1": {
+    "value": {
+      "id": "30495a42-9484-4ba1-9ff4-5c957f78acb1",
+      "version": 36,
+      "type": "sub_header",
+      "properties": {
+        "title": [
+          [
+            "3d Printer"
+          ]
+        ]
+      },
+      "created_time": 1736513363600,
+      "last_edited_time": 1736513367987,
+      "parent_id": "93b57e73-87fd-4b26-89ec-be35214cdda4",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "lNDKCnZopGFt_XSuznGDVQ,\"start\",\"end\"",
+          "n": {
+            "lNDKCnZopGFt_XSuznGDVQ,\"start\",\"end\"": {
+              "s": {
+                "x": "lNDKCnZopGFt_XSuznGDVQ",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "_EmdMyBxBlAY",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 10,
+                    "c": "3d Printer"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-80bd-b4be-e78082b0ceae": {
+    "value": {
+      "id": "177c1246-6a36-80bd-b4be-e78082b0ceae",
+      "version": 12,
+      "type": "image",
+      "properties": {
+        "size": [
+          [
+            "3855.7KB"
+          ]
+        ],
+        "title": [
+          [
+            "image.png"
+          ]
+        ],
+        "source": [
+          [
+            "/spa/images/notion/7c83af48ad69c3285e42abeac66a32fe.png"
+          ]
+        ]
+      },
+      "format": {
+        "block_width": 1836,
+        "display_source": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5879eef3-18ea-4bbc-bd29-f5fd2e827242/36cf1763-3fe8-4d88-a51f-162919e461f1/image.png",
+        "block_full_width": false,
+        "block_page_width": true,
+        "block_aspect_ratio": 0.75,
+        "block_preserve_scale": true
+      },
+      "created_time": 1736513418136,
+      "last_edited_time": 1736513431591,
+      "parent_id": "93b57e73-87fd-4b26-89ec-be35214cdda4",
+      "parent_table": "block",
+      "alive": true,
+      "file_ids": [
+        "36cf1763-3fe8-4d88-a51f-162919e461f1"
+      ],
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "j7NVdMn7ZcvdZCstp4jWeg,\"start\",\"end\"",
+          "n": {
+            "j7NVdMn7ZcvdZCstp4jWeg,\"start\",\"end\"": {
+              "s": {
+                "x": "j7NVdMn7ZcvdZCstp4jWeg",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "q0-gPfzfIRck",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 9,
+                    "c": "image.png"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "22629f47-1826-42c7-b6d2-6bfea5c0df16": {
+    "value": {
+      "id": "22629f47-1826-42c7-b6d2-6bfea5c0df16",
+      "version": 150,
+      "type": "sub_header",
+      "properties": {
+        "title": [
+          [
+            "Some Analysis Tools"
+          ]
+        ]
+      },
+      "created_time": 1736513363600,
+      "last_edited_time": 1736524749705,
+      "parent_id": "1bdee3bb-437d-43c4-bc15-90afb2277068",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "XInoRbeFXuOMB6ipM4FUww,\"start\",\"end\"",
+          "n": {
+            "XInoRbeFXuOMB6ipM4FUww,\"start\",\"end\"": {
+              "s": {
+                "x": "XInoRbeFXuOMB6ipM4FUww",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "NXgRYt5L6Pdt",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 19,
+                    "c": "Some Analysis Tools"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-80eb-8ab8-f5daf44a1e7b": {
+    "value": {
+      "id": "177c1246-6a36-80eb-8ab8-f5daf44a1e7b",
+      "version": 12,
+      "type": "image",
+      "properties": {
+        "size": [
+          [
+            "2138.5KB"
+          ]
+        ],
+        "title": [
+          [
+            "image.png"
+          ]
+        ],
+        "source": [
+          [
+            "/spa/images/notion/eeb4aa18b50b9dc388795e93e8ff5199.png"
+          ]
+        ]
+      },
+      "format": {
+        "block_width": 1484,
+        "display_source": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5879eef3-18ea-4bbc-bd29-f5fd2e827242/667130cf-5d96-4436-a1b0-0b4a4708e723/image.png",
+        "block_full_width": false,
+        "block_page_width": true,
+        "block_aspect_ratio": 0.5619946091644205,
+        "block_preserve_scale": true
+      },
+      "created_time": 1736513471066,
+      "last_edited_time": 1736513482693,
+      "parent_id": "1bdee3bb-437d-43c4-bc15-90afb2277068",
+      "parent_table": "block",
+      "alive": true,
+      "file_ids": [
+        "667130cf-5d96-4436-a1b0-0b4a4708e723"
+      ],
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "kIICECUoNmcc_QQIBFEkiQ,\"start\",\"end\"",
+          "n": {
+            "kIICECUoNmcc_QQIBFEkiQ,\"start\",\"end\"": {
+              "s": {
+                "x": "kIICECUoNmcc_QQIBFEkiQ",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "edKw23MxAyiD",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 9,
+                    "c": "image.png"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "3fc62f54-1c52-4587-9a77-cfc457e455eb": {
+    "value": {
+      "id": "3fc62f54-1c52-4587-9a77-cfc457e455eb",
+      "version": 126,
+      "type": "sub_header",
+      "properties": {
+        "title": [
+          [
+            "Software Radio"
+          ]
+        ]
+      },
+      "created_time": 1736513363600,
+      "last_edited_time": 1736513580142,
+      "parent_id": "4fbe835c-dd74-453b-8d6a-c8f7e80951a2",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "r_cojFRX-GH0ouV73k-_ZA,\"start\",\"end\"",
+          "n": {
+            "r_cojFRX-GH0ouV73k-_ZA,\"start\",\"end\"": {
+              "s": {
+                "x": "r_cojFRX-GH0ouV73k-_ZA",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "dyyR4ASfNXjJ",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 14,
+                    "c": "Software Radio"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-8048-8a2c-cb8a462ff42f": {
+    "value": {
+      "id": "177c1246-6a36-8048-8a2c-cb8a462ff42f",
+      "version": 4,
+      "type": "text",
+      "created_time": 1736513540108,
+      "last_edited_time": 1736513540109,
+      "parent_id": "4fbe835c-dd74-453b-8d6a-c8f7e80951a2",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "ojAUl2B7GrpwngVe-w4RWQ,\"start\",\"end\"",
+          "n": {
+            "ojAUl2B7GrpwngVe-w4RWQ,\"start\",\"end\"": {
+              "s": {
+                "x": "ojAUl2B7GrpwngVe-w4RWQ",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-8086-805c-ef70a0403f51": {
+    "value": {
+      "id": "177c1246-6a36-8086-805c-ef70a0403f51",
+      "version": 16,
+      "type": "image",
+      "properties": {
+        "size": [
+          [
+            "24.0KB"
+          ]
+        ],
+        "title": [
+          [
+            "20250110_010356 Small.jpeg"
+          ]
+        ],
+        "source": [
+          [
+            "/spa/images/notion/411a74333501961e580ab9463567c619.jpeg"
+          ]
+        ]
+      },
+      "format": {
+        "block_width": 144,
+        "block_height": 320,
+        "display_source": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5879eef3-18ea-4bbc-bd29-f5fd2e827242/f7ed8196-df21-4fa9-9d42-722dcdbc9250/20250110_010356_Small.jpeg",
+        "block_full_width": false,
+        "block_page_width": false,
+        "block_aspect_ratio": 1.3333333333333333,
+        "block_preserve_scale": true
+      },
+      "created_time": 1736513555124,
+      "last_edited_time": 1736513574801,
+      "parent_id": "4fbe835c-dd74-453b-8d6a-c8f7e80951a2",
+      "parent_table": "block",
+      "alive": true,
+      "file_ids": [
+        "f7ed8196-df21-4fa9-9d42-722dcdbc9250"
+      ],
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "WAgtkCRqJlmCJCSdU_Fwrw,\"start\",\"end\"",
+          "n": {
+            "WAgtkCRqJlmCJCSdU_Fwrw,\"start\",\"end\"": {
+              "s": {
+                "x": "WAgtkCRqJlmCJCSdU_Fwrw",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "Gf4ODVv-bnUk",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 26,
+                    "c": "20250110_010356 Small.jpeg"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  }
+}
