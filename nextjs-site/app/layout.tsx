@@ -5,7 +5,7 @@ import { AuthProvider } from '@/lib/auth-context'
 import { StructuredData } from '@/components/StructuredData'
 
 const siteUrl = 'https://ash9.dev'
-const siteName = 'Ashish Thapa'
+const siteName = 'voidash'
 const siteDescription = 'Software engineer exploring meaning, psychology, philosophy, and innate curiosity. Builder, thinker, and lifelong learner.'
 
 export const metadata: Metadata = {

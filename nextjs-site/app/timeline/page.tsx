@@ -7,7 +7,7 @@ import './timeline.css'
 const TIMELINE_DB_ID = process.env.TIMELINE_DB_ID || '70bfec27eb6a4e11882b95e32bfdcdca'
 
 export const metadata: Metadata = {
-  title: 'Timeline - Ashish Thapa',
+  title: 'Timeline',
   description: 'Timeline of My Life',
 }
 

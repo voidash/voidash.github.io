@@ -97,6 +97,9 @@ jobs:
           mkdir -p deploy/spa
           cp -r react-swc-ts/dist/* deploy/spa/
 
+          # Copy CNAME file for custom domain
+          cp CNAME deploy/
+
           # Add .nojekyll file
           touch deploy/.nojekyll
 
