@@ -56,8 +56,7 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   verification: {
-    // Add your verification codes here when you have them
-    // google: 'your-google-verification-code',
+    google: 'FnaKZBOJsnNKWMmUYsqmJ8PnuiVRAmb_42Prer5l28w',
   }
 }
 

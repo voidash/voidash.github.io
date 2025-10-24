@@ -15,6 +15,14 @@ type BookmarksClientProps = {
   bookmarks: BookmarkEntry[]
 }
 
+function getHostname(url: string): string {
+  try {
+    return url && url.trim() ? new URL(url).hostname : 'Invalid URL'
+  } catch {
+    return 'Invalid URL'
+  }
+}
+
 export default function BookmarksClient({ bookmarks }: BookmarksClientProps) {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set())
@@ -153,7 +161,7 @@ export default function BookmarksClient({ bookmarks }: BookmarksClientProps) {
                     </div>
                   ))}
                 </div>
-                <span className="url">{new URL(content.URL).hostname}</span>
+                <span className="url">{getHostname(content.URL)}</span>
                 <div className="description">{content.Description}</div>
               </a>
             </div>
