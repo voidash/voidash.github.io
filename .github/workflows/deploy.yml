@@ -9,12 +9,12 @@ on:
   workflow_dispatch:
 
   # Run on push to main
-  push:
-    branches:
-      - main
-    paths:
-      - 'nextjs-site/**'
-      - '.github/workflows/deploy.yml'
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - 'nextjs-site/**'
+  #     - '.github/workflows/deploy.yml'
 
 jobs:
   build-and-deploy:
