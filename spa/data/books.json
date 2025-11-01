@@ -1,0 +1,431 @@
+{
+  "171c1246-6a36-8086-9dd4-dd1007de7b10": {
+    "value": {
+      "id": "171c1246-6a36-8086-9dd4-dd1007de7b10",
+      "version": 57,
+      "type": "page",
+      "properties": {
+        "title": [
+          [
+            "Books"
+          ]
+        ]
+      },
+      "content": [
+        "177c1246-6a36-8038-aef7-ece8f5df9ca7",
+        "177c1246-6a36-80d9-b994-d9fa0fbd4007",
+        "171c1246-6a36-8044-8afe-f17b5515956b",
+        "177c1246-6a36-8093-aeaa-d2d84b72a1df"
+      ],
+      "format": {
+        "page_icon": "📃",
+        "page_cover": "/images/page-cover/met_william_morris_1875.jpg",
+        "page_cover_position": 1,
+        "social_media_image_preview_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5879eef3-18ea-4bbc-bd29-f5fd2e827242/1ff87000-9050-47ae-b315-338bcd47e37d/SocialMediaPreviewImage.png"
+      },
+      "created_time": 1735963535181,
+      "last_edited_time": 1736525726611,
+      "parent_id": "4b840ab3-1f97-48b3-961d-3ff88745f00c",
+      "parent_table": "block",
+      "alive": true,
+      "file_ids": [
+        "581781b3-0a4d-44f4-912d-f8c055c1daee",
+        "eb5a0e32-77ed-4cb2-ab7c-c28506021be5",
+        "aa395e43-9691-4f13-9748-c3d84d3140f2",
+        "1ff87000-9050-47ae-b315-338bcd47e37d"
+      ],
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "ItqyQjnjpo9mZd30eg5ZXQ,\"start\",\"end\"",
+          "n": {
+            "ItqyQjnjpo9mZd30eg5ZXQ,\"start\",\"end\"": {
+              "s": {
+                "x": "ItqyQjnjpo9mZd30eg5ZXQ",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "GHzdJ54_qaOC",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 5,
+                    "c": "Books"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "4b840ab3-1f97-48b3-961d-3ff88745f00c": {
+    "value": {
+      "id": "4b840ab3-1f97-48b3-961d-3ff88745f00c",
+      "version": 145,
+      "type": "page",
+      "properties": {
+        "title": [
+          [
+            "Personal Database"
+          ]
+        ]
+      },
+      "content": [
+        "6fab1aca-487d-4d8c-875e-6625c5d01a0a",
+        "76d6ac1f-5d52-4df5-a71f-d826ef2380fa",
+        "70bfec27-eb6a-4e11-882b-95e32bfdcdca",
+        "12e6efc8-4d68-4f5f-898d-afdd808d9fc2",
+        "171c1246-6a36-808f-bbb4-cdbfcbbe8366",
+        "171c1246-6a36-802a-9ebd-f6ec516f7f3f",
+        "171c1246-6a36-8086-9dd4-dd1007de7b10",
+        "28ac1246-6a36-804e-aae0-ee2be06154ad",
+        "28ac1246-6a36-8061-9ccb-d81d9cb50db3"
+      ],
+      "format": {
+        "page_icon": "💽"
+      },
+      "permissions": [
+        {
+          "role": {
+            "read_comment": true,
+            "read_content": true,
+            "insert_comment": true,
+            "insert_content": true,
+            "update_content": true
+          },
+          "type": "bot_permission",
+          "bot_id": "02715098-4986-45e7-b1eb-a5bb2ca2a420",
+          "parent_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+          "parent_table": "space"
+        }
+      ],
+      "created_time": 1704876662253,
+      "last_edited_time": 1760254094182,
+      "parent_id": "487f0fd0-cab8-42ec-bcb7-73a992104e62",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "XBsXXUIJZlXZsAns1niMug,\"start\",\"end\"",
+          "n": {
+            "XBsXXUIJZlXZsAns1niMug,\"start\",\"end\"": {
+              "s": {
+                "x": "XBsXXUIJZlXZsAns1niMug",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "G1z3c6BVcXTu",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 17,
+                    "c": "Personal Database"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "487f0fd0-cab8-42ec-bcb7-73a992104e62": {
+    "value": {
+      "id": "487f0fd0-cab8-42ec-bcb7-73a992104e62",
+      "version": 149,
+      "type": "page",
+      "properties": {
+        "title": [
+          [
+            "Portfolio"
+          ]
+        ]
+      },
+      "content": [
+        "3aec3947-84ab-48dd-90fb-e44b948a7da9",
+        "f114f9d0-0408-42ad-b864-9125f13407dc",
+        "4b840ab3-1f97-48b3-961d-3ff88745f00c",
+        "28ac1246-6a36-8082-a486-e4231600d0d4",
+        "535d7114-97b1-4223-ba4f-7dd378f40008",
+        "8defdd66-fd6f-4b24-af48-6b9a17e924d5"
+      ],
+      "format": {
+        "site_id": "1b59eef3-18ea-81c0-b62f-007935a29be3",
+        "page_icon": "🏅",
+        "social_media_image_preview_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5879eef3-18ea-4bbc-bd29-f5fd2e827242/830bfbb3-b9bd-4f3b-beb4-401a1f4f2c8a/SocialMediaPreviewImage.png"
+      },
+      "permissions": [
+        {
+          "role": "editor",
+          "type": "user_permission",
+          "user_id": "434f1b06-ea28-452f-8994-d8a57f7ee1f4"
+        },
+        {
+          "role": "reader",
+          "type": "public_permission",
+          "is_site": true,
+          "added_timestamp": 1709009004511
+        },
+        {
+          "role": {
+            "read_content": true,
+            "insert_content": true,
+            "update_content": true
+          },
+          "type": "bot_permission",
+          "bot_id": "386b5011-bf30-4d61-93d0-f4c3e84240f6",
+          "parent_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+          "parent_table": "space"
+        }
+      ],
+      "created_time": 1700028501124,
+      "last_edited_time": 1760254103622,
+      "parent_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "parent_table": "space",
+      "alive": true,
+      "file_ids": [
+        "830bfbb3-b9bd-4f3b-beb4-401a1f4f2c8a"
+      ],
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "x8PzfEsrTg4WHcrh0L-fbw,\"start\",\"end\"",
+          "n": {
+            "x8PzfEsrTg4WHcrh0L-fbw,\"start\",\"end\"": {
+              "s": {
+                "x": "x8PzfEsrTg4WHcrh0L-fbw",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "qT84P9CyIl5N",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 9,
+                    "c": "Portfolio"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-8038-aef7-ece8f5df9ca7": {
+    "value": {
+      "id": "177c1246-6a36-8038-aef7-ece8f5df9ca7",
+      "version": 352,
+      "type": "text",
+      "properties": {
+        "title": [
+          [
+            "I want to write so much more on this. And i will write when i get the time. For now here is the image of the books that i planning to read this year"
+          ]
+        ]
+      },
+      "created_time": 1736525460131,
+      "last_edited_time": 1736525483273,
+      "parent_id": "171c1246-6a36-8086-9dd4-dd1007de7b10",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "i6k1NFghSVLtmmHovWcGyA,\"start\",\"end\"",
+          "n": {
+            "i6k1NFghSVLtmmHovWcGyA,\"start\",\"end\"": {
+              "s": {
+                "x": "i6k1NFghSVLtmmHovWcGyA",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "DTgdeZWsPiUL",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 148,
+                    "c": "I want to write so much more on this. And i will write when i get the time. For now here is the image of the books that i planning to read this year"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-80d9-b994-d9fa0fbd4007": {
+    "value": {
+      "id": "177c1246-6a36-80d9-b994-d9fa0fbd4007",
+      "version": 4,
+      "type": "text",
+      "created_time": 1736525483680,
+      "last_edited_time": 1736525483683,
+      "parent_id": "171c1246-6a36-8086-9dd4-dd1007de7b10",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "mK23I2eXSupCWnIfCVIDRg,\"start\",\"end\"",
+          "n": {
+            "mK23I2eXSupCWnIfCVIDRg,\"start\",\"end\"": {
+              "s": {
+                "x": "mK23I2eXSupCWnIfCVIDRg",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  },
+  "171c1246-6a36-8044-8afe-f17b5515956b": {
+    "value": {
+      "id": "171c1246-6a36-8044-8afe-f17b5515956b",
+      "version": 3,
+      "type": "text",
+      "created_time": 1735963560694,
+      "last_edited_time": 1735963560695,
+      "parent_id": "171c1246-6a36-8086-9dd4-dd1007de7b10",
+      "parent_table": "block",
+      "alive": true,
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242"
+    },
+    "role": "reader"
+  },
+  "177c1246-6a36-8093-aeaa-d2d84b72a1df": {
+    "value": {
+      "id": "177c1246-6a36-8093-aeaa-d2d84b72a1df",
+      "version": 14,
+      "type": "image",
+      "properties": {
+        "size": [
+          [
+            "298.5KB"
+          ]
+        ],
+        "title": [
+          [
+            "20250110_215548 Large.jpeg"
+          ]
+        ],
+        "source": [
+          [
+            "/spa/images/notion/3c3bd90183e6fa8d74d824857c6c609e.jpeg"
+          ]
+        ]
+      },
+      "format": {
+        "block_width": 708,
+        "display_source": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5879eef3-18ea-4bbc-bd29-f5fd2e827242/36335c9d-c6f5-44e8-a4b1-899cf413ce81/20250110_215548_Large.jpeg",
+        "block_full_width": false,
+        "block_page_width": true,
+        "block_aspect_ratio": 1.3333333333333333,
+        "block_preserve_scale": true
+      },
+      "created_time": 1736525726609,
+      "last_edited_time": 1736525735739,
+      "parent_id": "171c1246-6a36-8086-9dd4-dd1007de7b10",
+      "parent_table": "block",
+      "alive": true,
+      "file_ids": [
+        "36335c9d-c6f5-44e8-a4b1-899cf413ce81"
+      ],
+      "space_id": "5879eef3-18ea-4bbc-bd29-f5fd2e827242",
+      "crdt_format_version": 1,
+      "crdt_data": {
+        "title": {
+          "r": "8TmZyurEpi9CvAFCc3dJzQ,\"start\",\"end\"",
+          "n": {
+            "8TmZyurEpi9CvAFCc3dJzQ,\"start\",\"end\"": {
+              "s": {
+                "x": "8TmZyurEpi9CvAFCc3dJzQ",
+                "i": [
+                  {
+                    "t": "s"
+                  },
+                  {
+                    "t": "t",
+                    "i": [
+                      "r4O3bPQChKL4",
+                      1
+                    ],
+                    "o": "start",
+                    "l": 26,
+                    "c": "20250110_215548 Large.jpeg"
+                  },
+                  {
+                    "t": "e"
+                  }
+                ],
+                "l": ""
+              },
+              "c": []
+            }
+          }
+        }
+      }
+    },
+    "role": "reader"
+  }
+}

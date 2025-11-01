@@ -1,0 +1,529 @@
+{
+  "currentWeek": {
+    "weekStart": "2025-10-27",
+    "weekEnd": "2025-11-02",
+    "scores": {
+      "learning": {
+        "score": 3.510204081632653,
+        "components": [
+          {
+            "weight": 0.3,
+            "score": 9.523809523809524,
+            "name": "New stuff learned"
+          },
+          {
+            "name": "Old stuff reviewed",
+            "score": 1.6326530612244896,
+            "weight": 0.4
+          },
+          {
+            "weight": 0.3,
+            "score": 0,
+            "name": "Backlog health"
+          }
+        ]
+      },
+      "management": {
+        "components": [
+          {
+            "score": 100,
+            "weight": 0.4,
+            "name": "Weekly log exists"
+          },
+          {
+            "name": "Days actually logged",
+            "weight": 0.3,
+            "score": 28.57142857142857
+          },
+          {
+            "score": 100,
+            "name": "Finance tracking active",
+            "weight": 0.3
+          }
+        ],
+        "score": 78.57142857142857
+      },
+      "fitness": {
+        "components": [
+          {
+            "name": "Sessions completed",
+            "score": 19.047619047619047,
+            "weight": 0.4
+          },
+          {
+            "score": 0,
+            "weight": 0.3,
+            "name": "Weight target hit"
+          },
+          {
+            "weight": 0.2,
+            "name": "Food tracked",
+            "score": 0
+          },
+          {
+            "score": 20,
+            "weight": 0.1,
+            "name": "Backlog health"
+          }
+        ],
+        "score": 9.61904761904762
+      },
+      "finance": {
+        "score": 28.666666666666668,
+        "components": [
+          {
+            "name": "Money in vs out",
+            "score": 50,
+            "weight": 0.2
+          },
+          {
+            "weight": 0.2,
+            "score": 0,
+            "name": "Concept applied"
+          },
+          {
+            "score": 0,
+            "name": "Portfolio checked",
+            "weight": 0.2
+          },
+          {
+            "name": "Backlog health",
+            "score": 46.666666666666664,
+            "weight": 0.4
+          }
+        ]
+      },
+      "producer": {
+        "score": 50,
+        "components": [
+          {
+            "weight": 0.5,
+            "score": 100,
+            "name": "Shipped work"
+          },
+          {
+            "score": 0,
+            "weight": 0.5,
+            "name": "Backlog health"
+          }
+        ]
+      },
+      "relationship": {
+        "score": 0,
+        "components": [
+          {
+            "name": "Met new people",
+            "weight": 0.6,
+            "score": 0
+          },
+          {
+            "name": "Called family",
+            "score": 0,
+            "weight": 0.1
+          },
+          {
+            "name": "Conflicts + backlog",
+            "score": 0,
+            "weight": 0.3
+          }
+        ]
+      }
+    }
+  },
+  "updatedAt": "2025-10-30T05:40:01.672Z",
+  "allWeeks": [
+    {
+      "weekEnd": "2025-11-02",
+      "weekStart": "2025-10-27",
+      "scores": {
+        "finance": {
+          "components": [
+            {
+              "name": "Money in vs out",
+              "score": 50,
+              "weight": 0.2
+            },
+            {
+              "name": "Concept applied",
+              "weight": 0.2,
+              "score": 0
+            },
+            {
+              "name": "Portfolio checked",
+              "weight": 0.2,
+              "score": 0
+            },
+            {
+              "score": 46.666666666666664,
+              "name": "Backlog health",
+              "weight": 0.4
+            }
+          ],
+          "score": 28.666666666666668
+        },
+        "fitness": {
+          "components": [
+            {
+              "score": 19.047619047619047,
+              "name": "Sessions completed",
+              "weight": 0.4
+            },
+            {
+              "weight": 0.3,
+              "name": "Weight target hit",
+              "score": 0
+            },
+            {
+              "score": 0,
+              "name": "Food tracked",
+              "weight": 0.2
+            },
+            {
+              "score": 20,
+              "name": "Backlog health",
+              "weight": 0.1
+            }
+          ],
+          "score": 9.61904761904762
+        },
+        "producer": {
+          "score": 50,
+          "components": [
+            {
+              "weight": 0.5,
+              "score": 100,
+              "name": "Shipped work"
+            },
+            {
+              "score": 0,
+              "weight": 0.5,
+              "name": "Backlog health"
+            }
+          ]
+        },
+        "relationship": {
+          "components": [
+            {
+              "score": 0,
+              "weight": 0.6,
+              "name": "Met new people"
+            },
+            {
+              "name": "Called family",
+              "weight": 0.1,
+              "score": 0
+            },
+            {
+              "name": "Conflicts + backlog",
+              "score": 0,
+              "weight": 0.3
+            }
+          ],
+          "score": 0
+        },
+        "management": {
+          "score": 78.57142857142857,
+          "components": [
+            {
+              "score": 100,
+              "weight": 0.4,
+              "name": "Weekly log exists"
+            },
+            {
+              "score": 28.57142857142857,
+              "name": "Days actually logged",
+              "weight": 0.3
+            },
+            {
+              "weight": 0.3,
+              "score": 100,
+              "name": "Finance tracking active"
+            }
+          ]
+        },
+        "learning": {
+          "score": 3.510204081632653,
+          "components": [
+            {
+              "score": 9.523809523809524,
+              "weight": 0.3,
+              "name": "New stuff learned"
+            },
+            {
+              "name": "Old stuff reviewed",
+              "score": 1.6326530612244896,
+              "weight": 0.4
+            },
+            {
+              "score": 0,
+              "weight": 0.3,
+              "name": "Backlog health"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scores": {
+        "relationship": {
+          "components": [
+            {
+              "score": 0,
+              "name": "Met new people",
+              "weight": 0.6
+            },
+            {
+              "score": 0,
+              "name": "Called family",
+              "weight": 0.1
+            },
+            {
+              "score": 0,
+              "name": "Conflicts + backlog",
+              "weight": 0.3
+            }
+          ],
+          "score": 0
+        },
+        "finance": {
+          "score": 18,
+          "components": [
+            {
+              "weight": 0.2,
+              "score": 50,
+              "name": "Money in vs out"
+            },
+            {
+              "name": "Concept applied",
+              "score": 0,
+              "weight": 0.2
+            },
+            {
+              "name": "Portfolio checked",
+              "weight": 0.2,
+              "score": 0
+            },
+            {
+              "weight": 0.4,
+              "name": "Backlog health",
+              "score": 20
+            }
+          ]
+        },
+        "learning": {
+          "components": [
+            {
+              "name": "New stuff learned",
+              "score": 0,
+              "weight": 0.3
+            },
+            {
+              "weight": 0.4,
+              "name": "Old stuff reviewed",
+              "score": 0
+            },
+            {
+              "score": 0,
+              "weight": 0.3,
+              "name": "Backlog health"
+            }
+          ],
+          "score": 0
+        },
+        "management": {
+          "components": [
+            {
+              "weight": 0.4,
+              "score": 100,
+              "name": "Weekly log exists"
+            },
+            {
+              "name": "Days actually logged",
+              "score": 0,
+              "weight": 0.3
+            },
+            {
+              "name": "Finance tracking active",
+              "weight": 0.3,
+              "score": 100
+            }
+          ],
+          "score": 70
+        },
+        "producer": {
+          "components": [
+            {
+              "weight": 0.5,
+              "name": "Shipped work",
+              "score": 0
+            },
+            {
+              "name": "Backlog health",
+              "score": 0,
+              "weight": 0.5
+            }
+          ],
+          "score": 0
+        },
+        "fitness": {
+          "score": 2.000009177069615,
+          "components": [
+            {
+              "score": 0,
+              "name": "Sessions completed",
+              "weight": 0.4
+            },
+            {
+              "score": 0.00003059023205018258,
+              "weight": 0.3,
+              "name": "Weight target hit"
+            },
+            {
+              "weight": 0.2,
+              "name": "Food tracked",
+              "score": 0
+            },
+            {
+              "weight": 0.1,
+              "name": "Backlog health",
+              "score": 20
+            }
+          ]
+        }
+      },
+      "weekStart": "2025-10-20",
+      "weekEnd": "2025-10-26"
+    },
+    {
+      "scores": {
+        "finance": {
+          "components": [
+            {
+              "name": "Money in vs out",
+              "score": 50,
+              "weight": 0.2
+            },
+            {
+              "weight": 0.2,
+              "score": 0,
+              "name": "Concept applied"
+            },
+            {
+              "name": "Portfolio checked",
+              "weight": 0.2,
+              "score": 0
+            },
+            {
+              "score": 0,
+              "name": "Backlog health",
+              "weight": 0.4
+            }
+          ],
+          "score": 10
+        },
+        "management": {
+          "score": 91.42857142857143,
+          "components": [
+            {
+              "weight": 0.4,
+              "score": 100,
+              "name": "Weekly log exists"
+            },
+            {
+              "weight": 0.3,
+              "name": "Days actually logged",
+              "score": 71.42857142857143
+            },
+            {
+              "score": 100,
+              "name": "Finance tracking active",
+              "weight": 0.3
+            }
+          ]
+        },
+        "fitness": {
+          "components": [
+            {
+              "score": 95.23809523809524,
+              "name": "Sessions completed",
+              "weight": 0.4
+            },
+            {
+              "weight": 0.3,
+              "name": "Weight target hit",
+              "score": 79.81170604478913
+            },
+            {
+              "score": 14.285714285714285,
+              "name": "Food tracked",
+              "weight": 0.2
+            },
+            {
+              "weight": 0.1,
+              "name": "Backlog health",
+              "score": 0
+            }
+          ],
+          "score": 64.89589276581769
+        },
+        "learning": {
+          "score": 22.24489795918367,
+          "components": [
+            {
+              "score": 71.42857142857143,
+              "name": "New stuff learned",
+              "weight": 0.3
+            },
+            {
+              "weight": 0.4,
+              "score": 2.0408163265306123,
+              "name": "Old stuff reviewed"
+            },
+            {
+              "weight": 0.3,
+              "score": 0,
+              "name": "Backlog health"
+            }
+          ]
+        },
+        "producer": {
+          "components": [
+            {
+              "name": "Shipped work",
+              "score": 100,
+              "weight": 0.5
+            },
+            {
+              "score": 0,
+              "weight": 0.5,
+              "name": "Backlog health"
+            }
+          ],
+          "score": 50
+        },
+        "relationship": {
+          "components": [
+            {
+              "weight": 0.6,
+              "score": 0,
+              "name": "Met new people"
+            },
+            {
+              "weight": 0.1,
+              "score": 0,
+              "name": "Called family"
+            },
+            {
+              "weight": 0.3,
+              "score": 0,
+              "name": "Conflicts + backlog"
+            }
+          ],
+          "score": 0
+        }
+      },
+      "weekEnd": "2025-10-19",
+      "weekStart": "2025-10-13"
+    }
+  ]
+}
