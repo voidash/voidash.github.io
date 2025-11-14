@@ -1,17 +1,10 @@
-import { Metadata } from 'next'
-import { ThemeToggle } from '@/components/ThemeToggle'
-import DailyLogClient from './DailyLogClient'
+import { redirect } from 'next/navigation'
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Daily Log - Ashish Thapa',
   description: 'Log daily progress across all life dimensions',
 }
 
 export default function DailyLogPage() {
-  return (
-    <>
-      <ThemeToggle />
-      <DailyLogClient />
-    </>
-  )
+  redirect('/metrics/daily/add')
 }

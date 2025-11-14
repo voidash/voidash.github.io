@@ -159,6 +159,40 @@ export function extractWeeklyTaskData(markdown: string): WeeklyTaskData {
   }
 }
 
+/**
+ * Extract learning items (things that should go into spaced repetition)
+ * from completed tasks with #learn or #review tags
+ */
+export function extractLearningItems(markdown: string, sourceDate: string): Array<{
+  text: string
+  sourceType: 'learn' | 'review'
+}> {
+  const tasks = parseMarkdownTasks(markdown)
+  const completedTasks = tasks.filter(t => t.completed)
+  const learningItems: Array<{ text: string; sourceType: 'learn' | 'review' }> = []
+
+  for (const task of completedTasks) {
+    // Check for #learn tag
+    if (task.tags.includes('#learn')) {
+      const cleanText = task.text.replace(/#learn/g, '').trim()
+      learningItems.push({
+        text: cleanText,
+        sourceType: 'learn',
+      })
+    }
+    // Check for #review tag (but not #new-review, that's different)
+    else if (task.tags.includes('#review') && !task.tags.includes('#new-review')) {
+      const cleanText = task.text.replace(/#review/g, '').trim()
+      learningItems.push({
+        text: cleanText,
+        sourceType: 'review',
+      })
+    }
+  }
+
+  return learningItems
+}
+
 export function renderTaskPreview(markdown: string): string {
   const tasks = parseMarkdownTasks(markdown)
   const counts = countCompletedTasks(tasks)
