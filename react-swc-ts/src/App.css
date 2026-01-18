@@ -5,6 +5,69 @@
   --bg-color: #0F172A;
 }
 
+/* Beta Banner */
+.beta-banner {
+  position: relative;
+  z-index: 100;
+  background: linear-gradient(90deg, rgba(66, 108, 206, 0.3) 0%, rgba(139, 92, 246, 0.3) 100%);
+  border-bottom: 1px solid rgba(139, 92, 246, 0.5);
+  padding: 12px 20px;
+  text-align: center;
+}
+
+.beta-banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.beta-tag {
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.beta-banner a {
+  color: #a5b4fc;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.beta-banner a:hover {
+  color: #c4b5fd;
+}
+
+.beta-cta {
+  background: rgba(139, 92, 246, 0.3);
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none !important;
+  border: 1px solid rgba(139, 92, 246, 0.5);
+  font-weight: 600;
+}
+
+.beta-cta:hover {
+  background: rgba(139, 92, 246, 0.5);
+}
+
+@media only screen and (max-width: 600px) {
+  .beta-banner-content {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .beta-cta {
+    margin-top: 4px;
+  }
+}
+
 .unselectable {
     -webkit-touch-callout: none;
     -webkit-user-select: none;

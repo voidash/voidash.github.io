@@ -111,8 +111,22 @@ function App() {
       <>
         <div className="moving-gradient"></div>
         <div className="backdrop-content unselectable">
-          MEANING PSYCHOLOGY PHILOSOPHY INNATE CURIOSITY 
+          MEANING PSYCHOLOGY PHILOSOPHY INNATE CURIOSITY
         </div>
+
+        <div className="beta-banner">
+          <div className="beta-banner-content">
+            <span className="beta-tag">BETA</span>
+            <span>
+              Check out <a href="https://ash9.dev/civic-nepal/" target="_blank" rel="noopener noreferrer">Civic Nepal</a> —
+              a bilingual civic information app for Nepal with constitution, government structure, district maps, leaders directory & utility tools.
+            </span>
+            <a href="https://docs.google.com/spreadsheets/d/1F0hL5xjjWpueXW-ynUaX0KSWClhywWDBXtPHbj1b928/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="beta-cta">
+              Help Translate →
+            </a>
+          </div>
+        </div>
+
       <center>
           <h1>Ashish Thapa</h1>
       </center>

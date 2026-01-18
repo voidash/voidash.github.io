@@ -19,6 +19,51 @@ export default function SimpleHomePage({ recentPosts, recentBookmarks }: SimpleH
   return (
     <>
       <ThemeToggle />
+
+      {/* Beta Banner */}
+      <div style={{
+        borderBottom: '1px solid var(--border-color)',
+        padding: '10px 20px',
+        textAlign: 'center',
+        background: 'var(--bg-secondary)',
+      }}>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '10px',
+          flexWrap: 'wrap',
+          fontSize: '14px',
+          maxWidth: '1200px',
+          margin: '0 auto',
+        }}>
+          <span style={{
+            border: '1px solid var(--border-color)',
+            padding: '2px 8px',
+            borderRadius: '4px',
+            fontWeight: 600,
+            fontSize: '11px',
+            letterSpacing: '0.5px',
+            color: 'var(--text-secondary)',
+          }}>BETA</span>
+          <span style={{ color: 'var(--text-secondary)' }}>
+            Checkout{' '}
+            <a href="https://ash9.dev/civic-nepal/" target="_blank" rel="noopener noreferrer" style={{ color: '#0066cc' }}>
+              Civic Nepal
+            </a>
+            {' '}— a civic calendar first app for Nepal and Nepali people.{' '}
+            <a
+              href="https://docs.google.com/spreadsheets/d/1F0hL5xjjWpueXW-ynUaX0KSWClhywWDBXtPHbj1b928/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#0066cc' }}
+            >
+              Help translate if you know Newari/Maithili →
+            </a>
+          </span>
+        </div>
+      </div>
+
       <main style={{ padding: '40px 20px', maxWidth: '1200px', margin: '0 auto' }}>
         <header style={{ textAlign: 'center', marginBottom: '60px' }}>
           <h1 style={{ fontSize: '48px', marginBottom: '10px' }}>voidash musings</h1>
