@@ -5,6 +5,7 @@ import Aboutme from '../pages/aboutme';
 import Askme from '../pages/askme';
 import Timeline from '../pages/timeline';
 import { NotionPage } from '../pages/genericNotion';
+import Videos from '../pages/videos';
 
 
 let mainSpotlightElements: Array<spotlightElementProps> = [
@@ -17,6 +18,16 @@ let mainSpotlightElements: Array<spotlightElementProps> = [
       title: "About Me", 
       content: (<Aboutme/>) 
     }  
+  },
+  {
+    icon: images.megaphone,
+    description: "Videos — Latest YouTube content",
+    value: {
+      type: spotlightElementType.window,
+      url: "videos",
+      title: "Videos",
+      content: (<Videos/>)
+    }
   },
   {
     icon: images.heart,
