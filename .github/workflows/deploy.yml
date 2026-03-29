@@ -64,6 +64,10 @@ jobs:
           BOOKMARKS_DB_ID: ${{ secrets.BOOKMARKS_DB_ID }}
         run: node scripts/generate-dir.js
 
+      - name: Fetch YouTube videos
+        working-directory: nextjs-site
+        run: node scripts/fetch-youtube-videos.js
+
       - name: Build Next.js site
         working-directory: nextjs-site
         env:

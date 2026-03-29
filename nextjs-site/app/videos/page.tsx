@@ -1,5 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import fs from 'fs'
+import path from 'path'
 import { ThemeToggle } from '@/components/ThemeToggle'
 import './videos.css'
 
@@ -15,28 +17,19 @@ type Video = {
   date: string
 }
 
-const VIDEOS: Video[] = [
-  {
-    id: "kgiYvqQWhok",
-    title: "केपी ओली र रमेश लेखक पछि कस्को पालो? ९०० पेज प्रतिवेदन के भन्छ?",
-    description: "कार्की आयोगको ९०० पानाको प्रतिवेदनको पूरा breakdown — ७ जनामाथि फौजदारी सिफारिस, ७६ मृत्यु, २५२२ घाइते",
-    date: "2026-03-28",
-  },
-  {
-    id: "XbG8G4xfLR4",
-    title: "RSP पछिको नेपाल: सुधार कि तानाशाह",
-    description: "GenZ protest पछि नेपालको राजनीतिक दिशा — सुधारको बाटो कि अर्को authoritarian cycle?",
-    date: "2025-12-01",
-  },
-  {
-    id: "2Kh-cQZ6rBo",
-    title: "Learn to Build Computer from scratch on FPGA",
-    description: "स्क्र्याचबाट कम्प्युटर बनाउनुहोस् — FPGA मा 8-bit computer design",
-    date: "2024-06-01",
-  },
-]
+function loadVideos(): Video[] {
+  try {
+    const filePath = path.join(process.cwd(), 'public', 'data', 'videos.json')
+    const data = fs.readFileSync(filePath, 'utf-8')
+    return JSON.parse(data)
+  } catch {
+    console.warn('videos.json not found — run: node scripts/fetch-youtube-videos.js')
+    return []
+  }
+}
 
 export default function VideosPage() {
+  const VIDEOS = loadVideos()
   return (
     <>
       <ThemeToggle />
