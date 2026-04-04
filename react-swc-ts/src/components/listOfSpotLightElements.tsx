@@ -14,7 +14,7 @@ let mainSpotlightElements: Array<spotlightElementProps> = [
     description: "About Me",
     value: {
       type: spotlightElementType.window, 
-      url: "about-me",
+      url: "about",
       title: "About Me", 
       content: (<Aboutme/>) 
     }  
