@@ -42,7 +42,7 @@ export default function Admin() {
       const result = await signInWithPopup(auth, googleProvider);
       const user = result.user;
       setUser(user);
-      setIsAdmin(user.email === "ashish.thapa477@gmail.com");
+      setIsAdmin(user.email === "ashish@ampixa.com");
       console.log("Signed in as:", user.displayName);
     } catch (error) {
       console.error("Error signing in with Google:", error);

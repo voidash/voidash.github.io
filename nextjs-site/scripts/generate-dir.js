@@ -39,7 +39,7 @@ async function generateDirFile() {
     const plainText = `Ashish Thapa
 ============
 
-Email: ashish.thapa477@gmail.com
+Email: ashish@ampixa.com
 
 Socials:
   GitHub: https://github.com/voidash

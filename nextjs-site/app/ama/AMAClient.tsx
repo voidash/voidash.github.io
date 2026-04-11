@@ -70,7 +70,7 @@ export default function AMAClient() {
     <>
       <h5 style={{ marginBottom: '20px' }}>
         Anyone can ask questions. It's anonymous. I will answer it promptly. If something urgent
-        then you can always mail me at ashish.thapa477{"<at>"}gmail.com
+        then you can always mail me at ashish{"<at>"}ampixa.com
       </h5>
 
       <button

@@ -10,7 +10,7 @@ export function StructuredData() {
     name: 'Ashish Thapa',
     alternateName: 'voidash',
     url: 'https://ash9.dev',
-    email: 'ashish.thapa477@gmail.com',
+    email: 'ashish@ampixa.com',
     jobTitle: 'Software Engineer',
     description: 'Software engineer exploring meaning, psychology, philosophy, and innate curiosity',
     sameAs: [

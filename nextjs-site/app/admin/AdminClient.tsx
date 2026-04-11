@@ -42,7 +42,7 @@ export default function AdminClient() {
       const result = await signInWithPopup(auth, googleProvider)
       const user = result.user
       setUser(user)
-      setIsAdmin(user.email === 'ashish.thapa477@gmail.com')
+      setIsAdmin(user.email === 'ashish@ampixa.com')
       console.log('Signed in as:', user.displayName)
     } catch (error) {
       console.error('Error signing in with Google:', error)
@@ -113,7 +113,7 @@ export default function AdminClient() {
           </p>
           {!isAdmin && (
             <p style={{ color: '#d32f2f', marginBottom: '8px' }}>
-              ⚠️ You are not authorized to manage questions. Only ashish.thapa477@gmail.com can access admin features.
+              ⚠️ You are not authorized to manage questions. Only ashish@ampixa.com can access admin features.
             </p>
           )}
           <button onClick={handleSignOut} className="sign-out-button">

@@ -54,7 +54,7 @@ export default function Askme() {
 
   return (
     <>
-      <h5>Anyone can ask questions. It's anonymous. I will answer it promptly. If something urgent then you can always mail me at ashish.thapa477{"<at>"}gmail.com</h5>
+      <h5>Anyone can ask questions. It's anonymous. I will answer it promptly. If something urgent then you can always mail me at ashish{"<at>"}ampixa.com</h5>
       <button
         className="button"
         onClick={() => {
