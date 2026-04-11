@@ -38,3 +38,6 @@ notion-pages.json
 
 # youtube videos (generated during build)
 public/data/videos.json
+
+# prefetched notion data (generated during build)
+data/about-notion.json

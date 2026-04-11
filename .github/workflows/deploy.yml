@@ -68,6 +68,10 @@ jobs:
         working-directory: nextjs-site
         run: node scripts/fetch-youtube-videos.js
 
+      - name: Prefetch About page from Notion worker
+        working-directory: nextjs-site
+        run: node scripts/prefetch-about.js
+
       - name: Build Next.js site
         working-directory: nextjs-site
         env:

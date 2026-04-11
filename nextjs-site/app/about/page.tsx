@@ -1,21 +1,37 @@
-import { fetchNotionPage } from '@/lib/notion'
 import { NotionRenderer } from 'react-notion'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { ThemeToggle } from '@/components/ThemeToggle'
-
-// Page ID from your existing code: About-Me-3aec394784ab48dd90fbe44b948a7da9
-const ABOUT_PAGE_ID = 'About-Me-3aec394784ab48dd90fbe44b948a7da9'
+import fs from 'fs'
+import path from 'path'
 
 export const metadata: Metadata = {
   title: 'About Me - Ashish Thapa',
   description: 'Learn more about Ashish Thapa',
 }
 
-export const revalidate = 18000 // 5 hours
+function loadAboutData() {
+  const filePath = path.join(process.cwd(), 'data', 'about-notion.json')
+  if (!fs.existsSync(filePath)) {
+    throw new Error('about-notion.json not found. Run: node scripts/prefetch-about.js')
+  }
+  const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
+  if (Object.keys(data).length === 0) {
+    throw new Error('about-notion.json is empty')
+  }
+  return data
+}
 
 export default async function AboutPage() {
-  const notionData = await fetchNotionPage(ABOUT_PAGE_ID)
+  let notionData: Record<string, any> | null = null
+  let error: string | null = null
+
+  try {
+    notionData = loadAboutData()
+  } catch (e) {
+    error = e instanceof Error ? e.message : 'Failed to load About page data'
+    console.error('About page data error:', e)
+  }
 
   return (
     <>
@@ -27,10 +43,12 @@ export default async function AboutPage() {
           </Link>
         </nav>
 
-        {/* Simple mode - always rendered for SEO */}
         <article>
           <h1 style={{ marginBottom: '20px' }}>About Me</h1>
-          <NotionRenderer blockMap={notionData} />
+          {error && (
+            <p style={{ color: 'red' }}>Failed to load content: {error}</p>
+          )}
+          {notionData && <NotionRenderer blockMap={notionData} />}
         </article>
       </main>
     </>
