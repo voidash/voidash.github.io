@@ -1,0 +1,1 @@
+.books-list{display:flex;flex-direction:column;gap:0}.book-item{padding:12px 0;border-bottom:1px solid var(--border-color)}.book-item:last-child{border-bottom:none}.book-link{text-decoration:none;color:inherit;display:block;transition:opacity .15s ease}.book-link:hover{opacity:.7}.book-title{font-weight:500;font-size:1.05em;color:var(--text-primary);line-height:1.4}
